@@ -1,6 +1,6 @@
 ---
 author-meta:
-- John Doe
+- Shiyuan Wang
 - Jane Roe
 bibliography:
 - content/manual-references.json
@@ -15,13 +15,13 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="Manuscript Title" />
+  <meta name="dc.title" content="Project 5 Pollution Vision" />
 
-  <meta name="citation_title" content="Manuscript Title" />
+  <meta name="citation_title" content="Project 5 Pollution Vision" />
 
-  <meta property="og:title" content="Manuscript Title" />
+  <meta property="og:title" content="Project 5 Pollution Vision" />
 
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta property="twitter:title" content="Project 5 Pollution Vision" />
 
   <meta name="dc.date" content="2020-12-05" />
 
@@ -39,7 +39,7 @@ header-includes: '<!--
 
   <meta name="citation_technical_report_institution" content="Manubot" />
 
-  <meta name="citation_author" content="John Doe" />
+  <meta name="citation_author" content="Shiyuan Wang" />
 
   <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
 
@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0a5e8d3a5997551af0fbfa3a9f936465e2c0f192/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/31e2bd3ac0f8e6fe09443124afc4f28ab79402dc/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0a5e8d3a5997551af0fbfa3a9f936465e2c0f192/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/31e2bd3ac0f8e6fe09443124afc4f28ab79402dc/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0a5e8d3a5997551af0fbfa3a9f936465e2c0f192/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/31e2bd3ac0f8e6fe09443124afc4f28ab79402dc/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -85,15 +85,15 @@ header-includes: '<!--
 
   <!-- end Manubot generated metadata -->'
 keywords:
-- markdown
-- publishing
-- manubot
+- Pollution vision
+- Machine learning
+- Imgae processing
 lang: en-US
 manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Manuscript Title
+title: Project 5 Pollution Vision
 ...
 
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/0a5e8d3a5997551af0fbfa3a9f936465e2c0f192/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/31e2bd3ac0f8e6fe09443124afc4f28ab79402dc/))
 was automatically generated
-from [Saran-Wang/dsproject@0a5e8d3](https://github.com/Saran-Wang/dsproject/tree/0a5e8d3a5997551af0fbfa3a9f936465e2c0f192)
+from [Saran-Wang/dsproject@31e2bd3](https://github.com/Saran-Wang/dsproject/tree/31e2bd3ac0f8e6fe09443124afc4f28ab79402dc)
 on December 5, 2020.
 </em></small>
 
@@ -113,11 +113,11 @@ on December 5, 2020.
 
 
 
-+ **John Doe**<br>
++ **Shiyuan Wang**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
+    [Saran-Wang](https://github.com/Saran-Wang)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [johndoe](https://twitter.com/johndoe)<br>
   <small>
