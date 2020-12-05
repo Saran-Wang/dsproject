@@ -1,17 +1,17 @@
 ---
-title: "Manuscript Title"
+title: "Project 5 Pollution Vision"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - Pollution vision
+  - Machine learning
+  - Imgae processing
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
+  - github: Saran-Wang
+    name: Shiyuan Wang
+    initials: WSY
     orcid: XXXX-XXXX-XXXX-XXXX
     twitter: johndoe
-    email: john.doe@something.com
+    email: shiyuan8@illinois.edu
     affiliations:
       - Department of Something, University of Whatever
     funders:
