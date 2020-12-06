@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/))
 was automatically generated
-from [Saran-Wang/dsproject@96fd2de](https://github.com/Saran-Wang/dsproject/tree/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb)
+from [Saran-Wang/dsproject@0ef85a2](https://github.com/Saran-Wang/dsproject/tree/0ef85a2207399deb46802a6972ec7cab0448c53b)
 on December 6, 2020.
 </em></small>
 
@@ -162,15 +162,17 @@ There are many studies using digital camera and advanced algorithm to estimate t
 - Delete the rows with equipment error during sampling
 3. Visualization of the distributions of varibales
 Figure @fig:Distributions shows that "Wind_Speed", "Camera_Angle", "Distance_to_Road" and "Elevation" are all in discrete distributions, while "Temp(C)" are in continuous distribution. "Pressure(kPa)" has four clusters. It should also be noted that the "Dead Time" almost shares the same distribution as "Total".
+
 ![
 **Variables Distribution**
-](images/Distributions.png "Wide image"){#fig:Distributions width=9in}
+](images/Distributions.png "Wide image"){#fig:Distributions width=7.5in}
 
 4. Correlations among variables
 From the correlation map @fig:Correlations we could see that "Dead Time" are extremely correlated with "Total", with a coefficient of 1, followed by  "Camera_Angle", "Pressure(kPa)" and "Distance_to_Road", with coefficient of 0.52, 0.49, 0.44 respectively. Here you may be curious why "Dead Time" could be so closely related to "Total", and there is one possible explanation: Actually, "Dead Time" is an instrument parameter, and if there are more PM concentrations in the air, the instrument need more time to process, and vice versa. 
+
 ![
 **Variables Correlations**
-](images/Correlation.png "Wide image"){#fig:Correlations width=9in}
+](images/Correlation.png "Wide image"){#fig:Correlations width=7.5in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
