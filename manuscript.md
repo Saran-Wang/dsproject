@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/))
 was automatically generated
-from [Saran-Wang/dsproject@db28bbc](https://github.com/Saran-Wang/dsproject/tree/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e)
+from [Saran-Wang/dsproject@8575815](https://github.com/Saran-Wang/dsproject/tree/85758155a06368db7781e0f46b0d39f0999978ae)
 on December 6, 2020.
 </em></small>
 
@@ -164,9 +164,16 @@ My model setup splits into two part, the first is image data extraction, the sec
 First I want to digitize images by extracting image features, there are mainly 6 features I want to extract: RGB, image luminance, image contrast, image entropy, transmission and amount of haze removed and number of cars on streets.
 
 1. RGB
+
 The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
 For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
-The figure below shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.
+The figure below @fig:RGB shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.
+
+![
+**RGB Distribution**
+Loaded from the latest version of image on GitHub.
+](images/RGB.png "Wide image"){#fig:RGB}
+
  
 2. Luminance
 3. Contrast

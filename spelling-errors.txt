@@ -4,7 +4,7 @@ gclark
 Gemma
 Gemma’s
 genralized
-Luminance
+luminance
 multivariable
 RGB
 Shiyuan

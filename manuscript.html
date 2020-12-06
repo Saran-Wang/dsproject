@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,9 +70,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/db28bbc07deb9e0a5b76f1b9deea69882dfa7b2e">Saran-Wang/dsproject@db28bbc</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/85758155a06368db7781e0f46b0d39f0999978ae">Saran-Wang/dsproject@8575815</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -112,15 +112,23 @@ Department of Civil and Environmental, University of Illinois
 <h4 id="image-extraction">Image Extraction</h4>
 <p>First I want to digitize images by extracting image features, there are mainly 6 features I want to extract: RGB, image luminance, image contrast, image entropy, transmission and amount of haze removed and number of cars on streets.</p>
 <ol type="1">
-<li><p>RGB
-The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
+<li>RGB</li>
+</ol>
+<p>The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
 For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
-The figure below shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p></li>
-<li><p>Luminance</p></li>
-<li><p>Contrast</p></li>
-<li><p>Entropy</p></li>
-<li><p>Transmission and amount of haze removed</p></li>
-<li><p>Number of cars on streets</p></li>
+The figure below <a href="#fig:RGB">1</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
+<div id="fig:RGB" class="fignos">
+<figure>
+<img src="images/RGB.png" alt="" /><figcaption><span>Figure 1:</span> <strong>RGB Distribution</strong>
+Loaded from the latest version of image on GitHub.</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Luminance</li>
+<li>Contrast</li>
+<li>Entropy</li>
+<li>Transmission and amount of haze removed</li>
+<li>Number of cars on streets</li>
 </ol>
 <h4 id="model-selection">Model selection</h4>
 <h3 class="page_break_before" id="gemmas-model">Gemma’s model</h3>
