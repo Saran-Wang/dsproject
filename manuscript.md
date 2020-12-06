@@ -2,6 +2,8 @@
 author-meta:
 - Shiyuan Wang
 - Weiqi Ni
+- Gemma Clark
+- Xueao Li
 bibliography:
 - content/manual-references.json
 date-meta: '2020-12-06'
@@ -43,13 +45,19 @@ header-includes: '<!--
 
   <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
-  <meta name="twitter:creator" content="@johndoe" />
-
   <meta name="citation_author" content="Weiqi Ni" />
 
   <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
   <meta name="citation_author_institution" content="Department of Environmental and Resources, Zhejiang University" />
+
+  <meta name="citation_author" content="Gemma Clark" />
+
+  <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
+
+  <meta name="citation_author" content="Xueao Li" />
+
+  <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
   <link rel="canonical" href="https://Saran-Wang.github.io/dsproject/" />
 
@@ -63,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/7ac7b491ad3eec8e14c5552e9fd7f6a91d906fd6/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/7ac7b491ad3eec8e14c5552e9fd7f6a91d906fd6/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/7ac7b491ad3eec8e14c5552e9fd7f6a91d906fd6/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -99,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/7ac7b491ad3eec8e14c5552e9fd7f6a91d906fd6/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/))
 was automatically generated
-from [Saran-Wang/dsproject@7ac7b49](https://github.com/Saran-Wang/dsproject/tree/7ac7b491ad3eec8e14c5552e9fd7f6a91d906fd6)
+from [Saran-Wang/dsproject@cb83846](https://github.com/Saran-Wang/dsproject/tree/cb83846603bd0f60b70587eb10e488dbfb8c5f26)
 on December 6, 2020.
 </em></small>
 
@@ -111,9 +119,7 @@ on December 6, 2020.
 
 + **Shiyuan Wang**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [Saran-Wang](https://github.com/Saran-Wang)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [Saran-Wang](https://github.com/Saran-Wang)<br>
   <small>
      Department of Civil and Environmental, University of Illinois
   </small>
@@ -125,6 +131,20 @@ on December 6, 2020.
      Department of Civil and Environmental, University of Illinois; Department of Environmental and Resources, Zhejiang University
   </small>
 
++ **Gemma Clark**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [441gclark](https://github.com/441gclark)<br>
+  <small>
+     Department of Civil and Environmental, University of Illinois
+  </small>
+
++ **Xueao Li**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [XueaoLi](https://github.com/XueaoLi)<br>
+  <small>
+     Department of Civil and Environmental, University of Illinois
+  </small>
+
 
 
 ## Abstract {.page_break_before}
@@ -132,6 +152,7 @@ on December 6, 2020.
 ## Literature review {.page_break_before}
 ## Model {.page_break_before}
 ### Shiyuan's model {.page_break_before}
+Citation by the DOI [@doi:10.1016/j.envint.2020.106044].
 ### Gemma's model {.page_break_before}
 ### Weiqi's model {.page_break_before}
 ### Xueao's model {.page_break_before}
