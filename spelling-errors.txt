@@ -11,7 +11,7 @@ genralized
 grayscale
 GridSearchCV
 kPa
-luminance
+Luminance
 MSE
 multivariable
 orginial
