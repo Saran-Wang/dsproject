@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9ae05c2a8eca9bc18ba7dc2dae8eae364f525d44/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9ae05c2a8eca9bc18ba7dc2dae8eae364f525d44/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9ae05c2a8eca9bc18ba7dc2dae8eae364f525d44/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/9ae05c2a8eca9bc18ba7dc2dae8eae364f525d44/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/fff06fccecddc9da07299e0dba05856976b2fc49">Saran-Wang/dsproject@fff06fc</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/9ae05c2a8eca9bc18ba7dc2dae8eae364f525d44">Saran-Wang/dsproject@9ae05c2</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -288,13 +288,13 @@ Department of Civil and Environmental, University of Illinois
 <ol start="5" type="1">
 <li>Visualize the total concentration based on different dates</li>
 </ol>
-<p>Extract the total particle concentration data based on different dates and then visualize it. Basic steps:
+<p>Extract the total particle concentration data based on different dates and then visualize it. Basic steps are as below:
 - Extract the date information from the column called “Image_file”: taking the image “video08052020_2771.jpg” as example, we will extract the date “0805”.
 - Add one column named “Date”: 0805
 - Group by “Date” and obtain the date-based concentration diagram</p>
 <div id="fig:Date-based" class="fignos">
 <figure>
-<img src="images/xueao1.png" style="width:4in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
+<img src="images/xueao1.png" style="width:6in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="model">Model</h2>
@@ -471,22 +471,17 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <span id="cb7-8"><a href="#cb7-8"></a>    <span class="co">#print(&#39;CV accuracy scores: %s&#39; % scores)</span></span>
 <span id="cb7-9"><a href="#cb7-9"></a>    <span class="bu">print</span>(estimator[<span class="dv">0</span>], <span class="st">&#39;CV accuracy: </span><span class="sc">%.3f</span><span class="st"> +/- </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (np.mean(scores), np.std(scores)))</span></code></pre></div>
 <ul>
-<li><strong>Ridge regression</strong></li>
+<li><strong>Ridge regression</strong> <span class="citation" data-cites="yCC8Xn6w">[<a href="#ref-yCC8Xn6w" role="doc-biblioref">3</a>]</span></li>
 </ul>
-<p>Reference: https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf</p>
 <div id="fig:Ridge" class="fignos">
 <figure>
-<img src="images/xueao2.png" style="width:5in" alt="" /><figcaption><span>Figure 13:</span> <strong>Ridge Regression Models</strong></figcaption>
+<img src="images/xueao2.png" style="width:6in" alt="" /><figcaption><span>Figure 13:</span> <strong>Ridge Regression Models</strong></figcaption>
 </figure>
 </div>
 <ul>
-<li><strong>Lasso regression</strong></li>
+<li><p><strong>Lasso regression</strong> <span class="citation" data-cites="1AkRshc0z">[<a href="#ref-1AkRshc0z" role="doc-biblioref">4</a>]</span></p></li>
+<li><p><strong>RandomForestRegressor</strong> <span class="citation" data-cites="R1nxXFqe">[<a href="#ref-R1nxXFqe" role="doc-biblioref">5</a>]</span></p></li>
 </ul>
-<p>Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters</p>
-<ul>
-<li><strong>RandomForestRegressor</strong></li>
-</ul>
-<p>Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb</p>
 <p>“A Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap Aggregation, commonly known as bagging. What is bagging you may ask? Bagging, in the Random Forest method, involves training each decision tree on a different data sample where sampling is done with replacement. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.”</p>
 <div id="fig:RandomForest" class="fignos">
 <figure>
@@ -494,24 +489,25 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 </figure>
 </div>
 <ul>
-<li><strong>GradientBoostingRegressor</strong></li>
+<li><strong>GradientBoostingRegressor</strong> <span class="citation" data-cites="k7TFwJCu">[<a href="#ref-k7TFwJCu" role="doc-biblioref">6</a>]</span></li>
 </ul>
-<p>Reference: https://en.wikipedia.org/wiki/Gradient_boosting</p>
 <div id="fig:GradientBoosting" class="fignos">
 <figure>
 <img src="images/xueao4.png" style="width:7in" alt="" /><figcaption><span>Figure 15:</span> <strong>Gradient Boosting Algorithm</strong></figcaption>
 </figure>
 </div>
-<p><strong>Evaluation method: cross_val_score</strong>: cross_val_score</p>
-<p><strong>Scoring standard</strong>: r2</p>
-<p><strong>Evaluation results</strong>:</p>
+<ul>
+<li><p><strong>Evaluation method: cross_val_score</strong>: cross_val_score</p></li>
+<li><p><strong>Scoring standard</strong>: r2</p></li>
+</ul>
 <div id="fig:Evaluation" class="fignos">
 <figure>
 <img src="images/xueao5.png" style="width:3in" alt="" /><figcaption><span>Figure 16:</span> <strong>Evaluation Results</strong></figcaption>
 </figure>
 </div>
 <h4 id="tune-hyperparameters-using-gridsearchcv">3. Tune hyperparameters using GridSearchCV</h4>
-<p>The Evaluation results show that RandomForest and GradientBoosting have the best performance using the scoring standard of r2. Thus, I tune hyper parameters for the two models at the same time using GridSearchCV. For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].</p>
+<p>The Evaluation results show that RandomForest and GradientBoosting have the best performance using the scoring standard of r2. Thus, I tune hyper parameters for the two models at the same time using GridSearchCV.</p>
+<p>For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].</p>
 <div id="fig:Best" class="fignos">
 <figure>
 <img src="images/xueao6.png" style="width:8in" alt="" /><figcaption><span>Figure 17:</span> <strong>Best Scores and Best Parameters</strong></figcaption>
@@ -519,7 +515,7 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 </div>
 <p>As shown above, the performance of the two models with their best parameters are both excellent. Thus, I will train two models:RandomForest and GradientBoosting at the same time and evaluate their RMSE to determine the best model.</p>
 <h4 id="model-training-and-selection">4. Model training and selection</h4>
-<p>I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate.</p>
+<p>I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate. The candidate models are shown as below:</p>
 <ul>
 <li>RandomForestRegressor with max_depth = 10, n_estimators = 300</li>
 <li>GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500</li>
@@ -533,7 +529,7 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <p>The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. When predicting for the test dataset, the root mean squared error of this model is 10.74.</p>
 <div id="fig:Flowchart" class="fignos">
 <figure>
-<img src="images/xueao8.png" style="width:3in" alt="" /><figcaption><span>Figure 18:</span> <strong>Flowchart of Modeling</strong></figcaption>
+<img src="images/xueao8.png" style="width:6in" alt="" /><figcaption><span>Figure 18:</span> <strong>Flowchart of Modeling</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
@@ -552,6 +548,26 @@ DOI: <a href="https://doi.org/10.1016/j.envint.2020.106044">10.1016/j.envint.202
 Chenbin Liu, Francis Tsow, Yi Zou, Nongjian Tao<br />
 <em>PLOS ONE</em> (2016-02-01) <a href="https://doi.org/ghnjkc">https://doi.org/ghnjkc</a> <br />
 DOI: <a href="https://doi.org/10.1371/journal.pone.0145955">10.1371/journal.pone.0145955</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26828757">26828757</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734658">PMC4734658</a></p>
+</div>
+<div id="ref-yCC8Xn6w">
+<p>3. <strong>Ridge Regression</strong> <br />
+NCSS, LLC<br />
+(2020-02-10) <a href="https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf">https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf</a></p>
+</div>
+<div id="ref-1AkRshc0z">
+<p>4. <strong>Lasso Regression: Simple Definition</strong> <br />
+Stephanie<br />
+<em>Statistics How To</em> (2015-09-24) <a href="https://www.statisticshowto.com/lasso-regression/">https://www.statisticshowto.com/lasso-regression/</a></p>
+</div>
+<div id="ref-R1nxXFqe">
+<p>5. <strong>A Beginners Guide to Random Forest Regression</strong> <br />
+Krishni<br />
+<em>Medium</em> (2019-06-05) <a href="https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb">https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb</a></p>
+</div>
+<div id="ref-k7TFwJCu">
+<p>6. <strong>Gradient boosting</strong> <br />
+Wikipedia<br />
+(2020-12-05) <a href="https://en.wikipedia.org/w/index.php?title=Gradient_boosting&amp;oldid=992489307">https://en.wikipedia.org/w/index.php?title=Gradient_boosting&amp;oldid=992489307</a></p>
 </div>
 </div>
 <!-- default theme -->
