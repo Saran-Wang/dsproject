@@ -8,9 +8,10 @@ Gemma
 Gemma’s
 genralized
 kPa
-luminance
+Luminance
 multivariable
 RGB
+RMS
 Shiyuan
 Shiyuan’s
 ultrafine

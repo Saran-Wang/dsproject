@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9276bbe764bdcb09aa2203c039cbbaafaf526b3e/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9276bbe764bdcb09aa2203c039cbbaafaf526b3e/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9276bbe764bdcb09aa2203c039cbbaafaf526b3e/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/9276bbe764bdcb09aa2203c039cbbaafaf526b3e/))
 was automatically generated
-from [Saran-Wang/dsproject@f4ce95f](https://github.com/Saran-Wang/dsproject/tree/f4ce95fe138515aa8a26b7ceff81b55831211b41)
+from [Saran-Wang/dsproject@9276bbe](https://github.com/Saran-Wang/dsproject/tree/9276bbe764bdcb09aa2203c039cbbaafaf526b3e)
 on December 6, 2020.
 </em></small>
 
@@ -159,7 +159,7 @@ There are many studies using digital camera and advanced algorithm to estimate t
 1. Variables Explanation
 
 | Data Fields | Explanation | 
-|:-----------------|:-------------:|
+|:-----------------:|:-------------|
 |Temp(C)  |ambient temperature  |
 |Pressure(kPa) |air pressure | 
 | Rel. Humidity | relative humidity | 
@@ -225,6 +225,15 @@ From figure @fig:Luminance we could also see that it’s also normally distribut
 
 
 3. Contrast
+$$Absolute Contrast = \frac{I(i_{max}, j_{max}) - I(i_{min}, j_{min})}{I(i_{max}, j_{max})+ I(i_{min},  j_{min})}$$ {#eq:absolute-contrast}
+$$RMS of Contrast = \sqrt{\frac{1}{MN}\sum{i=1}{N}\sum{j=1}{M}(I(i,j)-avg(I))^2}$$ {#eq:RMS-contrast}
+where I(i,j) is luminance intensity at (i,j) pixel.
+
+
+
+
+
+
 4. Entropy
 5. Transmission and amount of haze removed
 6. Number of cars on streets
