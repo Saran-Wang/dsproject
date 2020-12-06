@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3bd3a3a40a8d933126110f435d5e08293d43e473/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3bd3a3a40a8d933126110f435d5e08293d43e473/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3bd3a3a40a8d933126110f435d5e08293d43e473/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/3bd3a3a40a8d933126110f435d5e08293d43e473/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/))
 was automatically generated
-from [Saran-Wang/dsproject@3bd3a3a](https://github.com/Saran-Wang/dsproject/tree/3bd3a3a40a8d933126110f435d5e08293d43e473)
+from [Saran-Wang/dsproject@96fd2de](https://github.com/Saran-Wang/dsproject/tree/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb)
 on December 6, 2020.
 </em></small>
 
