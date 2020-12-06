@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3d41b165769d4c7ad52f14ce326472d5ad555142/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3d41b165769d4c7ad52f14ce326472d5ad555142/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3d41b165769d4c7ad52f14ce326472d5ad555142/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/3d41b165769d4c7ad52f14ce326472d5ad555142/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/))
 was automatically generated
-from [Saran-Wang/dsproject@3d41b16](https://github.com/Saran-Wang/dsproject/tree/3d41b165769d4c7ad52f14ce326472d5ad555142)
+from [Saran-Wang/dsproject@28550ab](https://github.com/Saran-Wang/dsproject/tree/28550ab7c956e4a56d3301f1533e0cadfcc98943)
 on December 6, 2020.
 </em></small>
 
@@ -208,7 +208,7 @@ From the correlation map @fig:Correlations we could see that "Dead Time" are ext
 5. Visualize the total concentration based on different dates
 
 Extract the total particle concentration data based on different dates and then visualize it. Basic steps:
-- Extract the date information from the column called “Image_file”: take the image “video08052020_2771.jpg” as example, we will extract the number “0805” 
+- Extract the date information from the column called “Image_file”: taking the image “video08052020_2771.jpg” as example, we will extract the date “0805”.
 - Add one column named “Date”: 0805 
 - Group by “Date” and obtain the date-based concentration diagram
 
@@ -343,6 +343,42 @@ Since my random forest model performed best on my validation dataset, I used the
 
 
 ### Xueao's Model {.page_break_before}
+#### 1.	Preparation stage
+In my literature review for this project, the article "Particle Pollution Estimation Based on Image Analysis" basically follows the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, feature extraction, regression model training and predicting. The image feature extaction work is basically on the algorithm illustrated in this article.
+
+The recommended features to be extracted from hazy image are transmission rate, RMS image contrast, image entropy, color, and smoothness of the sky. Since the images provided in this project don't include the sky, I cannot select the region of the sky or extract the feature of sky color and smoothness. Thus, I will only extract the transimission, RMS contrast and image entropy as the reference features.
+
+Reference: Liu, C., Tsow, F., Zou, Y., & Tao, N. (2016). Particle pollution estimation based on image analysis. PloS one, 11(2), e0145955.
+Link: [@doi:10.1371/journal.pone.0145955]
+
+**Convert the images into gray scale or binary images**
+
+The color images were converted into gray scale images, and then further into binary images with Otsu method. The Otsu method converts gray scale to binary images by selecting a threshold that minimizes the intra-class variance or maximizing the inter-class variance. The detailed coding process is shown in my Kaggle notebook.
+
+**Feature extraction**
+
+(1)Transmission
+
+Transmission is an important feature when we want to predict the PM concentration based on the images or videos. Liu, Tsow, Zou,& Tao (2016)"Transmission can be used to describe the attenuation of scene radiance. To solve for the transmission and thus the attenuation with a single hazy image, the concept of dark channel has been introduced, which assumes the existence of some pixels with zero or very low intensity at least for one color channel in all the outdoor images."
+
+(2) RMS contrast
+
+Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),"Human visual perception of air quality is related to image contrast, or visibility." The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast.
+
+(3)  Image entropy
+
+"Another image feature that can possibly provide PM information is image entropy, which quantifies information contained in an image, and is related to image texture. "(Liu et al., 2016) To determine the image contrast and entropy, we first have to converted a color images into a gray scale image, which has been done in the step above.
+
+(4) Image and numerical data
+
+Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, I found the correlation between image data and the air pollution concentration is not very high ,and the numerical data given in both train and test dataset is more important. 
+
+(5) Training and validation data
+
+Validation is essential when training and evaluating the models. Thus, after processing the train dataset with the similiar steps in EDA, I split the processed train data (X,y) into two parts: one part (80% of the original train dataset: X_train, y_train) for training, the other part (20% of the original train dataset: X_validation, y_validation) for validation. The detailed split can be realized by using train_test_split, and set the validation_size to be 0.2.
+
+In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model. 
+
 ## Conclusion {.page_break_before}
 All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions. 
 
