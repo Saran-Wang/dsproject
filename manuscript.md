@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/))
 was automatically generated
-from [Saran-Wang/dsproject@3742f41](https://github.com/Saran-Wang/dsproject/tree/3742f416c1b5ad34fb62557b996cdb667dbc6508)
+from [Saran-Wang/dsproject@f4ce95f](https://github.com/Saran-Wang/dsproject/tree/f4ce95fe138515aa8a26b7ceff81b55831211b41)
 on December 6, 2020.
 </em></small>
 
@@ -157,6 +157,28 @@ There are many studies using digital camera and advanced algorithm to estimate t
 
 ## Exploratory Data Anlysis {.page_break_before}
 1. Variables Explanation
+
+| Data Fields | Explanation | 
+|:-----------------|:-------------:|
+|Temp(C)  |ambient temperature  |
+|Pressure(kPa) |air pressure | 
+| Rel. Humidity | relative humidity | 
+| Errors | if the air measurement equipment has error during sampling (0=no) | 
+| Alarm Triggered | if any instrumental warning shows during sampling (0=no) | 
+| Dilution Factor | an instrumental parameter (should close to 1) | 
+| Dead Time |another instrumental parameter (ideally close to 0)  | 
+| Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. | parameters describe particle sizes, which can be ignored | 
+| Total Conc. | an output variable from the instrument that should not be used | 
+| image_file | the visual information of the traffic condition, corresponding to an image in the "frames" directory | 
+| Wind_Speed |  the wind velocity during sampling| 
+| Distance_to_Road | the distance between camera and road | 
+| Camera_Angle | the angle of incidence between the camera and the road | 
+| Elevation | the elevation between the camera and the breathing zone | 
+| Total | the total measured particle number concentration (# / cm3) This is the dependent variable | 
+
+Table: Variables Explanation
+{#tbl:Explanation}
+
 2. Data Cleaning
 - Delete the useless columns in the dataset
 - Delete the rows with equipment error during sampling

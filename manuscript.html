@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,9 +70,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/f4ce95fe138515aa8a26b7ceff81b55831211b41/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/3742f416c1b5ad34fb62557b996cdb667dbc6508">Saran-Wang/dsproject@3742f41</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/f4ce95fe138515aa8a26b7ceff81b55831211b41">Saran-Wang/dsproject@f4ce95f</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -109,6 +109,86 @@ Department of Civil and Environmental, University of Illinois
 <h2 class="page_break_before" id="exploratory-data-anlysis">Exploratory Data Anlysis</h2>
 <ol type="1">
 <li>Variables Explanation</li>
+</ol>
+<div id="tbl:Explanation" class="tablenos">
+<table>
+<caption><span>Table 1:</span> Variables Explanation
+</caption>
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Data Fields</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Temp(C)</td>
+<td style="text-align: center;">ambient temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pressure(kPa)</td>
+<td style="text-align: center;">air pressure</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rel. Humidity</td>
+<td style="text-align: center;">relative humidity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Errors</td>
+<td style="text-align: center;">if the air measurement equipment has error during sampling (0=no)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alarm Triggered</td>
+<td style="text-align: center;">if any instrumental warning shows during sampling (0=no)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dilution Factor</td>
+<td style="text-align: center;">an instrumental parameter (should close to 1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dead Time</td>
+<td style="text-align: center;">another instrumental parameter (ideally close to 0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Median, Mean, Geo. Mean, Mode, and Geo. St. Dev.</td>
+<td style="text-align: center;">parameters describe particle sizes, which can be ignored</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total Conc.</td>
+<td style="text-align: center;">an output variable from the instrument that should not be used</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">image_file</td>
+<td style="text-align: center;">the visual information of the traffic condition, corresponding to an image in the “frames” directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wind_Speed</td>
+<td style="text-align: center;">the wind velocity during sampling</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distance_to_Road</td>
+<td style="text-align: center;">the distance between camera and road</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Camera_Angle</td>
+<td style="text-align: center;">the angle of incidence between the camera and the road</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elevation</td>
+<td style="text-align: center;">the elevation between the camera and the breathing zone</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: center;">the total measured particle number concentration (# / cm3) This is the dependent variable</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol start="2" type="1">
 <li>Data Cleaning</li>
 </ol>
 <ul>
