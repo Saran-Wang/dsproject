@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/f18932cd198c91fa2e67e747293f19952b3d760c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f18932cd198c91fa2e67e747293f19952b3d760c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/f18932cd198c91fa2e67e747293f19952b3d760c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/f18932cd198c91fa2e67e747293f19952b3d760c/))
 was automatically generated
-from [Saran-Wang/dsproject@8bdb897](https://github.com/Saran-Wang/dsproject/tree/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac)
+from [Saran-Wang/dsproject@f18932c](https://github.com/Saran-Wang/dsproject/tree/f18932cd198c91fa2e67e747293f19952b3d760c)
 on December 6, 2020.
 </em></small>
 
@@ -257,11 +257,11 @@ Figure @fig:orginial1 is the original figure and figure @fig:Entropy shows its e
 
 ![
 **Original Image**
-](images/111.png "Wide image"){#fig:orginial1 width=3.5} 
+](images/111.png "Wide image"){#fig:orginial1 width=3in} 
 
 ![
 **Entropy**
-](images/222.png "Wide image"){#fig:Entropy width=3.5}
+](images/222.png "Wide image"){#fig:Entropy width=3in}
 
 
 5. Transmission and amount of haze removed
@@ -281,11 +281,11 @@ As we can see in figure @fig:2cars, the left image has 2 cars on street, and we 
 
 ![
 **Two cars detected**
-](images/666.png "Wide image"){#fig:2cars width=3.5} 
+](images/666.png "Wide image"){#fig:2cars width=3in} 
 
 ![
 **Five cars detected**
-](images/222.png "Wide image"){#fig:5cars width=3.5}
+](images/222.png "Wide image"){#fig:5cars width=3in}
 
 Here comes the problem, this function could only detect the number of cars appearing on an image but can’t identify which is in motion. But the moving cars are actually the ones which contribute to PM concentrations at the very moment. However, in this case, I just keep the original detection results, since if there are more cars in the parking lot, I just assume it’s a traffic busy day, on which the PM concentrations would be higher than normal days.
 
