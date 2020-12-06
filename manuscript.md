@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/6febd8e727148170bee24f705bb4393fd6864d80/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/ef461d819653b75929d2d80bda4a60406105cf4f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/6febd8e727148170bee24f705bb4393fd6864d80/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ef461d819653b75929d2d80bda4a60406105cf4f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/6febd8e727148170bee24f705bb4393fd6864d80/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ef461d819653b75929d2d80bda4a60406105cf4f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/6febd8e727148170bee24f705bb4393fd6864d80/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/ef461d819653b75929d2d80bda4a60406105cf4f/))
 was automatically generated
-from [Saran-Wang/dsproject@6febd8e](https://github.com/Saran-Wang/dsproject/tree/6febd8e727148170bee24f705bb4393fd6864d80)
+from [Saran-Wang/dsproject@ef461d8](https://github.com/Saran-Wang/dsproject/tree/ef461d819653b75929d2d80bda4a60406105cf4f)
 on December 6, 2020.
 </em></small>
 
@@ -164,13 +164,13 @@ There are many studies using digital camera and advanced algorithm to estimate t
 Figure @fig:Distributions shows that "Wind_Speed", "Camera_Angle", "Distance_to_Road" and "Elevation" are all in discrete distributions, while "Temp(C)" are in continuous distribution. "Pressure(kPa)" has four clusters. It should also be noted that the "Dead Time" almost shares the same distribution as "Total".
 ![
 **Variables Distribution**
-](images/Distributions.png "Wide image"){#fig:Distributions width=3in}
+](images/Distributions.png "Wide image"){#fig:Distributions width=9in}
 
 4. Correlations among variables
 From the correlation map @fig:Correlations we could see that "Dead Time" are extremely correlated with "Total", with a coefficient of 1, followed by  "Camera_Angle", "Pressure(kPa)" and "Distance_to_Road", with coefficient of 0.52, 0.49, 0.44 respectively. Here you may be curious why "Dead Time" could be so closely related to "Total", and there is one possible explanation: Actually, "Dead Time" is an instrument parameter, and if there are more PM concentrations in the air, the instrument need more time to process, and vice versa. 
 ![
 **Variables Correlations**
-](images/Correlation.png "Wide image"){#fig:Correlations width=3in}
+](images/Correlation.png "Wide image"){#fig:Correlations width=9in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
@@ -190,8 +190,16 @@ The figure below @fig:RGB shows the distributions of RGB in this dataset. We can
 **RGB Distribution**
 ](images/RGB.png "Wide image"){#fig:RGB}
 
- 
 2. Luminance
+
+Like RGB, luminance is also a very basic parameter describing an image, which could be an indicator of how bright the image will appear. The luminance of each image is calculated by taking the average of the luminance intensity of each pixel. 
+From figure @fig:Luminance we could also see that it’s also normally distributed with a mean of around 130.
+
+![
+**Luminance Distribution**
+](images/Luminance.png "Wide image"){#fig:Luminance}
+
+
 3. Contrast
 4. Entropy
 5. Transmission and amount of haze removed
