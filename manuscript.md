@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/d9a6f8455cfa015a5ff61a027df7e2e0ff246279/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d9a6f8455cfa015a5ff61a027df7e2e0ff246279/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d9a6f8455cfa015a5ff61a027df7e2e0ff246279/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/d9a6f8455cfa015a5ff61a027df7e2e0ff246279/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/fff06fccecddc9da07299e0dba05856976b2fc49/))
 was automatically generated
-from [Saran-Wang/dsproject@d9a6f84](https://github.com/Saran-Wang/dsproject/tree/d9a6f8455cfa015a5ff61a027df7e2e0ff246279)
+from [Saran-Wang/dsproject@fff06fc](https://github.com/Saran-Wang/dsproject/tree/fff06fccecddc9da07299e0dba05856976b2fc49)
 on December 6, 2020.
 </em></small>
 
@@ -439,7 +439,7 @@ Reference: https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Proce
 
 ![
 **Ridge Regression Models**
-](images/xueao2.png "Wide image"){#fig:Ridge width=6in}
+](images/xueao2.png "Wide image"){#fig:Ridge width=5in}
 
 - **Lasso regression**
 
@@ -453,7 +453,7 @@ Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc
 
 ![
 **Random Forest Regression: Process**
-](images/xueao3.png "Wide image"){#fig:RandomForest width=4in}
+](images/xueao_progress.png "Wide image"){#fig:RandomForest width=4in}
 
 - **GradientBoostingRegressor**
 
