@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/))
 was automatically generated
-from [Saran-Wang/dsproject@56cc9de](https://github.com/Saran-Wang/dsproject/tree/56cc9deee60d85e99f38af042e2362ae3a3fb3b7)
+from [Saran-Wang/dsproject@dfcdbfb](https://github.com/Saran-Wang/dsproject/tree/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7)
 on December 6, 2020.
 </em></small>
 
@@ -181,12 +181,17 @@ Table: Variables Explanation
 2. Data Cleaning
 
 **Delete the useless columns in the dataset**
+
 - The first column titled unnamed is meaningless.
+
 - The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing  particle sizes, which can be ignored.
+
 - The column titled "Total Conc.(#/cm³)" is an output variable and should not be used.
 
 **Delete the rows with equipment error during sampling**
+
 - train = train[train['Errors'] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)
+
 - train = train[train['Alarm Triggered'] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)
 
 3. Visualization of the distributions of varibales
@@ -214,7 +219,7 @@ Extract the total particle concentration data based on different dates and then 
 
 ![
 **Date-based Particle Concentration**
-](images/xueao1.png "Wide image"){#fig:Date-based width=6in}
+](images/xueao1.png "Wide image"){#fig:Date-based width=4in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
@@ -481,7 +486,7 @@ As shown above, the performance of the two models with their best parameters are
 
 #### 4.	Model training and selection 
 
-I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate. The candidate models are shown as below:
+I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate. The two candidate models are shown as below:
 
 -	RandomForestRegressor with max_depth = 10, n_estimators = 300
 -	GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500 
@@ -496,11 +501,11 @@ sample['Total'] = Pred
 ```
 #### 5.	Summary for modeling process
 
-The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. When predicting for the test dataset, the root mean squared error of this model is 10.74.
+The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.
 
 ![
 **Flowchart of Modeling**
-](images/xueao8.png "Wide image"){#fig:Flowchart width=6in}
+](images/xueao8.png "Wide image"){#fig:Flowchart width=5in}
 
 ## Conclusion {.page_break_before}
 All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions. 

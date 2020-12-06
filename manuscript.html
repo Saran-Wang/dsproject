@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/56cc9deee60d85e99f38af042e2362ae3a3fb3b7">Saran-Wang/dsproject@56cc9de</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7">Saran-Wang/dsproject@dfcdbfb</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -260,13 +260,17 @@ Department of Civil and Environmental, University of Illinois
 <ol start="2" type="1">
 <li>Data Cleaning</li>
 </ol>
-<p><strong>Delete the useless columns in the dataset</strong>
-- The first column titled unnamed is meaningless.
-- The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing particle sizes, which can be ignored.
-- The column titled “Total Conc.(#/cm³)” is an output variable and should not be used.</p>
-<p><strong>Delete the rows with equipment error during sampling</strong>
-- train = train[train[‘Errors’] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)
-- train = train[train[‘Alarm Triggered’] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)</p>
+<p><strong>Delete the useless columns in the dataset</strong></p>
+<ul>
+<li><p>The first column titled unnamed is meaningless.</p></li>
+<li><p>The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing particle sizes, which can be ignored.</p></li>
+<li><p>The column titled “Total Conc.(#/cm³)” is an output variable and should not be used.</p></li>
+</ul>
+<p><strong>Delete the rows with equipment error during sampling</strong></p>
+<ul>
+<li><p>train = train[train[‘Errors’] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)</p></li>
+<li><p>train = train[train[‘Alarm Triggered’] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)</p></li>
+</ul>
 <ol start="3" type="1">
 <li>Visualization of the distributions of varibales</li>
 </ol>
@@ -294,7 +298,7 @@ Department of Civil and Environmental, University of Illinois
 - Group by “Date” and obtain the date-based concentration diagram</p>
 <div id="fig:Date-based" class="fignos">
 <figure>
-<img src="images/xueao1.png" style="width:6in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
+<img src="images/xueao1.png" style="width:4in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="model">Model</h2>
@@ -522,7 +526,7 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 </div>
 <p>As shown above, the performance of the two models with their best parameters are both excellent. Thus, I will train two models:RandomForest and GradientBoosting at the same time and evaluate their RMSE to determine the best model.</p>
 <h4 id="model-training-and-selection">4. Model training and selection</h4>
-<p>I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate. The candidate models are shown as below:</p>
+<p>I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate. The two candidate models are shown as below:</p>
 <ul>
 <li>RandomForestRegressor with max_depth = 10, n_estimators = 300</li>
 <li>GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500</li>
@@ -533,10 +537,10 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <span id="cb8-3"><a href="#cb8-3"></a>Pred <span class="op">=</span> model.predict(X_test)</span>
 <span id="cb8-4"><a href="#cb8-4"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
 <h4 id="summary-for-modeling-process">5. Summary for modeling process</h4>
-<p>The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. When predicting for the test dataset, the root mean squared error of this model is 10.74.</p>
+<p>The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.</p>
 <div id="fig:Flowchart" class="fignos">
 <figure>
-<img src="images/xueao8.png" style="width:6in" alt="" /><figcaption><span>Figure 19:</span> <strong>Flowchart of Modeling</strong></figcaption>
+<img src="images/xueao8.png" style="width:5in" alt="" /><figcaption><span>Figure 19:</span> <strong>Flowchart of Modeling</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
