@@ -20,13 +20,3 @@
   ]
 }
 ]
-
-@article{hong2020predicting,
-  title={Predicting outdoor ultrafine particle number concentrations, particle size, and noise using street-level images and audio data},
-  author={Hong, Kris Y and Pinheiro, Pedro O and Weichenthal, Scott},
-  journal={Environment International},
-  volume={144},
-  pages={106044},
-  year={2020},
-  publisher={Elsevier}
-}
