@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7">Saran-Wang/dsproject@8005329</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/8bdb897308c99eb0ba48c6e0ea0cebed7afdebac">Saran-Wang/dsproject@8bdb897</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -328,18 +328,45 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>colorIm <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>greyIm <span class="op">=</span> colorIm.convert(<span class="st">&#39;L&#39;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>ImContrast <span class="op">=</span> skimage.measure.shannon_entropy(greyIm)</span></code></pre></div>
-<p>Figure ?? shows the entropy of figure ?? .</p>
-<p><img src="images/111.png" title="Wide image" id="fig:orginial1" width="3" alt="Original Image" />
-<img src="images/222.png" title="Wide image" id="fig:Entropy" width="3" alt="Entropy" /></p>
+<p>Figure <a href="#fig:orginial1">6</a> is the original figure and figure <a href="#fig:Entropy">7</a> shows its entropy.</p>
+<div id="fig:orginial1" class="fignos">
+<figure>
+<img src="images/111.png" width="3" alt="" /><figcaption><span>Figure 6:</span> <strong>Original Image</strong></figcaption>
+</figure>
+</div>
+<div id="fig:Entropy" class="fignos">
+<figure>
+<img src="images/222.png" width="3" alt="" /><figcaption><span>Figure 7:</span> <strong>Entropy</strong></figcaption>
+</figure>
+</div>
 <ol start="5" type="1">
 <li><p>Transmission and amount of haze removed</p></li>
 <li><p>Number of cars on streets</p></li>
-<li><p>Correlations among variables</p></li>
 </ol>
-<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">6</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
+<p>Also, I take the number of cars on streets into account. Intuitively, the more cars on the street, the higher PM concentrations would be. There is a very efficient library in python called <em>cvlib</em>, within which a function called <em>object_detection</em> could detect the number of different objects appearing on an image. The example code is shown as below:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>im <span class="op">=</span> cv2.imread(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>bbox, label, conf <span class="op">=</span> cv.detect_common_objects(im)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>output_image <span class="op">=</span> draw_bbox(im, bbox, label, conf)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>number_of_car <span class="op">=</span> label.count(<span class="st">&#39;car&#39;</span>)</span></code></pre></div>
+<p>As we can see in figure <a href="#fig:2cars">8</a>, the left image has 2 cars on street, and we can detect exactly two cars; while figure <a href="#fig:5cars">9</a> has no car on street but 5 cars parking in the parking lot, and we could detect 5 cars.</p>
+<div id="fig:2cars" class="fignos">
+<figure>
+<img src="images/666.png" width="3" alt="" /><figcaption><span>Figure 8:</span> <strong>Two cars detected</strong></figcaption>
+</figure>
+</div>
+<div id="fig:5cars" class="fignos">
+<figure>
+<img src="images/222.png" width="3" alt="" /><figcaption><span>Figure 9:</span> <strong>Five cars detected</strong></figcaption>
+</figure>
+</div>
+<p>Here comes the problem, this function could only detect the number of cars appearing on an image but can’t identify which is in motion. But the moving cars are actually the ones which contribute to PM concentrations at the very moment. However, in this case, I just keep the original detection results, since if there are more cars in the parking lot, I just assume it’s a traffic busy day, on which the PM concentrations would be higher than normal days.</p>
+<ol start="7" type="1">
+<li>Correlations among variables</li>
+</ol>
+<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">10</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
 <div id="fig:correlations2" class="fignos">
 <figure>
-<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 6:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
+<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
 </figure>
 </div>
 <h4 id="model-selection">Model Selection</h4>
