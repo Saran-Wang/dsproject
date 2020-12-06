@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/Saran-Wang/dsproject/tree/gh-pages) branch hosts the contents of this directory at <https://Saran-Wang.github.io/dsproject/>.
-The permalink for this webpage version is <https://Saran-Wang.github.io/dsproject/v/be581674fc85d19b3f0a401427b2952ad2afff06/>.
+The permalink for this webpage version is <https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://Saran-Wang.github.io/dsproject/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`be581674fc85d19b3f0a401427b2952ad2afff06`](https://github.com/Saran-Wang/dsproject/commit/be581674fc85d19b3f0a401427b2952ad2afff06).
+[`92d6e899cac4e99e90d5b8cc8f6da296b5d8de18`](https://github.com/Saran-Wang/dsproject/commit/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18).
