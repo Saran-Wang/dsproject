@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/547d797528c06d49f589318a3988d958dffdcd31">Saran-Wang/dsproject@547d797</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15">Saran-Wang/dsproject@638157f</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -287,6 +287,18 @@ Department of Civil and Environmental, University of Illinois
 <img src="images/Correlation.png" style="height:3in" alt="" /><figcaption><span>Figure 2:</span> <strong>Variables Correlations</strong></figcaption>
 </figure>
 </div>
+<ol start="5" type="1">
+<li>Visualize the total concentration based on different dates</li>
+</ol>
+<p>Extract the total particle concentration data based on different dates and then visualize it. Basic steps:
+- Extract the date information from the column called “Image_file”: take the image “video08052020_2771.jpg” as example, we will extract the number “0805”
+- Add one column named “Date”: 0805
+- Group by “Date” and obtain the date-based concentration diagram</p>
+<div id="fig:wide-image" class="fignos">
+<figure>
+<img src="images/xueao1.png" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="model">Model</h2>
 <h3 class="page_break_before" id="shiyuans-model">Shiyuan’s Model</h3>
 <p>My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.</p>
@@ -297,20 +309,20 @@ Department of Civil and Environmental, University of Illinois
 </ol>
 <p>The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
 For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
-The figure below <a href="#fig:RGB">3</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
+The figure below <a href="#fig:RGB">4</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
 <div id="fig:RGB" class="fignos">
 <figure>
-<img src="images/RGB.png" alt="" /><figcaption><span>Figure 3:</span> <strong>RGB Distribution</strong></figcaption>
+<img src="images/RGB.png" alt="" /><figcaption><span>Figure 4:</span> <strong>RGB Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
 <li>Luminance</li>
 </ol>
 <p>Like RGB, luminance is also a very basic parameter describing an image, which could be an indicator of how bright the image will appear. The luminance of each image is calculated by taking the average of the luminance intensity of each pixel.
-From figure <a href="#fig:Luminance">4</a> we could also see that it’s also normally distributed with a mean of around 130.</p>
+From figure <a href="#fig:Luminance">5</a> we could also see that it’s also normally distributed with a mean of around 130.</p>
 <div id="fig:Luminance" class="fignos">
 <figure>
-<img src="images/Luminance.png" style="height:3in" alt="" /><figcaption><span>Figure 4:</span> <strong>Luminance Distribution</strong></figcaption>
+<img src="images/Luminance.png" style="height:3in" alt="" /><figcaption><span>Figure 5:</span> <strong>Luminance Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="3" type="1">
@@ -320,10 +332,10 @@ From figure <a href="#fig:Luminance">4</a> we could also see that it’s also no
 <p><span id="eq:absolute-contrast" class="eqnos"><span class="math display">\[Absolute_Contrast = \frac{I(i_{max}, j_{max}) - I(i_{min}, j_{min})}{I(i_{max}, j_{max})+ I(i_{min}, j_{min})}\]</span><span class="eqnos-number">(1)</span></span> 
 <span id="eq:RMS-contrast" class="eqnos"><span class="math display">\[RMS_Contrast = \sqrt{\frac{1}{MN}\sum_{i=1}^{N}\sum_{j=1}^{M}(I(i,j)-avg(I))^2}\]</span><span class="eqnos-number">(2)</span></span> 
 where I(i,j) is luminance intensity at (i,j) pixel.</p>
-<p>From figure <a href="#fig:Contrast">5</a> we could see that the distribution is a little bit right-skewed with a small peak at around 35, and a larger one at around 50.</p>
+<p>From figure <a href="#fig:Contrast">6</a> we could see that the distribution is a little bit right-skewed with a small peak at around 35, and a larger one at around 50.</p>
 <div id="fig:Contrast" class="fignos">
 <figure>
-<img src="images/Contrast.png" style="height:3in" alt="" /><figcaption><span>Figure 5:</span> <strong>Contrast Distribution</strong></figcaption>
+<img src="images/Contrast.png" style="height:3in" alt="" /><figcaption><span>Figure 6:</span> <strong>Contrast Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="4" type="1">
@@ -333,15 +345,15 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>colorIm <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>greyIm <span class="op">=</span> colorIm.convert(<span class="st">&#39;L&#39;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>ImContrast <span class="op">=</span> skimage.measure.shannon_entropy(greyIm)</span></code></pre></div>
-<p>Figure <a href="#fig:orginial1">6</a> is the original figure and figure <a href="#fig:Entropy">7</a> shows its entropy.</p>
+<p>Figure <a href="#fig:orginial1">7</a> is the original figure and figure <a href="#fig:Entropy">8</a> shows its entropy.</p>
 <div id="fig:orginial1" class="fignos">
 <figure>
-<img src="images/111.png" style="width:3in" alt="" /><figcaption><span>Figure 6:</span> <strong>Original Image</strong></figcaption>
+<img src="images/111.png" style="width:3in" alt="" /><figcaption><span>Figure 7:</span> <strong>Original Image</strong></figcaption>
 </figure>
 </div>
 <div id="fig:Entropy" class="fignos">
 <figure>
-<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 7:</span> <strong>Entropy</strong></figcaption>
+<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 8:</span> <strong>Entropy</strong></figcaption>
 </figure>
 </div>
 <ol start="5" type="1">
@@ -353,25 +365,25 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 <span id="cb2-2"><a href="#cb2-2"></a>bbox, label, conf <span class="op">=</span> cv.detect_common_objects(im)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>output_image <span class="op">=</span> draw_bbox(im, bbox, label, conf)</span>
 <span id="cb2-4"><a href="#cb2-4"></a>number_of_car <span class="op">=</span> label.count(<span class="st">&#39;car&#39;</span>)</span></code></pre></div>
-<p>As we can see in figure <a href="#fig:2cars">8</a>, the left image has 2 cars on street, and we can detect exactly two cars; while figure <a href="#fig:5cars">9</a> has no car on street but 5 cars parking in the parking lot, and we could detect 5 cars.</p>
+<p>As we can see in figure <a href="#fig:2cars">9</a>, the left image has 2 cars on street, and we can detect exactly two cars; while figure <a href="#fig:5cars">10</a> has no car on street but 5 cars parking in the parking lot, and we could detect 5 cars.</p>
 <div id="fig:2cars" class="fignos">
 <figure>
-<img src="images/666.png" style="width:3in" alt="" /><figcaption><span>Figure 8:</span> <strong>Two cars detected</strong></figcaption>
+<img src="images/666.png" style="width:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Two cars detected</strong></figcaption>
 </figure>
 </div>
 <div id="fig:5cars" class="fignos">
 <figure>
-<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Five cars detected</strong></figcaption>
+<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Five cars detected</strong></figcaption>
 </figure>
 </div>
 <p>Here comes the problem, this function could only detect the number of cars appearing on an image but can’t identify which is in motion. But the moving cars are actually the ones which contribute to PM concentrations at the very moment. However, in this case, I just keep the original detection results, since if there are more cars in the parking lot, I just assume it’s a traffic busy day, on which the PM concentrations would be higher than normal days.</p>
 <ol start="7" type="1">
 <li>Correlations among variables</li>
 </ol>
-<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">10</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
+<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">11</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
 <div id="fig:correlations2" class="fignos">
 <figure>
-<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
+<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 11:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
 </figure>
 </div>
 <h4 id="model-selection">Model Selection</h4>
