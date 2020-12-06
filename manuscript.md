@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/ac40f988bb8e5aec6e6fa8fc483a89573c9c3d4f/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ac40f988bb8e5aec6e6fa8fc483a89573c9c3d4f/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ac40f988bb8e5aec6e6fa8fc483a89573c9c3d4f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/ac40f988bb8e5aec6e6fa8fc483a89573c9c3d4f/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/))
 was automatically generated
-from [Saran-Wang/dsproject@ac40f98](https://github.com/Saran-Wang/dsproject/tree/ac40f988bb8e5aec6e6fa8fc483a89573c9c3d4f)
+from [Saran-Wang/dsproject@802e935](https://github.com/Saran-Wang/dsproject/tree/802e935139a51c67bc4f02d40b92a9c47fb694bb)
 on December 6, 2020.
 </em></small>
 
@@ -182,6 +182,10 @@ Table: Variables Explanation
 2. Data Cleaning
 
 - Delete the useless columns in the dataset
+ -	The first column titled unnamed is meaningless.
+ -	The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing  particle sizes, which can be ignored.
+ -	The column titled "Total Conc.(#/cm³)" is an output variable and should not be used.
+
 - Delete the rows with equipment error during sampling
 3. Visualization of the distributions of varibales
 
