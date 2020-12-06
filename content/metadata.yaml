@@ -9,13 +9,10 @@ authors:
   - github: Saran-Wang
     name: Shiyuan Wang
     initials: WSY
-    orcid: XXXX-XXXX-XXXX-XXXX
     twitter: johndoe
     email: shiyuan8@illinois.edu
     affiliations:
-      - Department of Something, University of Whatever
-    funders:
-      - Grant XXXXXXXX
+      - Department of Civil and Environmental, University of Illinois
   - github: weiqini
     name: Weiqi Ni
     initials: W. N.
