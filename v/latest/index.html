@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/276cba7cabd4916edc5d3fe8001c0b0e080c0ff4/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/276cba7cabd4916edc5d3fe8001c0b0e080c0ff4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/276cba7cabd4916edc5d3fe8001c0b0e080c0ff4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,9 +70,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/85758155a06368db7781e0f46b0d39f0999978ae/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/276cba7cabd4916edc5d3fe8001c0b0e080c0ff4/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/85758155a06368db7781e0f46b0d39f0999978ae">Saran-Wang/dsproject@8575815</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/276cba7cabd4916edc5d3fe8001c0b0e080c0ff4">Saran-Wang/dsproject@276cba7</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -104,10 +104,24 @@ Department of Civil and Environmental, University of Illinois
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <h2 class="page_break_before" id="introduction">Introduction</h2>
-<h2 class="page_break_before" id="literature-review">Literature review</h2>
+<h2 class="page_break_before" id="literature-review">Literature Review</h2>
 <p>There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. <span class="citation" data-cites="19MbLWqCv">[<a href="#ref-19MbLWqCv" role="doc-biblioref">1</a>]</span> developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions.</p>
+<h2 class="page_break_before" id="exploratory-data-anlysis">Exploratory Data Anlysis</h2>
+<ol type="1">
+<li>Variables Explanation</li>
+<li>Data Cleaning</li>
+</ol>
+<ul>
+<li>Delete the useless columns in the dataset</li>
+<li>Delete the rows with equipment error during sampling</li>
+</ul>
+<ol start="3" type="1">
+<li>Visualization of the distributions of varibales
+Figure shows that “Wind_Speed”, “Camera_Angle”, “Distance_to_Road” and “Elevation” are all in discrete distributions, while “Temp(C)” are in continuous distribution. “Pressure(kPa)” has four clusters. It should also be noted that the “Dead Time” almost shares the same distribution as “Total”.</li>
+<li>Correlations among variables</li>
+</ol>
 <h2 class="page_break_before" id="model">Model</h2>
-<h3 class="page_break_before" id="shiyuans-model">Shiyuan’s model</h3>
+<h3 class="page_break_before" id="shiyuans-model">Shiyuan’s Model</h3>
 <p>My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.</p>
 <h4 id="image-extraction">Image Extraction</h4>
 <p>First I want to digitize images by extracting image features, there are mainly 6 features I want to extract: RGB, image luminance, image contrast, image entropy, transmission and amount of haze removed and number of cars on streets.</p>
@@ -119,8 +133,7 @@ For each image, after deriving the RGB of each pixel, we take the average of the
 The figure below <a href="#fig:RGB">1</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
 <div id="fig:RGB" class="fignos">
 <figure>
-<img src="images/RGB.png" alt="" /><figcaption><span>Figure 1:</span> <strong>RGB Distribution</strong>
-Loaded from the latest version of image on GitHub.</figcaption>
+<img src="images/RGB.png" alt="" /><figcaption><span>Figure 1:</span> <strong>RGB Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
@@ -130,10 +143,10 @@ Loaded from the latest version of image on GitHub.</figcaption>
 <li>Transmission and amount of haze removed</li>
 <li>Number of cars on streets</li>
 </ol>
-<h4 id="model-selection">Model selection</h4>
-<h3 class="page_break_before" id="gemmas-model">Gemma’s model</h3>
-<h3 class="page_break_before" id="weiqis-model">Weiqi’s model</h3>
-<h3 class="page_break_before" id="xueaos-model">Xueao’s model</h3>
+<h4 id="model-selection">Model Selection</h4>
+<h3 class="page_break_before" id="gemmas-model">Gemma’s Model</h3>
+<h3 class="page_break_before" id="weiqis-model">Weiqi’s Model</h3>
+<h3 class="page_break_before" id="xueaos-model">Xueao’s Model</h3>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
