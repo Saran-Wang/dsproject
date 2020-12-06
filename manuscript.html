@@ -18,6 +18,68 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -54,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/ff64d5131864a65bc807ec6ace09642b9420c46d">Saran-Wang/dsproject@ff64d51</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/9790dad5922dda117a0a7763193e6eb2436935eb">Saran-Wang/dsproject@9790dad</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -261,10 +323,27 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 </div>
 <ol start="4" type="1">
 <li>Entropy</li>
-<li>Transmission and amount of haze removed</li>
-<li>Number of cars on streets</li>
 </ol>
+<p>Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result (10.1371/journal.pone.0145955). To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: <em>skimage</em> to calculate image entropy directly. The example code is shown as below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>colorIm <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>greyIm <span class="op">=</span> colorIm.convert(<span class="st">&#39;L&#39;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>ImContrast <span class="op">=</span> skimage.measure.shannon_entropy(greyIm)</span></code></pre></div>
+<p>Figure ?? shows the entropy of figure ??.
+<img src="images/111.png" title="Wide image" id="fig:orginial1" alt="Original Image" /> <img src="images/222.png" title="Wide image" id="fig:Entropy" alt="Entropy" /></p>
+<ol start="5" type="1">
+<li><p>Transmission and amount of haze removed</p></li>
+<li><p>Number of cars on streets</p></li>
+<li><p>Correlations among variables</p></li>
+</ol>
+<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">6</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
+<div id="fig:correlations2" class="fignos">
+<figure>
+<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 6:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
+</figure>
+</div>
 <h4 id="model-selection">Model Selection</h4>
+<p>As mentioned before, we can’t select the features barely based on their correlations with PM concentrations, since I have both numerical data and digitized image data, which could be very complicated. Therefore, I selected different combinations of features and run the model several times to select the one with best performance.
+At first, I tried the Neural network, but it doesn’t do well in this dataset, with an MSE of around 800. Then I calculated the model accuracy using <em>cross_val_score</em>, and then I switch to random forest, which gives me an accuracy of 0.997. With the help of * GridSearchCV*, I could decide on the parameters for random forest: <code>RandomForestRegressor(max_depth=20, n_estimators=1000, random_state=3)</code>. With those parameters, I could get an RSME around 11.</p>
 <h3 class="page_break_before" id="gemmas-model">Gemma’s Model</h3>
 <h3 class="page_break_before" id="weiqis-model">Weiqi’s Model</h3>
 <h3 class="page_break_before" id="xueaos-model">Xueao’s Model</h3>

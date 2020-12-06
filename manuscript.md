@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/))
 was automatically generated
-from [Saran-Wang/dsproject@ff64d51](https://github.com/Saran-Wang/dsproject/tree/ff64d5131864a65bc807ec6ace09642b9420c46d)
+from [Saran-Wang/dsproject@9790dad](https://github.com/Saran-Wang/dsproject/tree/9790dad5922dda117a0a7763193e6eb2436935eb)
 on December 6, 2020.
 </em></small>
 
@@ -244,13 +244,34 @@ From figure @fig:Contrast we could see that the distribution is a little bit rig
 
 
 4. Entropy
+
+Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result (10.1371/journal.pone.0145955). To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: *skimage* to calculate image entropy directly. The example code is shown as below:
+
+```python
+colorIm = Image.open('../input/pollutionvision/frames/frames/video06082020_0.jpg')
+greyIm = colorIm.convert('L')
+ImContrast = skimage.measure.shannon_entropy(greyIm)
+```
+
+Figure @fig:Entropy shows the entropy of figure @fig:orginial1.
+![**Original Image**](images/111.png "Wide image"){#fig:orginial1} ![**Entropy**](images/222.png "Wide image"){#fig:Entropy}
+
 5. Transmission and amount of haze removed
+
 6. Number of cars on streets
 
+7. Correlations among variables
 
+Here we plot out the spearman correlations among those features in figure @fig:correlations2, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.
 
+![
+**Variables Correlations (include digitized image data)**
+](images/999.png "Wide image"){#fig:correlations2 height=3in}
 
 #### Model Selection
+
+As mentioned before, we can’t select the features barely based on their correlations with PM concentrations, since I have both numerical data and digitized image data, which could be very complicated. Therefore, I selected different combinations of features and run the model several times to select the one with best performance. 
+At first, I tried the Neural network, but it doesn’t do well in this dataset, with an MSE of around 800. Then I calculated the model accuracy using *cross_val_score*, and then I switch to random forest, which gives me an accuracy of 0.997. With the help of * GridSearchCV*, I could decide on the parameters for random forest: `RandomForestRegressor(max_depth=20, n_estimators=1000, random_state=3)`. With those parameters, I could get an RSME around 11.
 
 
 ### Gemma's Model {.page_break_before}
