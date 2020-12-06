@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/56cc9deee60d85e99f38af042e2362ae3a3fb3b7/))
 was automatically generated
-from [Saran-Wang/dsproject@92d6e89](https://github.com/Saran-Wang/dsproject/tree/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18)
+from [Saran-Wang/dsproject@56cc9de](https://github.com/Saran-Wang/dsproject/tree/56cc9deee60d85e99f38af042e2362ae3a3fb3b7)
 on December 6, 2020.
 </em></small>
 
@@ -440,6 +440,10 @@ for estimator in estimators:
 ](images/xueao2.png "Wide image"){#fig:Ridge width=6in}
 
 - **Lasso regression** [@https://en.wikipedia.org/wiki/Lasso_(statistics)]
+
+![
+**Forms of the Constraint Regions for Lasso and Ridge Regression**
+](images/Comparison.png "Wide image"){#fig:Comparison width=6in}
 
 - **RandomForestRegressor** [@https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb]
 
