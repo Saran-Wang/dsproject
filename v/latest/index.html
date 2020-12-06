@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/5818726b792af46cdb1bcea96256ae3ff7b0b258">Saran-Wang/dsproject@5818726</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/486274c5f27808eb5020e00a8561607292922dda">Saran-Wang/dsproject@486274c</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -260,15 +260,13 @@ Department of Civil and Environmental, University of Illinois
 <ol start="2" type="1">
 <li>Data Cleaning</li>
 </ol>
-<ul>
-<li><p><strong>Delete the useless columns in the dataset</strong></p></li>
-<li><p>The first column titled unnamed is meaningless.</p></li>
-<li><p>The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing particle sizes, which can be ignored.</p></li>
-<li><p>The column titled “Total Conc.(#/cm³)” is an output variable and should not be used.</p></li>
-<li><p><strong>Delete the rows with equipment error during sampling</strong></p></li>
-<li><p>train = train[train[‘Errors’] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)</p></li>
-<li><p>train = train[train[‘Alarm Triggered’] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)</p></li>
-</ul>
+<p><strong>Delete the useless columns in the dataset</strong>
+- The first column titled unnamed is meaningless.
+- The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing particle sizes, which can be ignored.
+- The column titled “Total Conc.(#/cm³)” is an output variable and should not be used.</p>
+<p><strong>Delete the rows with equipment error during sampling</strong>
+- train = train[train[‘Errors’] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)
+- train = train[train[‘Alarm Triggered’] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)</p>
 <ol start="3" type="1">
 <li>Visualization of the distributions of varibales</li>
 </ol>
@@ -451,18 +449,22 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <li>Training and validation data</li>
 </ol>
 <p>Validation is essential when training and evaluating the models. Thus, after processing the train dataset with the similiar steps in EDA, I split the processed train data (X,y) into two parts: one part (80% of the original train dataset: X_train, y_train) for training, the other part (20% of the original train dataset: X_validation, y_validation) for validation. The detailed split can be realized by using train_test_split, and set the validation_size to be 0.2.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb6-2"><a href="#cb6-2"></a>validation_size <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>seed <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>X_train, X_validation, y_train, y_validation <span class="op">=</span> train_test_split(X, y, <span class="op">\</span> test_size<span class="op">=</span>validation_size, random_state<span class="op">=</span>seed)</span></code></pre></div>
 <p>In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model.</p>
 <h4 id="model-introduction-and-evaluation">2. Model introduction and evaluation</h4>
 <p>Here I will evaluate and compare four different models. They are Ridge regression, Lasso regression, RandomForestRegressor and GradientBoostingRegressor.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="cf">for</span> estimator <span class="kw">in</span> estimators:</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    scores <span class="op">=</span> cross_val_score(estimator<span class="op">=</span>estimator[<span class="dv">1</span>],</span>
-<span id="cb6-3"><a href="#cb6-3"></a>                            X<span class="op">=</span>X_train,</span>
-<span id="cb6-4"><a href="#cb6-4"></a>                            y<span class="op">=</span>y_train,</span>
-<span id="cb6-5"><a href="#cb6-5"></a>                            scoring<span class="op">=</span><span class="st">&#39;r2&#39;</span>,</span>
-<span id="cb6-6"><a href="#cb6-6"></a>                            cv<span class="op">=</span><span class="dv">3</span>,</span>
-<span id="cb6-7"><a href="#cb6-7"></a>                            n_jobs<span class="op">=-</span><span class="dv">1</span>)</span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="co">#print(&#39;CV accuracy scores: %s&#39; % scores)</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a>    <span class="bu">print</span>(estimator[<span class="dv">0</span>], <span class="st">&#39;CV accuracy: </span><span class="sc">%.3f</span><span class="st"> +/- </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (np.mean(scores), np.std(scores)))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">for</span> estimator <span class="kw">in</span> estimators:</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    scores <span class="op">=</span> cross_val_score(estimator<span class="op">=</span>estimator[<span class="dv">1</span>],</span>
+<span id="cb7-3"><a href="#cb7-3"></a>                            X<span class="op">=</span>X_train,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>                            y<span class="op">=</span>y_train,</span>
+<span id="cb7-5"><a href="#cb7-5"></a>                            scoring<span class="op">=</span><span class="st">&#39;r2&#39;</span>,</span>
+<span id="cb7-6"><a href="#cb7-6"></a>                            cv<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>                            n_jobs<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="co">#print(&#39;CV accuracy scores: %s&#39; % scores)</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    <span class="bu">print</span>(estimator[<span class="dv">0</span>], <span class="st">&#39;CV accuracy: </span><span class="sc">%.3f</span><span class="st"> +/- </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (np.mean(scores), np.std(scores)))</span></code></pre></div>
 <ul>
 <li><strong>Ridge regression</strong></li>
 </ul>
@@ -518,10 +520,10 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <li>GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500</li>
 </ul>
 <p>Finally, I selected RandomForest as my model because after trial I find this model can lead to a reasonable RMSE value while GradientBoosting will lead to an unacceptably huge root mean squared error.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>model <span class="op">=</span> RandomForestRegressor(max_depth <span class="op">=</span> <span class="dv">10</span>, n_estimators <span class="op">=</span> <span class="dv">300</span>,random_state <span class="op">=</span> <span class="dv">3</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>model.fit(X,y)</span>
-<span id="cb7-3"><a href="#cb7-3"></a>Pred <span class="op">=</span> model.predict(X_test)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>model <span class="op">=</span> RandomForestRegressor(max_depth <span class="op">=</span> <span class="dv">10</span>, n_estimators <span class="op">=</span> <span class="dv">300</span>,random_state <span class="op">=</span> <span class="dv">3</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>model.fit(X,y)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>Pred <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
 <h4 id="summary-for-modeling-process">5. Summary for modeling process</h4>
 <p>The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. When predicting for the test dataset, the root mean squared error of this model is 10.74.</p>
 <div id="fig:Flowchart" class="fignos">
