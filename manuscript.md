@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/032e2b49a24f680eebfc5561f361e4472941a480/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/032e2b49a24f680eebfc5561f361e4472941a480/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/032e2b49a24f680eebfc5561f361e4472941a480/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/032e2b49a24f680eebfc5561f361e4472941a480/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/ff64d5131864a65bc807ec6ace09642b9420c46d/))
 was automatically generated
-from [Saran-Wang/dsproject@032e2b4](https://github.com/Saran-Wang/dsproject/tree/032e2b49a24f680eebfc5561f361e4472941a480)
+from [Saran-Wang/dsproject@ff64d51](https://github.com/Saran-Wang/dsproject/tree/ff64d5131864a65bc807ec6ace09642b9420c46d)
 on December 6, 2020.
 </em></small>
 
@@ -228,7 +228,8 @@ From figure @fig:Luminance we could also see that it’s also normally distribut
 
 
 3. Contrast
-The image contrast is defined as the difference between the max and min luminance intensity of an image. Study [@doi:10.1371/journal.pone.0145955] shows that the higher the PM concentrations, the lower contrast would be. It makes sense since the image would become vague and lighter when there are more particulate matters in the air. And often, one image would have pixels with highest intensity of 255, as well as lowest intensity of 0. Therefore, we can’t see much difference if we want to derive the absolute contrast, since it would be 1 for most of those images. Therefore, we use root mean square of image intensity to describe image contrast.
+
+The image contrast is defined as the difference between the max and min luminance intensity of an image. Study [@doi:10.1371/journal.pone.0145955] shows that the higher the PM concentrations, the lower contrast would be. It makes sense since the image would become vague and lighter when there are more particulate matters in the air. And often, one image would have pixels with the highest intensity of 255, as well as the lowest intensity of 0. Therefore, we can’t see much difference if we want to derive the absolute contrast, since it would be 1 for most of those images. Therefore, we use root mean square of image intensity to describe image contrast.
 
 $$Absolute_Contrast = \frac{I(i_{max}, j_{max}) - I(i_{min}, j_{min})}{I(i_{max}, j_{max})+ I(i_{min}, j_{min})}$$ {#eq:absolute-contrast}
 $$RMS_Contrast = \sqrt{\frac{1}{MN}\sum_{i=1}^{N}\sum_{j=1}^{M}(I(i,j)-avg(I))^2}$$ {#eq:RMS-contrast}
