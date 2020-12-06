@@ -12,7 +12,7 @@
       "Shiyuan Wang",
       "Weiqi Ni"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"Project 5 Pollution Vision\" />\n<meta name=\"citation_title\" content=\"Project 5 Pollution Vision\" />\n<meta property=\"og:title\" content=\"Project 5 Pollution Vision\" />\n<meta property=\"twitter:title\" content=\"Project 5 Pollution Vision\" />\n<meta name=\"dc.date\" content=\"2020-12-06\" />\n<meta name=\"citation_publication_date\" content=\"2020-12-06\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Shiyuan Wang\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"twitter:creator\" content=\"@johndoe\" />\n<meta name=\"citation_author\" content=\"Weiqi Ni\" />\n<meta name=\"citation_author_institution\" content=\"Department of Civil and Environmental, University of Illinois\" />\n<meta name=\"citation_author_institution\" content=\"Department of Environmental and Resources, Zhejiang University\" />\n<link rel=\"canonical\" href=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta property=\"og:url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta property=\"twitter:url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta name=\"citation_pdf_url\" content=\"https://Saran-Wang.github.io/dsproject/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://Saran-Wang.github.io/dsproject/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"Project 5 Pollution Vision\" />\n<meta name=\"citation_title\" content=\"Project 5 Pollution Vision\" />\n<meta property=\"og:title\" content=\"Project 5 Pollution Vision\" />\n<meta property=\"twitter:title\" content=\"Project 5 Pollution Vision\" />\n<meta name=\"dc.date\" content=\"2020-12-06\" />\n<meta name=\"citation_publication_date\" content=\"2020-12-06\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Shiyuan Wang\" />\n<meta name=\"citation_author_institution\" content=\"Department of Civil and Environmental, University of Illinois\" />\n<meta name=\"twitter:creator\" content=\"@johndoe\" />\n<meta name=\"citation_author\" content=\"Weiqi Ni\" />\n<meta name=\"citation_author_institution\" content=\"Department of Civil and Environmental, University of Illinois\" />\n<meta name=\"citation_author_institution\" content=\"Department of Environmental and Resources, Zhejiang University\" />\n<link rel=\"canonical\" href=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta property=\"og:url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta property=\"twitter:url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://Saran-Wang.github.io/dsproject/\" />\n<meta name=\"citation_pdf_url\" content=\"https://Saran-Wang.github.io/dsproject/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://Saran-Wang.github.io/dsproject/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -28,14 +28,10 @@
         "github": "Saran-Wang",
         "name": "Shiyuan Wang",
         "initials": "WSY",
-        "orcid": "XXXX-XXXX-XXXX-XXXX",
         "twitter": "johndoe",
         "email": "shiyuan8@illinois.edu",
         "affiliations": [
-          "Department of Something, University of Whatever"
-        ],
-        "funders": [
-          "Grant XXXXXXXX"
+          "Department of Civil and Environmental, University of Illinois"
         ],
         "affiliation_numbers": [
           1
@@ -51,23 +47,19 @@
           "Department of Environmental and Resources, Zhejiang University"
         ],
         "affiliation_numbers": [
-          2,
-          3
+          1,
+          2
         ]
       }
     ],
     "affiliations": [
       {
-        "affiliation": "Department of Something, University of Whatever",
+        "affiliation": "Department of Civil and Environmental, University of Illinois",
         "affiliation_number": 1
       },
       {
-        "affiliation": "Department of Civil and Environmental, University of Illinois",
-        "affiliation_number": 2
-      },
-      {
         "affiliation": "Department of Environmental and Resources, Zhejiang University",
-        "affiliation_number": 3
+        "affiliation_number": 2
       }
     ],
     "ci_source": {
@@ -75,15 +67,15 @@
       "repo_slug": "Saran-Wang/dsproject",
       "repo_owner": "Saran-Wang",
       "repo_name": "dsproject",
-      "commit": "893d55baa8236b9e0b08132950717f02ba7869b7",
-      "triggering_commit": "893d55baa8236b9e0b08132950717f02ba7869b7",
-      "build_url": "https://github.com/Saran-Wang/dsproject/commit/893d55baa8236b9e0b08132950717f02ba7869b7/checks",
+      "commit": "3417dde20c6fc3ab11c97af2c31577040d1fb306",
+      "triggering_commit": "3417dde20c6fc3ab11c97af2c31577040d1fb306",
+      "build_url": "https://github.com/Saran-Wang/dsproject/commit/3417dde20c6fc3ab11c97af2c31577040d1fb306/checks",
       "job_url": "https://github.com/Saran-Wang/dsproject/runs/run3"
     },
     "html_url": "https://Saran-Wang.github.io/dsproject/",
     "pdf_url": "https://Saran-Wang.github.io/dsproject/manuscript.pdf",
-    "html_url_versioned": "https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/",
-    "pdf_url_versioned": "https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/manuscript.pdf",
+    "html_url_versioned": "https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/",
+    "pdf_url_versioned": "https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/manuscript.pdf",
     "manubot_version": "0.4.1",
     "rootstock_commit": "97b294802ffcd39071b6e5b8ab59f60faf4be118",
     "manuscript_stats": {

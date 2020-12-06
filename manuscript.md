@@ -41,9 +41,7 @@ header-includes: '<!--
 
   <meta name="citation_author" content="Shiyuan Wang" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
   <meta name="twitter:creator" content="@johndoe" />
 
@@ -65,11 +63,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +99,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/3417dde20c6fc3ab11c97af2c31577040d1fb306/))
 was automatically generated
-from [Saran-Wang/dsproject@893d55b](https://github.com/Saran-Wang/dsproject/tree/893d55baa8236b9e0b08132950717f02ba7869b7)
+from [Saran-Wang/dsproject@3417dde](https://github.com/Saran-Wang/dsproject/tree/3417dde20c6fc3ab11c97af2c31577040d1fb306)
 on December 6, 2020.
 </em></small>
 
@@ -112,15 +110,12 @@ on December 6, 2020.
 
 
 + **Shiyuan Wang**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
     · ![GitHub icon](images/github.svg){.inline_icon}
     [Saran-Wang](https://github.com/Saran-Wang)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [johndoe](https://twitter.com/johndoe)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Department of Civil and Environmental, University of Illinois
   </small>
 
 + **Weiqi Ni**<br>
