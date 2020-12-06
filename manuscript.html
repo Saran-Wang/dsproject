@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/86cc1c34c668c2169eb4f48f367e014a7494ce03/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/86cc1c34c668c2169eb4f48f367e014a7494ce03/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/86cc1c34c668c2169eb4f48f367e014a7494ce03/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/22ea961d7dfbc0af7dcd831736bb9b5a98fa15d2/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/22ea961d7dfbc0af7dcd831736bb9b5a98fa15d2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/22ea961d7dfbc0af7dcd831736bb9b5a98fa15d2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,9 +77,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/86cc1c34c668c2169eb4f48f367e014a7494ce03/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/22ea961d7dfbc0af7dcd831736bb9b5a98fa15d2/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/86cc1c34c668c2169eb4f48f367e014a7494ce03">Saran-Wang/dsproject@86cc1c3</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/22ea961d7dfbc0af7dcd831736bb9b5a98fa15d2">Saran-Wang/dsproject@22ea961</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -247,13 +247,22 @@ From figure <a href="#fig:Luminance">4</a> we could also see that it’s also no
 </figure>
 </div>
 <ol start="3" type="1">
-<li><p>Contrast
-<span id="eq:absolute-contrast" class="eqnos"><span class="math display">\[Absolute Contrast = \frac{I(i_{max}, j_{max}) - I(i_{min}, j_{min})}{I(i_{max}, j_{max})+ I(i_{min},  j_{min})}\]</span><span class="eqnos-number">(1)</span></span> 
-<span id="eq:RMS-contrast" class="eqnos"><span class="math display">\[RMS of Contrast = \sqrt{\frac{1}{MN}\sum{i=1}{N}\sum{j=1}{M}(I(i,j)-avg(I))^2}\]</span><span class="eqnos-number">(2)</span></span> 
-where I(i,j) is luminance intensity at (i,j) pixel.</p></li>
-<li><p>Entropy</p></li>
-<li><p>Transmission and amount of haze removed</p></li>
-<li><p>Number of cars on streets</p></li>
+<li>Contrast
+The image contrast is defined as the difference between the max and min luminance intensity of an image. Study <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role="doc-biblioref">2</a>]</span> shows that the higher the PM concentrations, the lower contrast would be. It makes sense since the image would become vague and lighter when there are more particulate matters in the air. And often, one image would have pixels with highest intensity of 255, as well as lowest intensity of 0. Therefore, we can’t see much difference if we want to derive the absolute contrast, since it would be 1 for most of those images. Therefore, we use root mean square of image intensity to describe image contrast.</li>
+</ol>
+<p><span id="eq:absolute-contrast" class="eqnos"><span class="math display">\[Absolute_Contrast = \frac{I(i_{max}, j_{max}) - I(i_{min}, j_{min})}{I(i_{max}, j_{max})+ I(i_{min}, j_{min})}\]</span><span class="eqnos-number">(1)</span></span> 
+<span id="eq:RMS-contrast" class="eqnos"><span class="math display">\[RMS_Contrast = \sqrt{\frac{1}{MN}\sum_{i=1}^{N}\sum_{j=1}^{M}(I(i,j)-avg(I))^2}\]</span><span class="eqnos-number">(2)</span></span> 
+where I(i,j) is luminance intensity at (i,j) pixel.</p>
+<p>From figure <a href="#fig:Contrast">5</a> we could see that the distribution is a little bit right-skewed with a small peak at around 35, and a larger one at around 50.</p>
+<div id="fig:Contrast" class="fignos">
+<figure>
+<img src="images/Contrast.png" style="height:3in" alt="" /><figcaption><span>Figure 5:</span> <strong>Contrast Distribution</strong></figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Entropy</li>
+<li>Transmission and amount of haze removed</li>
+<li>Number of cars on streets</li>
 </ol>
 <h4 id="model-selection">Model Selection</h4>
 <h3 class="page_break_before" id="gemmas-model">Gemma’s Model</h3>
@@ -268,6 +277,12 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p></li>
 Kris Y. Hong, Pedro O. Pinheiro, Scott Weichenthal<br />
 <em>Environment International</em> (2020-11) <a href="https://doi.org/ghnh6n">https://doi.org/ghnh6n</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.envint.2020.106044">10.1016/j.envint.2020.106044</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32805577">32805577</a></p>
+</div>
+<div id="ref-9840lw8i">
+<p>2. <strong>Particle Pollution Estimation Based on Image Analysis</strong> <br />
+Chenbin Liu, Francis Tsow, Yi Zou, Nongjian Tao<br />
+<em>PLOS ONE</em> (2016-02-01) <a href="https://doi.org/ghnjkc">https://doi.org/ghnjkc</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pone.0145955">10.1371/journal.pone.0145955</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26828757">26828757</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734658">PMC4734658</a></p>
 </div>
 </div>
 <!-- default theme -->
