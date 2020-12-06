@@ -13,6 +13,7 @@ Gemma
 Gemma’s
 genralized
 GlobalAveragePooling
+GradientBoostingRegressor
 grayscale
 GridSearchCV
 hyperparameters
@@ -30,6 +31,7 @@ optimizers
 orginial
 Otsu
 PloS
+RandomForestRegressor
 relu
 RGB
 RMS

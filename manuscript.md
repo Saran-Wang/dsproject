@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/28550ab7c956e4a56d3301f1533e0cadfcc98943/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/))
 was automatically generated
-from [Saran-Wang/dsproject@28550ab](https://github.com/Saran-Wang/dsproject/tree/28550ab7c956e4a56d3301f1533e0cadfcc98943)
+from [Saran-Wang/dsproject@8c07a6a](https://github.com/Saran-Wang/dsproject/tree/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb)
 on December 6, 2020.
 </em></small>
 
@@ -214,7 +214,7 @@ Extract the total particle concentration data based on different dates and then 
 
 ![
 **Date-based Particle Concentration**
-](images/xueao1.png "Date-based Particle Concentration"){#fig:wide-image}
+](images/xueao1.png "Wide image"){#fig:Date-based width=7in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
@@ -371,13 +371,32 @@ Image contrast is another important feature when predicting the PM concentration
 
 (4) Image and numerical data
 
-Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, I found the correlation between image data and the air pollution concentration is not very high ,and the numerical data given in both train and test dataset is more important. 
+Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high ,and the numerical data given in both train and test dataset is more important for training. 
 
 (5) Training and validation data
 
 Validation is essential when training and evaluating the models. Thus, after processing the train dataset with the similiar steps in EDA, I split the processed train data (X,y) into two parts: one part (80% of the original train dataset: X_train, y_train) for training, the other part (20% of the original train dataset: X_validation, y_validation) for validation. The detailed split can be realized by using train_test_split, and set the validation_size to be 0.2.
 
-In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model. 
+In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model.
+
+#### 2.	Model introduction and evaluation
+
+Here I will evaluate and compare four different models. They are Ridge regression, Lasso regression, RandomForestRegressor and GradientBoostingRegressor. 
+
+**Ridge regression**
+Reference: [@https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf ]
+
+![
+**Ridge Regression Models**
+](images/xueao2.png "Wide image"){#fig:Ridge width=7in}
+
+**Lasso regression**
+Reference: [@https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters]
+
+Lasso solutions are quadratic programming problems. The goal of the Lasso regression is to minimize:
+
+\sum_{i=1}^{n} \left ( y_i\, -\, \sum_{j}^{} x_i_j\beta_j \right )^2+\lambda \sum_{j=1}^{p}\left | \beta _j \right |
+
 
 ## Conclusion {.page_break_before}
 All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions. 

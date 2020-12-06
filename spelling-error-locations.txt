@@ -54,6 +54,7 @@ content/01.abstract.md:164:spearman
 content/01.abstract.md:173:dataset
 content/01.abstract.md:173:GridSearchCV
 content/01.abstract.md:173:MSE
+content/01.abstract.md:173:RandomForestRegressor
 content/01.abstract.md:173:RSME
 content/01.abstract.md:176:Gemma
 content/01.abstract.md:176:Gemma's
@@ -121,3 +122,5 @@ content/01.abstract.md:229:EDA
 content/01.abstract.md:229:similiar
 content/01.abstract.md:231:hyperparameters
 content/01.abstract.md:231:slected
+content/01.abstract.md:235:GradientBoostingRegressor
+content/01.abstract.md:235:RandomForestRegressor
