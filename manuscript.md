@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/98cbe3f860f37cda81d457baa2d7862a2b5b7acc/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/98cbe3f860f37cda81d457baa2d7862a2b5b7acc/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/98cbe3f860f37cda81d457baa2d7862a2b5b7acc/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/802e935139a51c67bc4f02d40b92a9c47fb694bb/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/98cbe3f860f37cda81d457baa2d7862a2b5b7acc/))
 was automatically generated
-from [Saran-Wang/dsproject@802e935](https://github.com/Saran-Wang/dsproject/tree/802e935139a51c67bc4f02d40b92a9c47fb694bb)
+from [Saran-Wang/dsproject@98cbe3f](https://github.com/Saran-Wang/dsproject/tree/98cbe3f860f37cda81d457baa2d7862a2b5b7acc)
 on December 6, 2020.
 </em></small>
 
@@ -181,12 +181,19 @@ Table: Variables Explanation
 
 2. Data Cleaning
 
-- Delete the useless columns in the dataset
+**Delete the useless columns in the dataset**
  -	The first column titled unnamed is meaningless.
  -	The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing  particle sizes, which can be ignored.
  -	The column titled "Total Conc.(#/cm³)" is an output variable and should not be used.
 
-- Delete the rows with equipment error during sampling
+**Delete the rows with equipment error during sampling**
+-	train = train[train['Errors'] == 0].reset_index(drop=True)
+  Errors = error that the air measurement equipment has during sampling (0=no)
+  only keep the rows with no error (value = 0)
+-	train = train[train['Alarm Triggered'] == 0].reset_index(drop=True)
+  Alarm Triggered = instrumental warning shown during sampling (0=no)
+ only keep the rows with no warning (value = 0)
+
 3. Visualization of the distributions of varibales
 
 Figure @fig:Distributions shows that "Wind_Speed", "Camera_Angle", "Distance_to_Road" and "Elevation" are all in discrete distributions, while "Temp(C)" are in continuous distribution. "Pressure(kPa)" has four clusters. It should also be noted that the "Dead Time" almost shares the same distribution as "Total".
