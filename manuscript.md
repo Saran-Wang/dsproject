@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7/))
 was automatically generated
-from [Saran-Wang/dsproject@fef7260](https://github.com/Saran-Wang/dsproject/tree/fef72609b6353553c11cc5f1c3526048cdb43ee2)
+from [Saran-Wang/dsproject@8005329](https://github.com/Saran-Wang/dsproject/tree/80053292c6a3356a0d4e3a596265c3c0bdbe1bb7)
 on December 6, 2020.
 </em></small>
 
@@ -255,7 +255,12 @@ ImContrast = skimage.measure.shannon_entropy(greyIm)
 
 Figure @fig:Entropy shows the entropy of figure @fig:orginial1 .
 
-![**Original Image**](images/111.png "Wide image"){#fig:orginial1 width=3.5} ![**Entropy**](images/222.png "Wide image"){#fig:Entropy width=3.5}
+![
+**Original Image**
+](images/111.png "Wide image"){#fig:orginial1 width=3.5} 
+![
+**Entropy**
+](images/222.png "Wide image"){#fig:Entropy width=3.5}
 
 5. Transmission and amount of haze removed
 
