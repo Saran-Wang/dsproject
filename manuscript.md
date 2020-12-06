@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/))
 was automatically generated
-from [Saran-Wang/dsproject@8c07a6a](https://github.com/Saran-Wang/dsproject/tree/8c07a6a0a9d626e4a4a9ed1420e7880090af8bfb)
+from [Saran-Wang/dsproject@14d3391](https://github.com/Saran-Wang/dsproject/tree/14d3391dfb793c0537d36e3897c87771f13c6348)
 on December 6, 2020.
 </em></small>
 
@@ -384,18 +384,20 @@ In the following parts, I chose to use the numerical data to train my models: fi
 Here I will evaluate and compare four different models. They are Ridge regression, Lasso regression, RandomForestRegressor and GradientBoostingRegressor. 
 
 **Ridge regression**
-Reference: [@https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf ]
+
+Reference: https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf
 
 ![
 **Ridge Regression Models**
 ](images/xueao2.png "Wide image"){#fig:Ridge width=7in}
 
 **Lasso regression**
-Reference: [@https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters]
+
+Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters
 
 Lasso solutions are quadratic programming problems. The goal of the Lasso regression is to minimize:
 
-\sum_{i=1}^{n} \left ( y_i\, -\, \sum_{j}^{} x_i_j\beta_j \right )^2+\lambda \sum_{j=1}^{p}\left | \beta _j \right |
+Z = \sum_{i=1}^{n} \left ( y_i\, -\, \sum_{j}^{} x_i_j\beta_j \right )^2+\lambda \sum_{j=1}^{p}\left | \beta _j \right |
 
 
 ## Conclusion {.page_break_before}
