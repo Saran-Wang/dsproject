@@ -17,7 +17,7 @@ imagenet
 jpg
 keras
 kPa
-luminance
+Luminance
 MSE
 multivariable
 optimizers
