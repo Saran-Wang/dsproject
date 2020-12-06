@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/cb83846603bd0f60b70587eb10e488dbfb8c5f26/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/))
 was automatically generated
-from [Saran-Wang/dsproject@cb83846](https://github.com/Saran-Wang/dsproject/tree/cb83846603bd0f60b70587eb10e488dbfb8c5f26)
+from [Saran-Wang/dsproject@0ce566c](https://github.com/Saran-Wang/dsproject/tree/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc)
 on December 6, 2020.
 </em></small>
 
@@ -148,13 +148,27 @@ on December 6, 2020.
 
 
 ## Abstract {.page_break_before}
+
 ## Introduction {.page_break_before}
+
 ## Literature review {.page_break_before}
+There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions.
+
+
 ## Model {.page_break_before}
 ### Shiyuan's model {.page_break_before}
-Citation by the DOI [@doi:10.1016/j.envint.2020.106044].
+My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.
+
+#### Image Extraction
+
+#### Model selection
+
+
 ### Gemma's model {.page_break_before}
+
 ### Weiqi's model {.page_break_before}
+
+
 ### Xueao's model {.page_break_before}
 ## Conclusion {.page_break_before}
 
