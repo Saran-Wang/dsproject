@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/))
 was automatically generated
-from [Saran-Wang/dsproject@13be6db](https://github.com/Saran-Wang/dsproject/tree/13be6dbb139670c3b6694c773d175f72155ecc5f)
+from [Saran-Wang/dsproject@5818726](https://github.com/Saran-Wang/dsproject/tree/5818726b792af46cdb1bcea96256ae3ff7b0b258)
 on December 6, 2020.
 </em></small>
 
@@ -152,8 +152,7 @@ on December 6, 2020.
 ## Introduction {.page_break_before}
 
 ## Literature Review {.page_break_before}
-There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. 
-
+There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,& Tao (2016) [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting. 
 
 ## Exploratory Data Anlysis {.page_break_before}
 1. Variables Explanation
@@ -351,7 +350,7 @@ The recommended features to be extracted from hazy image are transmission rate, 
 Reference: Liu, C., Tsow, F., Zou, Y., & Tao, N. (2016). Particle pollution estimation based on image analysis. PloS one, 11(2), e0145955.
 Link: [@doi:10.1371/journal.pone.0145955]
 
-**Convert the images into gray scale or binary images**
+- **Convert the images into gray scale or binary images**
 
 The color images were converted into gray scale images, and then further into binary images with Otsu method. The Otsu method converts gray scale to binary images by selecting a threshold that minimizes the intra-class variance or maximizing the inter-class variance. The detailed coding process is shown in my Kaggle notebook. Part of the code is shown below.
 
@@ -365,7 +364,7 @@ plt.imshow(gray, cmap=plt.get_cmap('gray'), vmin=0, vmax=1)
 plt.show()
 ```
 
-**Feature extraction**
+- **Feature extraction**
 
 (1) Transmission
 
@@ -422,19 +421,19 @@ for estimator in estimators:
     print(estimator[0], 'CV accuracy: %.3f +/- %.3f' % (np.mean(scores), np.std(scores)))
 ```
 
-**Ridge regression**
+- **Ridge regression**
 
 Reference: https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf
 
 ![
 **Ridge Regression Models**
-](images/xueao2.png "Wide image"){#fig:Ridge width=7in}
+](images/xueao2.png "Wide image"){#fig:Ridge width=6in}
 
-**Lasso regression**
+- **Lasso regression**
 
 Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters
 
-**RandomForestRegressor**
+- **RandomForestRegressor**
 
 Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb 
 
@@ -444,7 +443,7 @@ Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc
 **Random Forest Regression: Process**
 ](images/xueao3.png "Wide image"){#fig:RandomForest width=4in}
 
-**GradientBoostingRegressor**
+- **GradientBoostingRegressor**
 
 Reference: https://en.wikipedia.org/wiki/Gradient_boosting 
 
@@ -460,7 +459,7 @@ Reference: https://en.wikipedia.org/wiki/Gradient_boosting
 
 ![
 **Evaluation Results**
-](images/xueao5.png "Wide image"){#fig:Evaluation width=5in}
+](images/xueao5.png "Wide image"){#fig:Evaluation width=3in}
 
 #### 3.	Tune hyperparameters using GridSearchCV
 
@@ -487,6 +486,13 @@ model.fit(X,y)
 Pred = model.predict(X_test)
 sample['Total'] = Pred
 ```
+#### 5.	Summary for modeling process
+
+The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. When predicting for the test dataset, the root mean squared error of this model is 10.74.
+
+![
+**Flowchart of Modeling**
+](images/xueao8.png "Wide image"){#fig:Flowchart width=3in}
 
 ## Conclusion {.page_break_before}
 All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions. 
