@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/9790dad5922dda117a0a7763193e6eb2436935eb">Saran-Wang/dsproject@9790dad</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/fef72609b6353553c11cc5f1c3526048cdb43ee2">Saran-Wang/dsproject@fef7260</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -324,12 +324,12 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 <ol start="4" type="1">
 <li>Entropy</li>
 </ol>
-<p>Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result (10.1371/journal.pone.0145955). To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: <em>skimage</em> to calculate image entropy directly. The example code is shown as below:</p>
+<p>Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role="doc-biblioref">2</a>]</span> . To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: <em>skimage</em> to calculate image entropy directly. The example code is shown as below:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>colorIm <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>greyIm <span class="op">=</span> colorIm.convert(<span class="st">&#39;L&#39;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>ImContrast <span class="op">=</span> skimage.measure.shannon_entropy(greyIm)</span></code></pre></div>
-<p>Figure ?? shows the entropy of figure ??.
-<img src="images/111.png" title="Wide image" id="fig:orginial1" alt="Original Image" /> <img src="images/222.png" title="Wide image" id="fig:Entropy" alt="Entropy" /></p>
+<p>Figure ?? shows the entropy of figure ?? .</p>
+<p><img src="images/111.png" title="Wide image" id="fig:orginial1" width="3" alt="Original Image" /> <img src="images/222.png" title="Wide image" id="fig:Entropy" width="3" alt="Entropy" /></p>
 <ol start="5" type="1">
 <li><p>Transmission and amount of haze removed</p></li>
 <li><p>Number of cars on streets</p></li>

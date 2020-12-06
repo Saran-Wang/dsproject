@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/9790dad5922dda117a0a7763193e6eb2436935eb/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/fef72609b6353553c11cc5f1c3526048cdb43ee2/))
 was automatically generated
-from [Saran-Wang/dsproject@9790dad](https://github.com/Saran-Wang/dsproject/tree/9790dad5922dda117a0a7763193e6eb2436935eb)
+from [Saran-Wang/dsproject@fef7260](https://github.com/Saran-Wang/dsproject/tree/fef72609b6353553c11cc5f1c3526048cdb43ee2)
 on December 6, 2020.
 </em></small>
 
@@ -245,7 +245,7 @@ From figure @fig:Contrast we could see that the distribution is a little bit rig
 
 4. Entropy
 
-Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result (10.1371/journal.pone.0145955). To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: *skimage* to calculate image entropy directly. The example code is shown as below:
+Image entropy is a statistical measure of randomness that quantifies information contained in an image. Usually, an image would lose its details with the increasing PM concentrations, and the image entropy will decrease as a result [@doi:10.1371/journal.pone.0145955] . To do the calculation, I first converted the original RGB image to grayscale image and then used a module within python: *skimage* to calculate image entropy directly. The example code is shown as below:
 
 ```python
 colorIm = Image.open('../input/pollutionvision/frames/frames/video06082020_0.jpg')
@@ -253,8 +253,9 @@ greyIm = colorIm.convert('L')
 ImContrast = skimage.measure.shannon_entropy(greyIm)
 ```
 
-Figure @fig:Entropy shows the entropy of figure @fig:orginial1.
-![**Original Image**](images/111.png "Wide image"){#fig:orginial1} ![**Entropy**](images/222.png "Wide image"){#fig:Entropy}
+Figure @fig:Entropy shows the entropy of figure @fig:orginial1 .
+
+![**Original Image**](images/111.png "Wide image"){#fig:orginial1 width=3.5} ![**Entropy**](images/222.png "Wide image"){#fig:Entropy width=3.5}
 
 5. Transmission and amount of haze removed
 
