@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/))
 was automatically generated
-from [Saran-Wang/dsproject@14d3391](https://github.com/Saran-Wang/dsproject/tree/14d3391dfb793c0537d36e3897c87771f13c6348)
+from [Saran-Wang/dsproject@c535ced](https://github.com/Saran-Wang/dsproject/tree/c535cede73d5a8824646b212bc2dd04e8d6d995f)
 on December 6, 2020.
 </em></small>
 
@@ -214,7 +214,7 @@ Extract the total particle concentration data based on different dates and then 
 
 ![
 **Date-based Particle Concentration**
-](images/xueao1.png "Wide image"){#fig:Date-based width=7in}
+](images/xueao1.png "Wide image"){#fig:Date-based width=4in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
@@ -398,6 +398,34 @@ Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20reg
 Lasso solutions are quadratic programming problems. The goal of the Lasso regression is to minimize:
 
 Z = \sum_{i=1}^{n} \left ( y_i\, -\, \sum_{j}^{} x_i_j\beta_j \right )^2+\lambda \sum_{j=1}^{p}\left | \beta _j \right |
+
+**RandomForestRegressor**
+
+Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb 
+
+“A Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap Aggregation, commonly known as bagging. What is bagging you may ask? Bagging, in the Random Forest method, involves training each decision tree on a different data sample where sampling is done with replacement. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.”
+
+![
+**Random Forest Regression: Process**
+](images/xueao3.png "Wide image"){#fig:RandomForest width=4in}
+
+**GradientBoostingRegressor**
+
+Reference: https://en.wikipedia.org/wiki/Gradient_boosting 
+
+![
+**Gradient Boosting Algorithm**
+](images/xueao4.png "Wide image"){#fig:GradientBoosting width=7in}
+
+**Evaluation method: cross_val_score**: cross_val_score
+
+**Scoring standard**: r2
+
+**Evaluation results**:
+
+![
+**Evaluation results**
+](images/xueao5.png "Wide image"){#fig:Evaluation width=5in}
 
 
 ## Conclusion {.page_break_before}

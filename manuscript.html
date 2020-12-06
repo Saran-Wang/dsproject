@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/14d3391dfb793c0537d36e3897c87771f13c6348/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/c535cede73d5a8824646b212bc2dd04e8d6d995f/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/14d3391dfb793c0537d36e3897c87771f13c6348">Saran-Wang/dsproject@14d3391</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/c535cede73d5a8824646b212bc2dd04e8d6d995f">Saran-Wang/dsproject@c535ced</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -296,7 +296,7 @@ Department of Civil and Environmental, University of Illinois
 - Group by “Date” and obtain the date-based concentration diagram</p>
 <div id="fig:Date-based" class="fignos">
 <figure>
-<img src="images/xueao1.png" style="width:7in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
+<img src="images/xueao1.png" style="width:4in" alt="" /><figcaption><span>Figure 3:</span> <strong>Date-based Particle Concentration</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="model">Model</h2>
@@ -441,6 +441,29 @@ Link: <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role
 <p>Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters</p>
 <p>Lasso solutions are quadratic programming problems. The goal of the Lasso regression is to minimize:</p>
 <p>Z = <em>{i=1}^{n} ( y_i, -, </em>{j}^{} x_i_j<em>j )^2+</em>{j=1}^{p}| _j |</p>
+<p><strong>RandomForestRegressor</strong></p>
+<p>Reference: https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb</p>
+<p>“A Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap Aggregation, commonly known as bagging. What is bagging you may ask? Bagging, in the Random Forest method, involves training each decision tree on a different data sample where sampling is done with replacement. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.”</p>
+<div id="fig:RandomForest" class="fignos">
+<figure>
+<img src="images/xueao3.png" style="width:4in" alt="" /><figcaption><span>Figure 13:</span> <strong>Random Forest Regression: Process</strong></figcaption>
+</figure>
+</div>
+<p><strong>GradientBoostingRegressor</strong></p>
+<p>Reference: https://en.wikipedia.org/wiki/Gradient_boosting</p>
+<div id="fig:GradientBoosting" class="fignos">
+<figure>
+<img src="images/xueao4.png" style="width:7in" alt="" /><figcaption><span>Figure 14:</span> <strong>Gradient Boosting Algorithm</strong></figcaption>
+</figure>
+</div>
+<p><strong>Evaluation method: cross_val_score</strong>: cross_val_score</p>
+<p><strong>Scoring standard</strong>: r2</p>
+<p><strong>Evaluation results</strong>:</p>
+<div id="fig:Evaluation" class="fignos">
+<figure>
+<img src="images/xueao5.png" style="width:5in" alt="" /><figcaption><span>Figure 15:</span> <strong>Evaluation results</strong></figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
 <p>All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions.</p>
 <h2 class="page_break_before" id="references">References</h2>
