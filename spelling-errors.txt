@@ -25,12 +25,13 @@ Kaggle
 keras
 kPa
 Liu
-luminance
+Luminance
 MSE
 multivariable
 optimizers
 orginial
 Otsu
+Ouput
 PloS
 RandomForest
 RandomForestRegressor
