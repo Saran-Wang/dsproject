@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,9 +70,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc">Saran-Wang/dsproject@0ce566c</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/3da114358ee09098feb479dad50c0a25a774e330">Saran-Wang/dsproject@3da1143</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -110,6 +110,18 @@ Department of Civil and Environmental, University of Illinois
 <h3 class="page_break_before" id="shiyuans-model">Shiyuan’s model</h3>
 <p>My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.</p>
 <h4 id="image-extraction">Image Extraction</h4>
+<p>First I want to digitize images by extracting image features, there are mainly 6 features I want to extract: RGB, image luminance, image contrast, image entropy, transmission and amount of haze removed and number of cars on streets.</p>
+<ol type="1">
+<li><p>RGB
+The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
+For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
+The figure below shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p></li>
+<li><p>Luminance</p></li>
+<li><p>Contrast</p></li>
+<li><p>Entropy</p></li>
+<li><p>Transmission and amount of haze removed</p></li>
+<li><p>Number of cars on streets</p></li>
+</ol>
 <h4 id="model-selection">Model selection</h4>
 <h3 class="page_break_before" id="gemmas-model">Gemma’s model</h3>
 <h3 class="page_break_before" id="weiqis-model">Weiqi’s model</h3>

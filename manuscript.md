@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/3da114358ee09098feb479dad50c0a25a774e330/))
 was automatically generated
-from [Saran-Wang/dsproject@0ce566c](https://github.com/Saran-Wang/dsproject/tree/0ce566c55b4e040e0a5fb4259dc8b6ecf2390fbc)
+from [Saran-Wang/dsproject@3da1143](https://github.com/Saran-Wang/dsproject/tree/3da114358ee09098feb479dad50c0a25a774e330)
 on December 6, 2020.
 </em></small>
 
@@ -160,6 +160,22 @@ There are many studies using digital camera and advanced algorithm to estimate t
 My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.
 
 #### Image Extraction
+
+First I want to digitize images by extracting image features, there are mainly 6 features I want to extract: RGB, image luminance, image contrast, image entropy, transmission and amount of haze removed and number of cars on streets.
+
+1. RGB
+The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
+For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
+The figure below shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.
+ 
+2. Luminance
+3. Contrast
+4. Entropy
+5. Transmission and amount of haze removed
+6. Number of cars on streets
+
+
+
 
 #### Model selection
 

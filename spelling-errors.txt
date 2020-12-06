@@ -4,7 +4,9 @@ gclark
 Gemma
 Gemma’s
 genralized
+Luminance
 multivariable
+RGB
 Shiyuan
 Shiyuan’s
 ultrafine
