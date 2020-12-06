@@ -6,7 +6,7 @@ Gemma
 Gemma’s
 genralized
 kPa
-luminance
+Luminance
 multivariable
 RGB
 Shiyuan
