@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/be581674fc85d19b3f0a401427b2952ad2afff06/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/be581674fc85d19b3f0a401427b2952ad2afff06/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/be581674fc85d19b3f0a401427b2952ad2afff06/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/be581674fc85d19b3f0a401427b2952ad2afff06/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18/))
 was automatically generated
-from [Saran-Wang/dsproject@be58167](https://github.com/Saran-Wang/dsproject/tree/be581674fc85d19b3f0a401427b2952ad2afff06)
+from [Saran-Wang/dsproject@92d6e89](https://github.com/Saran-Wang/dsproject/tree/92d6e899cac4e99e90d5b8cc8f6da296b5d8de18)
 on December 6, 2020.
 </em></small>
 
@@ -439,7 +439,7 @@ for estimator in estimators:
 **Ridge Regression Models**
 ](images/xueao2.png "Wide image"){#fig:Ridge width=6in}
 
-- **Lasso regression** [@https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters]
+- **Lasso regression** [@https://en.wikipedia.org/wiki/Lasso_(statistics)]
 
 - **RandomForestRegressor** [@https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb]
 
@@ -447,7 +447,7 @@ for estimator in estimators:
 
 ![
 **Random Forest Regression: Process**
-](images/xueao_progress.png "Wide image"){#fig:RandomForest width=4in}
+](images/Forest.png "Wide image"){#fig:RandomForest width=4in}
 
 - **GradientBoostingRegressor** [@https://en.wikipedia.org/wiki/Gradient_boosting ]
 
