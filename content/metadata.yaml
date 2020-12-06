@@ -8,8 +8,7 @@ lang: en-US
 authors:
   - github: Saran-Wang
     name: Shiyuan Wang
-    initials: WSY
-    twitter: johndoe
+    initials: S. W.
     email: shiyuan8@illinois.edu
     affiliations:
       - Department of Civil and Environmental, University of Illinois
@@ -20,3 +19,15 @@ authors:
     affiliations:
       - Department of Civil and Environmental, University of Illinois
       - Department of Environmental and Resources, Zhejiang University
+   - github: 441gclark
+    name: Gemma Clark
+    initials: G. C.
+    email: gemmagc2@illinois.edu
+    affiliations:
+      - Department of Civil and Environmental, University of Illinois
+   - github: XueaoLi
+    name: Xueao Li
+    initials: X. L.
+    email: xueaoli2@illinois.edu
+    affiliations:
+      - Department of Civil and Environmental, University of Illinois
