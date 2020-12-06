@@ -1,6 +1,7 @@
 Anlysis
 Conc
 Convolutional
+cvlib
 dataset
 Dev
 gclark
@@ -10,7 +11,7 @@ genralized
 grayscale
 GridSearchCV
 kPa
-Luminance
+luminance
 MSE
 multivariable
 orginial
