@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/0ef85a2207399deb46802a6972ec7cab0448c53b/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/))
 was automatically generated
-from [Saran-Wang/dsproject@0ef85a2](https://github.com/Saran-Wang/dsproject/tree/0ef85a2207399deb46802a6972ec7cab0448c53b)
+from [Saran-Wang/dsproject@3742f41](https://github.com/Saran-Wang/dsproject/tree/3742f416c1b5ad34fb62557b996cdb667dbc6508)
 on December 6, 2020.
 </em></small>
 
@@ -165,14 +165,14 @@ Figure @fig:Distributions shows that "Wind_Speed", "Camera_Angle", "Distance_to_
 
 ![
 **Variables Distribution**
-](images/Distributions.png "Wide image"){#fig:Distributions width=7.5in}
+](images/Distributions.png "Wide image"){#fig:Distributions width=7in}
 
 4. Correlations among variables
 From the correlation map @fig:Correlations we could see that "Dead Time" are extremely correlated with "Total", with a coefficient of 1, followed by  "Camera_Angle", "Pressure(kPa)" and "Distance_to_Road", with coefficient of 0.52, 0.49, 0.44 respectively. Here you may be curious why "Dead Time" could be so closely related to "Total", and there is one possible explanation: Actually, "Dead Time" is an instrument parameter, and if there are more PM concentrations in the air, the instrument need more time to process, and vice versa. 
 
 ![
 **Variables Correlations**
-](images/Correlation.png "Wide image"){#fig:Correlations width=7.5in}
+](images/Correlation.png "Wide image"){#fig:Correlations height=3in}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
@@ -199,7 +199,7 @@ From figure @fig:Luminance we could also see that it’s also normally distribut
 
 ![
 **Luminance Distribution**
-](images/Luminance.png "Wide image"){#fig:Luminance}
+](images/Luminance.png "Wide image"){#fig:Luminance height=3in}
 
 
 3. Contrast
