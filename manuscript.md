@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/547d797528c06d49f589318a3988d958dffdcd31/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15/))
 was automatically generated
-from [Saran-Wang/dsproject@547d797](https://github.com/Saran-Wang/dsproject/tree/547d797528c06d49f589318a3988d958dffdcd31)
+from [Saran-Wang/dsproject@638157f](https://github.com/Saran-Wang/dsproject/tree/638157f3b3aa9d65ba9b6ec31b71e2daf59b9f15)
 on December 6, 2020.
 </em></small>
 
@@ -204,6 +204,17 @@ From the correlation map @fig:Correlations we could see that "Dead Time" are ext
 ![
 **Variables Correlations**
 ](images/Correlation.png "Wide image"){#fig:Correlations height=3in}
+
+5. Visualize the total concentration based on different dates
+
+Extract the total particle concentration data based on different dates and then visualize it. Basic steps:
+- Extract the date information from the column called “Image_file”: take the image “video08052020_2771.jpg” as example, we will extract the number “0805” 
+- Add one column named “Date”: 0805 
+- Group by “Date” and obtain the date-based concentration diagram
+
+![
+**Date-based Particle Concentration**
+](images/xueao1.png "Date-based Particle Concentration"){#fig:wide-image}
 
 ## Model {.page_break_before}
 ### Shiyuan's Model {.page_break_before}
