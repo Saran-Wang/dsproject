@@ -1,10 +1,10 @@
 ---
 author-meta:
 - Shiyuan Wang
-- Jane Roe
+- Weiqi Ni
 bibliography:
 - content/manual-references.json
-date-meta: '2020-12-05'
+date-meta: '2020-12-06'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -23,9 +23,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Project 5 Pollution Vision" />
 
-  <meta name="dc.date" content="2020-12-05" />
+  <meta name="dc.date" content="2020-12-06" />
 
-  <meta name="citation_publication_date" content="2020-12-05" />
+  <meta name="citation_publication_date" content="2020-12-06" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -47,13 +47,11 @@ header-includes: '<!--
 
   <meta name="twitter:creator" content="@johndoe" />
 
-  <meta name="citation_author" content="Jane Roe" />
+  <meta name="citation_author" content="Weiqi Ni" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
+  <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Environmental and Resources, Zhejiang University" />
 
   <link rel="canonical" href="https://Saran-Wang.github.io/dsproject/" />
 
@@ -67,11 +65,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/595925b38b25d32031e085e95f3d342367fcc4b0/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/595925b38b25d32031e085e95f3d342367fcc4b0/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/595925b38b25d32031e085e95f3d342367fcc4b0/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,10 +101,10 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/595925b38b25d32031e085e95f3d342367fcc4b0/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/893d55baa8236b9e0b08132950717f02ba7869b7/))
 was automatically generated
-from [Saran-Wang/dsproject@595925b](https://github.com/Saran-Wang/dsproject/tree/595925b38b25d32031e085e95f3d342367fcc4b0)
-on December 5, 2020.
+from [Saran-Wang/dsproject@893d55b](https://github.com/Saran-Wang/dsproject/tree/893d55baa8236b9e0b08132950717f02ba7869b7)
+on December 6, 2020.
 </em></small>
 
 ## Authors
@@ -125,13 +123,11 @@ on December 5, 2020.
      · Funded by Grant XXXXXXXX
   </small>
 
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Weiqi Ni**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
+    [weiqini](https://github.com/weiqini)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Department of Civil and Environmental, University of Illinois; Department of Environmental and Resources, Zhejiang University
   </small>
 
 
