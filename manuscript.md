@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/5818726b792af46cdb1bcea96256ae3ff7b0b258/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/486274c5f27808eb5020e00a8561607292922dda/))
 was automatically generated
-from [Saran-Wang/dsproject@5818726](https://github.com/Saran-Wang/dsproject/tree/5818726b792af46cdb1bcea96256ae3ff7b0b258)
+from [Saran-Wang/dsproject@486274c](https://github.com/Saran-Wang/dsproject/tree/486274c5f27808eb5020e00a8561607292922dda)
 on December 6, 2020.
 </em></small>
 
@@ -179,12 +179,13 @@ Table: Variables Explanation
 {#tbl:Explanation}
 
 2. Data Cleaning
-- **Delete the useless columns in the dataset**
+
+**Delete the useless columns in the dataset**
 -	The first column titled unnamed is meaningless.
 -	The columns titled Median, Mean, Geo. Mean, Mode, and Geo. St. Dev. are parameters describing  particle sizes, which can be ignored.
 -	The column titled "Total Conc.(#/cm³)" is an output variable and should not be used.
 
-- **Delete the rows with equipment error during sampling**
+**Delete the rows with equipment error during sampling**
 -	train = train[train['Errors'] == 0].reset_index(drop=True), only keep the rows with no error (value = 0)
 -	train = train[train['Alarm Triggered'] == 0].reset_index(drop=True), only keep the rows with no warning (value = 0)
 
@@ -402,6 +403,13 @@ Under certain conditions, the method of extracting features from images helps wh
 (5) Training and validation data
 
 Validation is essential when training and evaluating the models. Thus, after processing the train dataset with the similiar steps in EDA, I split the processed train data (X,y) into two parts: one part (80% of the original train dataset: X_train, y_train) for training, the other part (20% of the original train dataset: X_validation, y_validation) for validation. The detailed split can be realized by using train_test_split, and set the validation_size to be 0.2.
+
+```python
+from sklearn.model_selection import train_test_split
+validation_size = 0.2
+seed = 3
+X_train, X_validation, y_train, y_validation = train_test_split(X, y, \ test_size=validation_size, random_state=seed)
+```
 
 In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model.
 
