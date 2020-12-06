@@ -54,9 +54,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,9 +70,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/3742f416c1b5ad34fb62557b996cdb667dbc6508/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/96fd2de8d9dab54595e902a5fc9dd8359b2d69eb">Saran-Wang/dsproject@96fd2de</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/3742f416c1b5ad34fb62557b996cdb667dbc6508">Saran-Wang/dsproject@3742f41</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -116,13 +116,23 @@ Department of Civil and Environmental, University of Illinois
 <li>Delete the rows with equipment error during sampling</li>
 </ul>
 <ol start="3" type="1">
-<li><p>Visualization of the distributions of varibales
-Figure ?? shows that “Wind_Speed”, “Camera_Angle”, “Distance_to_Road” and “Elevation” are all in discrete distributions, while “Temp(C)” are in continuous distribution. “Pressure(kPa)” has four clusters. It should also be noted that the “Dead Time” almost shares the same distribution as “Total”.
-<img src="images/Distributions.png" title="Wide image" id="fig:Distributions" style="width:9in" alt="Variables Distribution" /></p></li>
-<li><p>Correlations among variables
-From the correlation map ?? we could see that “Dead Time” are extremely correlated with “Total”, with a coefficient of 1, followed by “Camera_Angle”, “Pressure(kPa)” and “Distance_to_Road”, with coefficient of 0.52, 0.49, 0.44 respectively. Here you may be curious why “Dead Time” could be so closely related to “Total”, and there is one possible explanation: Actually, “Dead Time” is an instrument parameter, and if there are more PM concentrations in the air, the instrument need more time to process, and vice versa.
-<img src="images/Correlation.png" title="Wide image" id="fig:Correlations" style="width:9in" alt="Variables Correlations" /></p></li>
+<li>Visualization of the distributions of varibales
+Figure <a href="#fig:Distributions">1</a> shows that “Wind_Speed”, “Camera_Angle”, “Distance_to_Road” and “Elevation” are all in discrete distributions, while “Temp(C)” are in continuous distribution. “Pressure(kPa)” has four clusters. It should also be noted that the “Dead Time” almost shares the same distribution as “Total”.</li>
 </ol>
+<div id="fig:Distributions" class="fignos">
+<figure>
+<img src="images/Distributions.png" style="width:7in" alt="" /><figcaption><span>Figure 1:</span> <strong>Variables Distribution</strong></figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Correlations among variables
+From the correlation map <a href="#fig:Correlations">2</a> we could see that “Dead Time” are extremely correlated with “Total”, with a coefficient of 1, followed by “Camera_Angle”, “Pressure(kPa)” and “Distance_to_Road”, with coefficient of 0.52, 0.49, 0.44 respectively. Here you may be curious why “Dead Time” could be so closely related to “Total”, and there is one possible explanation: Actually, “Dead Time” is an instrument parameter, and if there are more PM concentrations in the air, the instrument need more time to process, and vice versa.</li>
+</ol>
+<div id="fig:Correlations" class="fignos">
+<figure>
+<img src="images/Correlation.png" style="height:3in" alt="" /><figcaption><span>Figure 2:</span> <strong>Variables Correlations</strong></figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="model">Model</h2>
 <h3 class="page_break_before" id="shiyuans-model">Shiyuan’s Model</h3>
 <p>My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.</p>
@@ -133,20 +143,20 @@ From the correlation map ?? we could see that “Dead Time” are extremely corr
 </ol>
 <p>The RGB color model is one of the most straightforward parameters describing an image. Intuitively, in this case, we may expect more blueness and greenness if the PM concentrations are low since the color of tree and sky would be brighter when the air conditions are good.
 For each image, after deriving the RGB of each pixel, we take the average of them, and then divide each value by 255 to normalize it.
-The figure below <a href="#fig:RGB">1</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
+The figure below <a href="#fig:RGB">3</a> shows the distributions of RGB in this dataset. We can see that they are nearly normally distributed with mean 0.45, 0.55 and 0.35 respectively. For blueness, we could see a second peak at around 0.42.</p>
 <div id="fig:RGB" class="fignos">
 <figure>
-<img src="images/RGB.png" alt="" /><figcaption><span>Figure 1:</span> <strong>RGB Distribution</strong></figcaption>
+<img src="images/RGB.png" alt="" /><figcaption><span>Figure 3:</span> <strong>RGB Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
 <li>Luminance</li>
 </ol>
 <p>Like RGB, luminance is also a very basic parameter describing an image, which could be an indicator of how bright the image will appear. The luminance of each image is calculated by taking the average of the luminance intensity of each pixel.
-From figure <a href="#fig:Luminance">2</a> we could also see that it’s also normally distributed with a mean of around 130.</p>
+From figure <a href="#fig:Luminance">4</a> we could also see that it’s also normally distributed with a mean of around 130.</p>
 <div id="fig:Luminance" class="fignos">
 <figure>
-<img src="images/Luminance.png" alt="" /><figcaption><span>Figure 2:</span> <strong>Luminance Distribution</strong></figcaption>
+<img src="images/Luminance.png" style="height:3in" alt="" /><figcaption><span>Figure 4:</span> <strong>Luminance Distribution</strong></figcaption>
 </figure>
 </div>
 <ol start="3" type="1">
