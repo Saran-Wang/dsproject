@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/69106dd9034a2957ba97b6467e8e3b134c090721/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/69106dd9034a2957ba97b6467e8e3b134c090721/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/69106dd9034a2957ba97b6467e8e3b134c090721/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/69106dd9034a2957ba97b6467e8e3b134c090721/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/13be6dbb139670c3b6694c773d175f72155ecc5f/))
 was automatically generated
-from [Saran-Wang/dsproject@69106dd](https://github.com/Saran-Wang/dsproject/tree/69106dd9034a2957ba97b6467e8e3b134c090721)
+from [Saran-Wang/dsproject@13be6db](https://github.com/Saran-Wang/dsproject/tree/13be6dbb139670c3b6694c773d175f72155ecc5f)
 on December 6, 2020.
 </em></small>
 
@@ -150,10 +150,6 @@ on December 6, 2020.
 ## Abstract {.page_break_before}
 
 ## Introduction {.page_break_before}
-Air quality has become a major concern for many cities around the world. Poor air quality in urban areas may cause various health problems for people who are exposed to it in their everyday life (Brunekreef, 2002). According to World Health Organisation (WHO), more than seven million persons are dying every year due to the air pollution and more than 80% of urban areas population lives in places where air quality over WHO guideline limits. Particularly, particulate matter in air is a public health hazard with both acute and chronic exposure. PM2.5 has found to cause about 3% of mortality from cardiopulmonary disease, 5% of mortality from cancer of the trachea, bronchus, and lung, and about 1% of mortality from acute respiratory infections in children under five year (Cohen. 2005). Therefore, it is a crucial to better monitoring and further reduce the air pollution. 
-The main sources of air pollution in urban areas are vehicle exhausts and industrial sites located around. Many cities have deployed a few advanced stations for air quality monitoring. However, the conventional air quality monitor equipment are high cost and time-consuming, which limited their implementations for quick, continuous and portable measurements. (Kaivonen, 2020)
-There are many research focus on the accurate air quality forecasts. Traditional approaches like chemistry-transport models (CTMs) and shallow statistical methods have the limitation of probing complex high-dimensional relationships from massive datasets with temporal and spatial heterogeneity. Recently, meachine learning has emerged as a advanced technology for air quality prediction and monitoring (Liao, 2020).
-In this project, air pollution concentration prediction from roadway surveillance video frames and corresponding numerical data of sensors and conditions is conducted with various modeling methods. The dataset provided in this project contain around 65,000 video images with measured PM2.5 values and numerical conditions as the training data and around 7,200 video images with numerical conditions only as the test data.
 
 ## Literature Review {.page_break_before}
 There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. 
@@ -357,17 +353,44 @@ Link: [@doi:10.1371/journal.pone.0145955]
 
 **Convert the images into gray scale or binary images**
 
-The color images were converted into gray scale images, and then further into binary images with Otsu method. The Otsu method converts gray scale to binary images by selecting a threshold that minimizes the intra-class variance or maximizing the inter-class variance. The detailed coding process is shown in my Kaggle notebook.
+The color images were converted into gray scale images, and then further into binary images with Otsu method. The Otsu method converts gray scale to binary images by selecting a threshold that minimizes the intra-class variance or maximizing the inter-class variance. The detailed coding process is shown in my Kaggle notebook. Part of the code is shown below.
+
+```python
+import matplotlib.image as mpimg
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
+img = mpimg.imread(r'C:\Users\xueao\Desktop\CEE 498DS\Project\video06182020_1271.png')     
+gray = rgb2gray(img)    
+plt.imshow(gray, cmap=plt.get_cmap('gray'), vmin=0, vmax=1)
+plt.show()
+```
 
 **Feature extraction**
 
-(1)Transmission
+(1) Transmission
 
-Transmission is an important feature when we want to predict the PM concentration based on the images or videos. Liu, Tsow, Zou,& Tao (2016)"Transmission can be used to describe the attenuation of scene radiance. To solve for the transmission and thus the attenuation with a single hazy image, the concept of dark channel has been introduced, which assumes the existence of some pixels with zero or very low intensity at least for one color channel in all the outdoor images."
+Transmission is an important feature when we want to predict the PM concentration based on the images or videos. Liu, Tsow, Zou,& Tao (2016)"Transmission can be used to describe the attenuation of scene radiance. To solve for the transmission and thus the attenuation with a single hazy image, the concept of dark channel has been introduced, which assumes the existence of some pixels with zero or very low intensity at least for one color channel in all the outdoor images." Part of the code is shown below. For full version, please check with the Kaggle competition notebook.
+
+```python
+def compute_transmission_rate(img,atmosphere_light_max,omega,dark_channel_img,guided_filter_radius,epsilon):
+    h,w=img.shape[:2]
+    img_gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    zero_mat=np.zeros((h,w))
+    transmition_rate_est=cv2.max(zero_mat,np.ones_like(zero_mat)-omega*dark_channel_img/atmosphere_light_max)
+    #transmission_rate = guied_filter(img_gray,transmition_rate_est, guided_filter_radius, epsilon)
+    transmission_rate=cv2.ximgproc.guidedFilter(img_gray.astype(np.float32),transmition_rate_est.astype(np.float32),guided_filter_radius,epsilon)
+    return transmission_rate
+```
 
 (2) RMS contrast
 
-Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),"Human visual perception of air quality is related to image contrast, or visibility." The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast.
+Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),"Human visual perception of air quality is related to image contrast, or visibility." The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast. Part of the code is shown below. For full version, please check with the Kaggle competition notebook.
+
+```python
+pre_contrast = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
+RMS_contrast = pre_contrast.std()
+RMS_contrast
+```
 
 (3)  Image entropy
 
@@ -375,7 +398,7 @@ Image contrast is another important feature when predicting the PM concentration
 
 (4) Image and numerical data
 
-Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high ,and the numerical data given in both train and test dataset is more important for training. 
+Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high. The numerical data given in both train and test dataset is more important for training. 
 
 (5) Training and validation data
 
@@ -386,6 +409,18 @@ In the following parts, I chose to use the numerical data to train my models: fi
 #### 2.	Model introduction and evaluation
 
 Here I will evaluate and compare four different models. They are Ridge regression, Lasso regression, RandomForestRegressor and GradientBoostingRegressor. 
+
+```python
+for estimator in estimators:
+    scores = cross_val_score(estimator=estimator[1],
+                            X=X_train,
+                            y=y_train,
+                            scoring='r2',
+                            cv=3,
+                            n_jobs=-1)
+    #print('CV accuracy scores: %s' % scores)
+    print(estimator[0], 'CV accuracy: %.3f +/- %.3f' % (np.mean(scores), np.std(scores)))
+```
 
 **Ridge regression**
 
@@ -398,10 +433,6 @@ Reference: https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Proce
 **Lasso regression**
 
 Reference: https://www.statisticshowto.com/lasso-regression/#:~:text=Lasso%20regression%20is%20a%20type,i.e.%20models%20with%20fewer%20parameters
-
-Lasso solutions are quadratic programming problems. The goal of the Lasso regression is to minimize:
-
-Z = \sum_{i=1}^{n} \left ( y_i\, -\, \sum_{j}^{} x_i_j\beta_j \right )^2+\lambda \sum_{j=1}^{p}\left | \beta _j \right |
 
 **RandomForestRegressor**
 
@@ -428,9 +459,34 @@ Reference: https://en.wikipedia.org/wiki/Gradient_boosting
 **Evaluation results**:
 
 ![
-**Evaluation results**
+**Evaluation Results**
 ](images/xueao5.png "Wide image"){#fig:Evaluation width=5in}
 
+#### 3.	Tune hyperparameters using GridSearchCV
+
+The  Evaluation results show that RandomForest and GradientBoosting have the best performance using the scoring standard of r2. Thus, I tune hyper parameters for the two models at the same time using GridSearchCV. For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].
+
+![
+**Best Scores and Best Parameters**
+](images/xueao6.png "Wide image"){#fig:Best width=8in}
+
+As shown above, the performance of the two models with their best parameters are both excellent. Thus, I will train two models:RandomForest and GradientBoosting at the same time and evaluate their RMSE to determine the best model. 
+
+#### 4.	Model training and selection 
+
+I will use the original train dataset (X,y) to train model rather than the 80% train dataset (X_train, y_train). It is because I have already split, got, and used the 20% train dataset (X_validation, y_validation) to evaluate and compare different models in the above steps. But now if we use the whole train dataset, the model will become more trained and accurate.
+
+-	RandomForestRegressor with max_depth = 10, n_estimators = 300
+-	GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500 
+
+Finally, I selected RandomForest as my model because after trial I find this model can lead to a reasonable RMSE value while GradientBoosting will lead to an unacceptably huge root mean squared error.
+
+```python
+model = RandomForestRegressor(max_depth = 10, n_estimators = 300,random_state = 3)
+model.fit(X,y)
+Pred = model.predict(X_test)
+sample['Total'] = Pred
+```
 
 ## Conclusion {.page_break_before}
 All of the team members found random forest models to produce the best results with the lowest root mean square error. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available, but a better model will be needed to produce more accurate predictions. 
