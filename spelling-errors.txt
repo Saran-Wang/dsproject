@@ -16,10 +16,10 @@ dataset
 datasets
 DBN
 dehaze
-Dehazed
+dehazed
 dehazedone
 dehazeroi
-dehazing
+Dehazing
 Dev
 droprate
 EDA
@@ -40,12 +40,12 @@ ImageDataGenerator
 imagenet
 intra
 jpg
-Kaggle
+kaggle
 keras
 kPa
 Liu
 LSTM
-Luminance
+luminance
 MaxPooling
 MSE
 multilayer
@@ -68,7 +68,7 @@ relu
 rescale
 RGB
 RMS
-RMSE
+rmse
 RMSPE
 RNN
 ROI

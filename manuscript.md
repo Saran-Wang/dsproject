@@ -69,11 +69,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/5bf42e034265732f64bfab00cf4806adc23518c4/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5bf42e034265732f64bfab00cf4806adc23518c4/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/5bf42e034265732f64bfab00cf4806adc23518c4/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/5bf42e034265732f64bfab00cf4806adc23518c4/))
 was automatically generated
-from [Saran-Wang/dsproject@9933543](https://github.com/Saran-Wang/dsproject/tree/993354340c05ee3b06e20ad624c1d22d07039778)
+from [Saran-Wang/dsproject@5bf42e0](https://github.com/Saran-Wang/dsproject/tree/5bf42e034265732f64bfab00cf4806adc23518c4)
 on December 7, 2020.
 </em></small>
 
@@ -340,7 +340,7 @@ As we can see in figure @fig:2cars, the left image has 2 cars on street, and we 
 
 ![
 **Five cars detected**
-](images/222.png "Wide image"){#fig:5cars width=3in}
+](images/777.png "Wide image"){#fig:5cars width=3in}
 
 Here comes the problem, this function could only detect the number of cars appearing on an image but can’t identify which is in motion. But the moving cars are actually the ones which contribute to PM concentrations at the very moment. However, in this case, I just keep the original detection results, since if there are more cars in the parking lot, I just assume it’s a traffic busy day, on which the PM concentrations would be higher than normal days.
 
