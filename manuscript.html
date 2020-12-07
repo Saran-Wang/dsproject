@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8">Saran-Wang/dsproject@fad08d4</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/e7b1d924348f6581008fba4d17e35e746db07bf2">Saran-Wang/dsproject@e7b1d92</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -401,12 +401,10 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <img src="images/Gemma1.png" id="fig:NumericNN_MSE" style="height:3in" alt="Numeric Neural Network Mean Square Error" /></p>
 <h4 id="convolutional-neural-network-image-data">Convolutional Neural Network (Image Data)</h4>
 <p>To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup.
-<strong>Image Neural Network Mean Square Error</strong>
-](images/Gemma2.png){#fig:ImageNN_MSE height=3in}</p>
+<img src="images/Gemma2.png" id="fig:ImageNN_MSE" style="height:3in" alt="Image Neural Network Mean Square Error" /></p>
 <h4 id="random-forest-numeric-data">Random Forest (Numeric Data)</h4>
 <p>For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution.
-<strong>Random Forest Feature Importance</strong>
-](images/Gemma3.png){#fig:Feature_Importance height=3in}</p>
+<img src="images/Gemma3.png" id="fig:Feature_Importance" style="height:3in" alt="Random Forest Feature Importance" /></p>
 <p>Since my random forest model performed best on my validation dataset, I used the entire original training dataset (not split into training and validation data) to create a random forest model with the same parameters. I then used this model to predict pollution values in the test dataset which resulted in a final mean square error of 124 or root mean square error of 11.2.</p>
 <h3 class="page_break_before" id="weiqis-model">Weiqi’s Model</h3>
 <h3 class="page_break_before" id="xueaos-model">Xueao’s Model</h3>
@@ -447,7 +445,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <ol start="2" type="1">
 <li>RMS contrast</li>
 </ol>
-<p>Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),“Human visual perception of air quality is related to image contrast, or visibility.” The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast. Part of the code is shown below. For full version, please check with the Kaggle competition notebook.</p>
+<p>Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),“Human visual perception of air quality is related to image contrast, or visibility.” The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast. Part of the code is shown below. For full version, please refer to Kaggle competition notebook.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>pre_contrast <span class="op">=</span> cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)</span>
 <span id="cb5-2"><a href="#cb5-2"></a>RMS_contrast <span class="op">=</span> pre_contrast.std()</span>
 <span id="cb5-3"><a href="#cb5-3"></a>RMS_contrast</span></code></pre></div>
@@ -524,7 +522,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <h4 id="tune-hyperparameters-using-gridsearchcv">3. Tune hyperparameters using GridSearchCV</h4>
 <p>The Evaluation results show that RandomForest and GradientBoosting have the best performance using the scoring standard of r2. Thus, I tune hyper parameters for the two models at the same time using GridSearchCV.</p>
 <p>For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].</p>
-<p>Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please check Kaggle competition notebook.</p>
+<p>Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please refer to Kaggle competition notebook.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>gs <span class="op">=</span> GridSearchCV(</span>
 <span id="cb8-2"><a href="#cb8-2"></a>                estimator<span class="op">=</span>RandomForestRegressor(random_state<span class="op">=</span>seed),</span>
 <span id="cb8-3"><a href="#cb8-3"></a>                param_grid<span class="op">=</span>{<span class="st">&#39;max_depth&#39;</span>:[<span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">20</span>],</span>

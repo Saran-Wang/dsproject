@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/e7b1d924348f6581008fba4d17e35e746db07bf2/))
 was automatically generated
-from [Saran-Wang/dsproject@fad08d4](https://github.com/Saran-Wang/dsproject/tree/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8)
+from [Saran-Wang/dsproject@e7b1d92](https://github.com/Saran-Wang/dsproject/tree/e7b1d924348f6581008fba4d17e35e746db07bf2)
 on December 7, 2020.
 </em></small>
 
@@ -343,11 +343,13 @@ To prepare the numeric data for the neural network model, I set the eight numeri
 
 #### Convolutional Neural Network (Image Data)
 To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup. 
+![
 **Image Neural Network Mean Square Error**
 ](images/Gemma2.png){#fig:ImageNN_MSE height=3in}
 
 #### Random Forest (Numeric Data)
 For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution. 
+![
 **Random Forest Feature Importance**
 ](images/Gemma3.png){#fig:Feature_Importance height=3in}
 
@@ -400,7 +402,7 @@ def compute_transmission_rate(img,atmosphere_light_max,omega,dark_channel_img,gu
 
 (2) RMS contrast
 
-Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),"Human visual perception of air quality is related to image contrast, or visibility." The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast. Part of the code is shown below. For full version, please check with the Kaggle competition notebook.
+Image contrast is another important feature when predicting the PM concentration. Further, according to Liu et al.(2016),"Human visual perception of air quality is related to image contrast, or visibility." The definition of RMS contrast is the standard deviation of the image pixel intensities. I will use the root mean square (RMS) of the image to represent the image contrast. Part of the code is shown below. For full version, please refer to Kaggle competition notebook.
 
 ```python
 pre_contrast = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
@@ -485,7 +487,7 @@ The  Evaluation results show that RandomForest and GradientBoosting have the bes
 
 For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].
 
-Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please check Kaggle competition notebook.
+Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please refer to Kaggle competition notebook.
 
 ```python
 gs = GridSearchCV(
