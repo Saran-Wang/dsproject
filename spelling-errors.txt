@@ -3,10 +3,11 @@ Anlysis
 autoencoder
 BatchNormalization
 categorisation
+cna
 CNNs
 Conc
 Conv
-Convolutional
+convolutional
 csv
 CTMs
 cvlib
@@ -18,7 +19,7 @@ dehaze
 Dehazed
 dehazedone
 dehazeroi
-dehazing
+Dehazing
 Dev
 droprate
 EDA
@@ -49,6 +50,8 @@ MaxPooling
 MSE
 multilayer
 multivariable
+NN
+nonparametric
 normolized
 optimizers
 Organisation
@@ -65,7 +68,8 @@ relu
 rescale
 RGB
 RMS
-RMSE
+rmse
+RMSPE
 RNN
 ROI
 RootMeanSquaredError
@@ -76,6 +80,7 @@ Shiyuan’s
 sigmoid
 similiar
 skimage
+sklearn
 softmax
 spearman
 tensorflow
