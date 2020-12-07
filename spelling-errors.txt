@@ -25,7 +25,7 @@ Kaggle
 keras
 kPa
 Liu
-Luminance
+luminance
 MSE
 multivariable
 optimizers

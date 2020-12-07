@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/84d0ac5ebf26ee57d65ee619a82f5cd10e1735ed/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/84d0ac5ebf26ee57d65ee619a82f5cd10e1735ed/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/84d0ac5ebf26ee57d65ee619a82f5cd10e1735ed/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/84d0ac5ebf26ee57d65ee619a82f5cd10e1735ed/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/))
 was automatically generated
-from [Saran-Wang/dsproject@84d0ac5](https://github.com/Saran-Wang/dsproject/tree/84d0ac5ebf26ee57d65ee619a82f5cd10e1735ed)
+from [Saran-Wang/dsproject@e94effa](https://github.com/Saran-Wang/dsproject/tree/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749)
 on December 7, 2020.
 </em></small>
 
@@ -148,6 +148,8 @@ on December 7, 2020.
 
 
 ## Abstract {.page_break_before}
+Particulate matter is a form of air pollution that can cause respiratory problems. The goal of this project was to create a machine learning model that could predict the concentration of particulate matter given image data and numeric parameters corresponding to each image such as elevation, temperature, and camera angle. We discovered that a random forest model produced the most accurate results, but the root mean square error was still around 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction.
+
 
 ## Introduction {.page_break_before}
 
