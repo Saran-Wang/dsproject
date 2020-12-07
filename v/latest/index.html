@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/d02653705a881d03d083a8dfb72f8a140f743272">Saran-Wang/dsproject@d026537</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/572a58a3c39d53ea4a35a345a8ca11357be62d93">Saran-Wang/dsproject@572a58a</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -174,7 +174,7 @@ Department of Civil and Environmental, University of Illinois
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <h2 class="page_break_before" id="introduction">Introduction</h2>
 <h2 class="page_break_before" id="literature-review">Literature Review</h2>
-<p>There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. <span class="citation" data-cites="19MbLWqCv">[<a href="#ref-19MbLWqCv" role="doc-biblioref">1</a>]</span> developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 [https://ieeexplore.ieee.org/abstract/document/4293686] present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,&amp; Tao (2016) <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role="doc-biblioref">2</a>]</span> conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting.</p>
+<p>There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. <span class="citation" data-cites="19MbLWqCv">[<a href="#ref-19MbLWqCv" role="doc-biblioref">1</a>]</span> developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,&amp; Tao (2016) <span class="citation" data-cites="9840lw8i">[<a href="#ref-9840lw8i" role="doc-biblioref">2</a>]</span> conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting.</p>
 <h2 class="page_break_before" id="exploratory-data-anlysis">Exploratory Data Anlysis</h2>
 <ol type="1">
 <li>Variables Explanation</li>
@@ -296,7 +296,7 @@ Department of Civil and Environmental, University of Illinois
 <ul>
 <li><p>Extract the date information from the column called “Image_file”: taking the image “video08052020_2771.jpg” as example, we will extract the date “0805”.</p></li>
 <li><p>Add one column named “Date”: 0805</p></li>
-<li><p>Group by “Date” and obtain the date-based concentration diagram</p></li>
+<li><p>Group by “Date” and plot the date-based concentration diagram</p></li>
 </ul>
 <div id="fig:Date-based" class="fignos">
 <figure>
@@ -453,7 +453,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <ol start="4" type="1">
 <li>Image and numerical data</li>
 </ol>
-<p>Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high. The numerical data given in both train and test dataset is more important for training.</p>
+<p>Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high. The numerical data given in train and test dataset is more important for training and preditcion.</p>
 <ol start="5" type="1">
 <li>Training and validation data</li>
 </ol>
@@ -462,7 +462,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <span id="cb6-2"><a href="#cb6-2"></a>validation_size <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>seed <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a>X_train, X_validation, y_train, y_validation <span class="op">=</span> train_test_split(X, y, <span class="op">\</span> test_size<span class="op">=</span>validation_size, random_state<span class="op">=</span>seed)</span></code></pre></div>
-<p>In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model.</p>
+<p>In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the selected models with the obtained best parameters, lastly follows the scoring standard of root mean squared error to select the final model.</p>
 <h4 id="model-introduction-and-evaluation">2. Model introduction and evaluation</h4>
 <p>Here I will evaluate and compare four different models. They are Ridge regression, Lasso regression, RandomForestRegressor and GradientBoostingRegressor.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">for</span> estimator <span class="kw">in</span> estimators:</span>
@@ -519,6 +519,22 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <h4 id="tune-hyperparameters-using-gridsearchcv">3. Tune hyperparameters using GridSearchCV</h4>
 <p>The Evaluation results show that RandomForest and GradientBoosting have the best performance using the scoring standard of r2. Thus, I tune hyper parameters for the two models at the same time using GridSearchCV.</p>
 <p>For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].</p>
+<p>Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please check Kaggle competition notebook.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>gs <span class="op">=</span> GridSearchCV(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>                estimator<span class="op">=</span>RandomForestRegressor(random_state<span class="op">=</span>seed),</span>
+<span id="cb8-3"><a href="#cb8-3"></a>                param_grid<span class="op">=</span>{<span class="st">&#39;max_depth&#39;</span>:[<span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">20</span>],</span>
+<span id="cb8-4"><a href="#cb8-4"></a>                            <span class="st">&#39;n_estimators&#39;</span>:[<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">1000</span>]},</span>
+<span id="cb8-5"><a href="#cb8-5"></a>                scoring<span class="op">=</span><span class="st">&#39;r2&#39;</span>,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>                cv<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>                n_jobs<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb8-8"><a href="#cb8-8"></a>gs <span class="op">=</span> gs.fit(X_train, y_train)</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(<span class="st">&#39;Random Forest:&#39;</span>)</span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="bu">print</span>(<span class="st">&#39;BR: &#39;</span>, gs.best_score_)</span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="bu">print</span>(<span class="st">&#39;BR: &#39;</span>, gs.best_params_)</span>
+<span id="cb8-12"><a href="#cb8-12"></a>est <span class="op">=</span> gs.best_estimator_</span>
+<span id="cb8-13"><a href="#cb8-13"></a>est.fit(X_train, y_train)</span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="bu">print</span>(<span class="st">&#39;Validation accuracy: </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> est.score(X_validation, y_validation))</span>
+<span id="cb8-15"><a href="#cb8-15"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
 <div id="fig:Best" class="fignos">
 <figure>
 <img src="images/xueao6.png" style="width:8in" alt="" /><figcaption><span>Figure 18:</span> <strong>Best Scores and Best Parameters</strong></figcaption>
@@ -532,12 +548,12 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <li>GradientBoosting with learning_rate = 0.1, max_depth = 3, n_estimators = 500</li>
 </ul>
 <p>Finally, I selected RandomForest as my model because after trial I find this model can lead to a reasonable RMSE value while GradientBoosting will lead to an unacceptably huge root mean squared error.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>model <span class="op">=</span> RandomForestRegressor(max_depth <span class="op">=</span> <span class="dv">10</span>, n_estimators <span class="op">=</span> <span class="dv">300</span>,random_state <span class="op">=</span> <span class="dv">3</span>)</span>
-<span id="cb8-2"><a href="#cb8-2"></a>model.fit(X,y)</span>
-<span id="cb8-3"><a href="#cb8-3"></a>Pred <span class="op">=</span> model.predict(X_test)</span>
-<span id="cb8-4"><a href="#cb8-4"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>model <span class="op">=</span> RandomForestRegressor(max_depth <span class="op">=</span> <span class="dv">10</span>, n_estimators <span class="op">=</span> <span class="dv">300</span>,random_state <span class="op">=</span> <span class="dv">3</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>model.fit(X,y)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>Pred <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>sample[<span class="st">&#39;Total&#39;</span>] <span class="op">=</span> Pred</span></code></pre></div>
 <h4 id="summary-for-modeling-process">5. Summary for modeling process</h4>
-<p>The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.</p>
+<p>The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. I first apply the entire processed train dataset to train the model, then predict for the test dataset, and finally get the root mean squared error of 10.74. RMSE = 10.74 (MSE = 115) is within the reasonable range for this project.</p>
 <div id="fig:Flowchart" class="fignos">
 <figure>
 <img src="images/xueao8.png" style="width:5in" alt="" /><figcaption><span>Figure 19:</span> <strong>Flowchart of Modeling</strong></figcaption>
