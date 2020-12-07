@@ -6,7 +6,7 @@ author-meta:
 - Xueao Li
 bibliography:
 - content/manual-references.json
-date-meta: '2020-12-06'
+date-meta: '2020-12-07'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -25,9 +25,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Project 5 Pollution Vision" />
 
-  <meta name="dc.date" content="2020-12-06" />
+  <meta name="dc.date" content="2020-12-07" />
 
-  <meta name="citation_publication_date" content="2020-12-06" />
+  <meta name="citation_publication_date" content="2020-12-07" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,10 +107,10 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/))
 was automatically generated
-from [Saran-Wang/dsproject@1096473](https://github.com/Saran-Wang/dsproject/tree/109647351fd435471b67f29c70f163cc333e7862)
-on December 6, 2020.
+from [Saran-Wang/dsproject@0542633](https://github.com/Saran-Wang/dsproject/tree/0542633dd89e2e3797b228411ad80e7098111b5f)
+on December 7, 2020.
 </em></small>
 
 ## Authors
@@ -213,8 +213,11 @@ From the correlation map @fig:Correlations we could see that "Dead Time" are ext
 5. Visualize the total concentration based on different dates
 
 Extract the total particle concentration data based on different dates and then visualize it. Basic steps are as below:
+
 - Extract the date information from the column called “Image_file”: taking the image “video08052020_2771.jpg” as example, we will extract the date “0805”.
+
 - Add one column named “Date”: 0805 
+
 - Group by “Date” and obtain the date-based concentration diagram
 
 ![
@@ -461,7 +464,7 @@ for estimator in estimators:
 **Gradient Boosting Algorithm**
 ](images/xueao4.png "Wide image"){#fig:GradientBoosting width=7in}
 
-- **Evaluation method: cross_val_score**: cross_val_score
+- **Evaluation method**: cross_val_score
 
 - **Scoring standard**: r2
 
@@ -498,7 +501,7 @@ sample['Total'] = Pred
 ```
 #### 5.	Summary for modeling process
 
-The flowchart below shows the modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.
+The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.
 
 ![
 **Flowchart of Modeling**
