@@ -7,7 +7,7 @@ cna
 CNNs
 Conc
 Conv
-convolutional
+Convolutional
 csv
 CTMs
 cvlib
@@ -16,7 +16,7 @@ dataset
 datasets
 DBN
 dehaze
-Dehazed
+dehazed
 dehazedone
 dehazeroi
 Dehazing
@@ -95,5 +95,4 @@ Xception
 Xueao
 XueaoLi
 Xueao’s
-Zhejiang
 Zou

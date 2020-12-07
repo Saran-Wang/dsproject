@@ -49,8 +49,6 @@ header-includes: '<!--
 
   <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
 
-  <meta name="citation_author_institution" content="Department of Environmental and Resources, Zhejiang University" />
-
   <meta name="citation_author" content="Gemma Clark" />
 
   <meta name="citation_author_institution" content="Department of Civil and Environmental, University of Illinois" />
@@ -71,11 +69,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/417a805dbedf604151212a58d4d44941b2b10c5a/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/417a805dbedf604151212a58d4d44941b2b10c5a/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/417a805dbedf604151212a58d4d44941b2b10c5a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +105,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/417a805dbedf604151212a58d4d44941b2b10c5a/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/))
 was automatically generated
-from [Saran-Wang/dsproject@417a805](https://github.com/Saran-Wang/dsproject/tree/417a805dbedf604151212a58d4d44941b2b10c5a)
+from [Saran-Wang/dsproject@c8daf95](https://github.com/Saran-Wang/dsproject/tree/c8daf954ff138b793fa882c243225fed9213bc32)
 on December 7, 2020.
 </em></small>
 
@@ -128,7 +126,7 @@ on December 7, 2020.
     · ![GitHub icon](images/github.svg){.inline_icon}
     [weiqini](https://github.com/weiqini)<br>
   <small>
-     Department of Civil and Environmental, University of Illinois; Department of Environmental and Resources, Zhejiang University
+     Department of Civil and Environmental, University of Illinois
   </small>
 
 + **Gemma Clark**<br>
