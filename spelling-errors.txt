@@ -16,10 +16,10 @@ dataset
 datasets
 DBN
 dehaze
-dehazed
+Dehazed
 dehazedone
 dehazeroi
-dehazing
+Dehazing
 Dev
 droprate
 EDA
@@ -88,7 +88,7 @@ transimission
 Tsow
 ultrafine
 varibales
-Weiqi
+weiqi
 weiqini
 Weiqi’s
 Xception
