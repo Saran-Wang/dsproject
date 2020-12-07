@@ -16,10 +16,10 @@ dataset
 datasets
 DBN
 dehaze
-Dehazed
+dehazed
 dehazedone
 dehazeroi
-Dehazing
+dehazing
 Dev
 droprate
 EDA
@@ -68,7 +68,7 @@ relu
 rescale
 RGB
 RMS
-rmse
+RMSE
 RMSPE
 RNN
 ROI
