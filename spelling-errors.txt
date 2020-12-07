@@ -32,7 +32,6 @@ optimizers
 orginial
 Otsu
 Ouput
-PloS
 RandomForest
 RandomForestRegressor
 relu

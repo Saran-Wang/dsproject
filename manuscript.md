@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/109647351fd435471b67f29c70f163cc333e7862/))
 was automatically generated
-from [Saran-Wang/dsproject@dfcdbfb](https://github.com/Saran-Wang/dsproject/tree/dfcdbfbb8d2eadc8f606f6f5b38d100ef861cca7)
+from [Saran-Wang/dsproject@1096473](https://github.com/Saran-Wang/dsproject/tree/109647351fd435471b67f29c70f163cc333e7862)
 on December 6, 2020.
 </em></small>
 
@@ -349,12 +349,9 @@ Since my random forest model performed best on my validation dataset, I used the
 
 ### Xueao's Model {.page_break_before}
 #### 1.	Preparation stage
-In my literature review for this project, the article "Particle Pollution Estimation Based on Image Analysis" basically follows the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, feature extraction, regression model training and predicting. The image feature extaction work is basically on the algorithm illustrated in this article.
+In my literature review for this project, the article "Particle Pollution Estimation Based on Image Analysis" basically follows the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, feature extraction, regression model training and predicting.[@doi:10.1371/journal.pone.0145955] The image feature extaction work is basically on the algorithm illustrated in this article.
 
 The recommended features to be extracted from hazy image are transmission rate, RMS image contrast, image entropy, color, and smoothness of the sky. Since the images provided in this project don't include the sky, I cannot select the region of the sky or extract the feature of sky color and smoothness. Thus, I will only extract the transimission, RMS contrast and image entropy as the reference features.
-
-Reference: Liu, C., Tsow, F., Zou, Y., & Tao, N. (2016). Particle pollution estimation based on image analysis. PloS one, 11(2), e0145955.
-Link: [@doi:10.1371/journal.pone.0145955]
 
 - **Convert the images into gray scale or binary images**
 
