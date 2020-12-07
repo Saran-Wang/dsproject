@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/0542633dd89e2e3797b228411ad80e7098111b5f/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/))
 was automatically generated
-from [Saran-Wang/dsproject@0542633](https://github.com/Saran-Wang/dsproject/tree/0542633dd89e2e3797b228411ad80e7098111b5f)
+from [Saran-Wang/dsproject@d026537](https://github.com/Saran-Wang/dsproject/tree/d02653705a881d03d083a8dfb72f8a140f743272)
 on December 7, 2020.
 </em></small>
 
@@ -152,7 +152,7 @@ on December 7, 2020.
 ## Introduction {.page_break_before}
 
 ## Literature Review {.page_break_before}
-There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,& Tao (2016) [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting. 
+There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 [https://ieeexplore.ieee.org/abstract/document/4293686] present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,& Tao (2016) [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting. 
 
 ## Exploratory Data Anlysis {.page_break_before}
 1. Variables Explanation
