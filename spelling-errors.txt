@@ -12,10 +12,10 @@ dataset
 datasets
 DBN
 dehaze
-Dehazed
+dehazed
 dehazedone
 dehazeroi
-dehazing
+Dehazing
 Dev
 EDA
 extaction
@@ -38,7 +38,7 @@ keras
 kPa
 Liu
 LSTM
-luminance
+Luminance
 MSE
 multilayer
 multivariable
