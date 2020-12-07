@@ -40,7 +40,7 @@ ImageDataGenerator
 imagenet
 intra
 jpg
-kaggle
+Kaggle
 keras
 kPa
 Liu
@@ -88,7 +88,7 @@ transimission
 Tsow
 ultrafine
 varibales
-weiqi
+Weiqi
 weiqini
 Weiqi’s
 Xception

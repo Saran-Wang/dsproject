@@ -115,9 +115,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -138,9 +138,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/c8daf954ff138b793fa882c243225fed9213bc32">Saran-Wang/dsproject@c8daf95</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/618df1db00d81c7639a954e8e444734fba7bd844">Saran-Wang/dsproject@618df1d</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -446,13 +446,13 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <p>Two modeling methods were applied in my kaggle competition part: the Convolutional Neural Network (CNN) for images and the Random Forest for numerical data.</p>
 <h4 id="convolutional-neural-network-image-data-1">Convolutional Neural Network (Image Data)</h4>
 <p>The first model I tried was the CNN with the image information only. First I cleaned up the training dataframe to only contain the total concentration column which is the dependent variable and the image file column which contain the corresponding image name to the concentration, and also cleaned the test dataframe only contain the image file column. In order to deal with large amount of images (~65,000), the size of each image was then compressed from (1280,720) to (128,72) with the quality of 90%, the output images were saved at the kaggle/working space and all got the name of “initial image name”+“ resized.jpg”. The resized image name column was also added in training and test dataframe. Although this process lost lots of image details, but help boost the model training and prevent the out of memory problem in kaggle.</p>
-<p><img src="images/weiqi%201.png" id="fig:weiqi" style="height:3in" alt="1280x720 image before compression" />
-<img src="images/weiqi%202.png" id="fig:weiqi" style="height:3in" alt="128x72 image after compression" /></p>
+<p><img src="images/weiqi1.png" id="fig:weiqi1" style="height:3in" alt="1280x720 image before compression" />
+<img src="images/weiqi2.png" id="fig:weiqi2" style="height:3in" alt="128x72 image after compression" /></p>
 <p>After the data preparation, next step is standardizing and generating the data for modeling. The ImageDataGenerator can take the image data and the label from the dataframe, and set the batch_size and seed. Specifically, the class_mode=“raw” for numerical data regression. For training data, the shuffle is True for a more random training. For testing data, the shuffle is False to make the prediection in order. In general, developing models that take least possible amount of preprocessing are preferred. As all the images have same size of 128x72, standardizing the data size is not necessary here. However, each pixel consists of 3 integer values between 0 and 255 (RGB level values). So pixel values need to be normolized between -1 and 1. It can be achieved with the ImageDataGenerator setting to rescale the value. Additionally, in order to better evaluate the model, the whole training set was split to training and validation set with the proportion of 0.7 and 0.3.</p>
 <p>Instead of the Xception model which is well-developed and pre-trained for image classification, a regression model for continuous output is needed in this project. A keras “Sequential” model with three layers was built up: one input layer, one hidden layer and one output layer. All layers used “relu” activation and have the BatchNormalization. The input layer and hidden layers are Conv2D with (3,3) kernel_size, and MaxPooling2D with (2,2) pool size. The filters in each layer (32/64/128) and dropout rate in the model were fine-tuned to have lower RMSE.
 The model then was complied with Adam optimizer and RootMeanSquaredError as the metrics, then was applied to fit the training and validation data, the learning rate and the epoch number were another two hyperparameters to fine-tuning the results. Using all layer with 32 filters, learning rate of 0.005, droprate of 0.25 and 10 epochs, the model loss and rmse change with each epoch were plotted at figure below. The RMSE of this CNN model could reach 40-50 depending on the the hyperparameter setting and the random split of training set. Compared with the concentration value in training set which in range of 100-300, the RMSE of 40-50 is still too high to have a reliable prediction.</p>
-<p><img src="images/weiqi%203.png" id="fig:weiqi" style="height:3in" alt="training and validation loss change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)" />
-<img src="images/weiqi%204.png" id="fig:weiqi" style="height:3in" alt="training and validation rmse change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)" /></p>
+<p><img src="images/weiqi3.png" id="fig:weiqi3" style="height:3in" alt="training and validation loss change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)" />
+<img src="images/weiqi4.png" id="fig:weiqi4" style="height:3in" alt="training and validation rmse change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)" /></p>
 <h4 id="random-forest-numerical-data">Random Forest (Numerical Data)</h4>
 <p>In order to make more accurate prediction, the Random Forest was applied for the modeling of numerical data. According to the correlation map in EDA part, the “Errors” and “Wind_Speed” have relatively low correlation with the dependent variable “Total”, the rest six independent variables - “Temp(C)”, “Pressure(kPa)”, “Dead Time”, “Distance_to_Road” and “Camera_Angle’,’Elevation” were selected as the features for model, and the “Total” was served as the label in model.</p>
 <p>The Random Forest modeling was easier compared with CNN previously. The training and test dataset were cleaned to only contain the six independent variables and the dependent variable “Total” for training set. Then the RandomForestRegressor in sklearn package was applied to build the model with hyperparameters, like the number of trees, maximum depth, the minimal samples split and leaf. The criterion was set as “mse”. By fine-tuning the hyperparameters, the best RMSE was achieved around 16 with number of trees=100, maximum depth=20, the minimal samples split=10 and minimal samples leaf=1.</p>
@@ -612,7 +612,12 @@ The model then was complied with Adam optimizer and RootMeanSquaredError as the 
 </figure>
 </div>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
-<p>All of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
+<div id="fig:weiqi5" class="fignos">
+<figure>
+<img src="images/weiqi5.png" style="height:3in" alt="" /><figcaption><span>Figure 26:</span> <strong>Modeling Results Summary</strong></figcaption>
+</figure>
+</div>
+<p>Based on the summary above, all of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
 However, to better achieve the goal of this project, further improvement of NN/CNN model will be needed to produce more accurate predictions based on the image information.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->

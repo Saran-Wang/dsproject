@@ -69,11 +69,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/c8daf954ff138b793fa882c243225fed9213bc32/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/))
 was automatically generated
-from [Saran-Wang/dsproject@c8daf95](https://github.com/Saran-Wang/dsproject/tree/c8daf954ff138b793fa882c243225fed9213bc32)
+from [Saran-Wang/dsproject@618df1d](https://github.com/Saran-Wang/dsproject/tree/618df1db00d81c7639a954e8e444734fba7bd844)
 on December 7, 2020.
 </em></small>
 
@@ -399,10 +399,10 @@ The first model I tried was the CNN with the image information only. First I cle
 
 ![
 **1280x720 image before compression**
-](images/weiqi 1.png){#fig:weiqi 1 height=3in}
+](images/weiqi1.png){#fig:weiqi1 height=3in}
 ![
 **128x72 image after compression**
-](images/weiqi 2.png){#fig:weiqi 2 height=3in}
+](images/weiqi2.png){#fig:weiqi2 height=3in}
 
 After the data preparation, next step is standardizing and generating the data for modeling. The ImageDataGenerator can take the image data and the label from the dataframe, and set the batch_size and seed. Specifically, the class_mode="raw" for numerical data regression. For training data, the shuffle is True for a more random training. For testing data, the shuffle is False to make the prediection in order. In general, developing models that take least possible amount of preprocessing are preferred. As all the images have same size of 128x72, standardizing the data size is not necessary here. However, each pixel consists of 3 integer values between 0 and 255 (RGB level values). So pixel values need to be normolized between -1 and 1. It can be achieved with the ImageDataGenerator setting to rescale the value. Additionally, in order to better evaluate the model, the whole training set was split to training and validation set with the proportion of 0.7 and 0.3.
 
@@ -411,10 +411,10 @@ The model then was complied with Adam optimizer and RootMeanSquaredError as the 
 
 ![
 **training and validation loss change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)**
-](images/weiqi 3.png){#fig:weiqi 3 height=3in}
+](images/weiqi3.png){#fig:weiqi3 height=3in}
 ![
 **training and validation rmse change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)**
-](images/weiqi 4.png){#fig:weiqi 4 height=3in}
+](images/weiqi4.png){#fig:weiqi4 height=3in}
 
 #### Random Forest (Numerical Data)
 
@@ -602,7 +602,11 @@ The flowchart below shows my overall modeling process. Finally, the model and pa
 
 ## Conclusion {.page_break_before} 
 
-All of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
+![
+**Modeling Results Summary**
+](images/weiqi5.png){#fig:weiqi5 height=3in}
+
+Based on the summary above, all of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
 However, to better achieve the goal of this project, further improvement of NN/CNN model will be needed to produce more accurate predictions based on the image information. 
 
 
