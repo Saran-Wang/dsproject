@@ -32,6 +32,7 @@ optimizers
 orginial
 Otsu
 Ouput
+preditcion
 RandomForest
 RandomForestRegressor
 relu
@@ -45,7 +46,6 @@ Shiyuan’s
 sigmoid
 similiar
 skimage
-slected
 softmax
 spearman
 tensorflow

@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/d02653705a881d03d083a8dfb72f8a140f743272/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/572a58a3c39d53ea4a35a345a8ca11357be62d93/))
 was automatically generated
-from [Saran-Wang/dsproject@d026537](https://github.com/Saran-Wang/dsproject/tree/d02653705a881d03d083a8dfb72f8a140f743272)
+from [Saran-Wang/dsproject@572a58a](https://github.com/Saran-Wang/dsproject/tree/572a58a3c39d53ea4a35a345a8ca11357be62d93)
 on December 7, 2020.
 </em></small>
 
@@ -152,7 +152,7 @@ on December 7, 2020.
 ## Introduction {.page_break_before}
 
 ## Literature Review {.page_break_before}
-There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 [https://ieeexplore.ieee.org/abstract/document/4293686] present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,& Tao (2016) [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting. 
+There are many studies using digital camera and advanced algorithm to estimate the concentrations of Particulate Matters. Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. Wong et al. 2007 present an image processing method for estimating concentrations of coarse particles (PM10) in real time using pixels acquired by an internet video surveillance camera. In this paper, the authors present formulas for predicting particulate matter based on optical physics including light absorption, scattering, and reflection. They do not use machine learning tactics to estimate pollution concentrations, but their model results in root mean square error values of around 4 µg/m3. Liu, Tsow, Zou,& Tao (2016) [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting. 
 
 ## Exploratory Data Anlysis {.page_break_before}
 1. Variables Explanation
@@ -218,7 +218,7 @@ Extract the total particle concentration data based on different dates and then 
 
 - Add one column named “Date”: 0805 
 
-- Group by “Date” and obtain the date-based concentration diagram
+- Group by “Date” and plot the date-based concentration diagram
 
 ![
 **Date-based Particle Concentration**
@@ -407,7 +407,7 @@ RMS_contrast
 
 (4) Image and numerical data
 
-Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high. The numerical data given in both train and test dataset is more important for training. 
+Under certain conditions, the method of extracting features from images helps when predicting the PM concentration. But in this project, after trial, I found the correlation between image data and the air pollution concentration is not very high. The numerical data given in train and test dataset is more important for training and preditcion. 
 
 (5) Training and validation data
 
@@ -420,7 +420,7 @@ seed = 3
 X_train, X_validation, y_train, y_validation = train_test_split(X, y, \ test_size=validation_size, random_state=seed)
 ```
 
-In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the slected models with the obtained best parameters, lastly follows the scoring standard of Root mean squared error to select the final model.
+In the following parts, I chose to use the numerical data to train my models: firstly evaluate all the 4 kinds of models using the scoring standard of r2 , secondly select and tune hyperparameters for the models with the best performance in the evaluation, thirdly train the selected models with the obtained best parameters, lastly follows the scoring standard of root mean squared error to select the final model.
 
 #### 2.	Model introduction and evaluation
 
@@ -478,6 +478,26 @@ The  Evaluation results show that RandomForest and GradientBoosting have the bes
 
 For RandomForest, I prepare 3 candidate values for the max_depth: [3, 10, 20], 7 candidate values for n_estimators: [10, 30, 50, 100, 300, 500, 1000]. Similarly, for GradientBoosting, I prepare 2 candidate values for the max_depth: [3, 10], 5 candidate values for n_estimators: [10, 50, 100, 250, 500].
 
+Here is the coding of using GridSearchCV to tune hyperparameters for RandomForest. For more coding details, please check Kaggle competition notebook.
+
+```python
+gs = GridSearchCV(
+                estimator=RandomForestRegressor(random_state=seed),
+                param_grid={'max_depth':[3, 10, 20],
+                            'n_estimators':[10, 30, 50, 100, 300, 500, 1000]},
+                scoring='r2',
+                cv=3,
+                n_jobs=-1)
+gs = gs.fit(X_train, y_train)
+print('Random Forest:')
+print('BR: ', gs.best_score_)
+print('BR: ', gs.best_params_)
+est = gs.best_estimator_
+est.fit(X_train, y_train)
+print('Validation accuracy: %.3f' % est.score(X_validation, y_validation))
+sample['Total'] = Pred
+```
+
 ![
 **Best Scores and Best Parameters**
 ](images/xueao6.png "Wide image"){#fig:Best width=8in}
@@ -501,7 +521,7 @@ sample['Total'] = Pred
 ```
 #### 5.	Summary for modeling process
 
-The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. The root mean squared error of my model is 10.74.
+The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. I first apply the entire processed train dataset to train the model, then predict for the test dataset, and finally get the root mean squared error of 10.74. RMSE = 10.74 (MSE = 115) is within the reasonable range for this project.
 
 ![
 **Flowchart of Modeling**
