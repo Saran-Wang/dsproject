@@ -69,11 +69,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/618df1db00d81c7639a954e8e444734fba7bd844/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/))
 was automatically generated
-from [Saran-Wang/dsproject@618df1d](https://github.com/Saran-Wang/dsproject/tree/618df1db00d81c7639a954e8e444734fba7bd844)
+from [Saran-Wang/dsproject@3272255](https://github.com/Saran-Wang/dsproject/tree/32722553fd7750ae140644626e8e94481fc210ea)
 on December 7, 2020.
 </em></small>
 
@@ -147,11 +147,11 @@ on December 7, 2020.
 
 
 ## Introduction {.page_break_before}
-Air quality has become a major concern for many cities around the world. Poor air quality in urban areas may cause various health problems for people who are exposed to it in their everyday life [@doi.org/10.1016/S0140-6736(02)11274-8]. According to World Health Organisation (WHO), more than seven million persons are dying every year due to the air pollution and more than 80% of urban areas population lives in places where air quality over WHO guideline limits. Particularly, particulate matter in air is a public health hazard with both acute and chronic exposure. 
+Air quality has become a major concern for many cities around the world. Poor air quality in urban areas may cause various health problems for people who are exposed to it in their everyday life [@doi:10.1016/S0140-6736(02)11274-8] . According to World Health Organisation (WHO), more than seven million persons are dying every year due to the air pollution and more than 80% of urban areas population lives in places where air quality over WHO guideline limits. Particularly, particulate matter in air is a public health hazard with both acute and chronic exposure. 
 
-PM2.5 refers to airborne particles less than 2.5 μm in the aerodynamic diameter and has been linked to many adverse health outcomes, including cardiovascular and respiratory morbidity and mortality [@doi.org/10.1021/acs.est.7b01210] . PM2.5 has found to cause about 3% of mortality from cardiopulmonary disease, 5% of mortality from cancer of the trachea, bronchus, and lung, and about 1% of mortality from acute respiratory infections in children under five year [@doi.org/10.1080/15287390590936166]. Therefore, it is a crucial to better monitoring and further reduce the air pollution. The main sources of air pollution in urban areas are vehicle exhausts and industrial sites located around. Many cities have deployed a few advanced stations for air quality monitoring. However, the conventional air quality monitor equipment are high cost and time-consuming, which limited their implementations for quick, continuous and portable measurements [@doi.org/10.1016/j.dcan.2019.03.003] .
+PM2.5 refers to airborne particles less than 2.5 μm in the aerodynamic diameter and has been linked to many adverse health outcomes, including cardiovascular and respiratory morbidity and mortality [@doi:10.1021/acs.est.7b01210] . PM2.5 has found to cause about 3% of mortality from cardiopulmonary disease, 5% of mortality from cancer of the trachea, bronchus, and lung, and about 1% of mortality from acute respiratory infections in children under five year [@doi:10.1080/15287390590936166]. Therefore, it is a crucial to better monitoring and further reduce the air pollution. The main sources of air pollution in urban areas are vehicle exhausts and industrial sites located around. Many cities have deployed a few advanced stations for air quality monitoring. However, the conventional air quality monitor equipment are high cost and time-consuming, which limited their implementations for quick, continuous and portable measurements [@doi:10.1016/j.dcan.2019.03.003] .
 
-There are many research focus on the accurate air quality monitoring and forecasting. Traditional approaches like chemistry-transport models (CTMs) and shallow statistical methods have the limitation of probing complex high-dimensional relationships from massive datasets with temporal and spatial heterogeneity. Recently, other modeling methods like machine learning have emerged as advanced technologies for air quality prediction and monitoring [https://link.springer.com/article/10.1007/s40726-020-00159-z]. Among different studies, the prediction from computer vision like videos or images is regarded as a promising topic as the figures are much easier to generate compared with traditional particle sample collection. 
+There are many research focus on the accurate air quality monitoring and forecasting. Traditional approaches like chemistry-transport models (CTMs) and shallow statistical methods have the limitation of probing complex high-dimensional relationships from massive datasets with temporal and spatial heterogeneity. Recently, other modeling methods like machine learning have emerged as advanced technologies for air quality prediction and monitoring. Among different studies, the prediction from computer vision like videos or images is regarded as a promising topic as the figures are much easier to generate compared with traditional particle sample collection. 
 
 In this project, air pollution concentration prediction from roadway surveillance video frames and corresponding numerical data of sensors and conditions is conducted with various modeling methods. The dataset provided in this project contain around 65,000 video images with measured PM2.5 values and numerical conditions as the training data and around 7,200 video images with numerical conditions only as the test data. The goal of this project is to create a machine learning model that could predict the concentration of particulate matter given image data and numeric parameters corresponding to each image such as elevation, temperature, and camera angle. 
 
@@ -160,9 +160,9 @@ There are many studies using digital camera and advanced algorithm to estimate t
 
 Instead of relatively simple regression methods, the machine learning method with more complex modeling were investigated more recently. For example, Liu, Tsow, Zou,& Tao [@doi:10.1371/journal.pone.0145955] conducted the following steps to make use of images to predict the air pollution concentration: ROI (region of interest) selection, extraction for image features, support vector regression for model training and predicting.
 
-Among different machine leaning network, like the recurrent neural network (RNN), the long short-term memory (LSTM) network, and the gated recurrent unit (GRU) network for temporal series predictions, and the convolutional neural network (CNN), the stacked autoencoder (SAE), and the deep belief network (DBN) for spatial feature extractions , the convolutional neural network (CNN) is widely applied for image data processing [https://link.springer.com/article/10.1007/s40726-020-00159-z]. The CNNs contain multilayer of fully connected networks, each neuron in one layer is connected to all neurons in the next layer. The networks in CNN employs mathematical operation called convolution, which is relatively simple. Various building blocks, hyperparameters, methods and frames can be chosen for specific applications, which makes the CNN very flexible. The CNNs also use relatively little pre-processing compared to other image classification algorithms, and can be conducted independently from prior knowledge and effort in feature design, which make CNN distinguished from others. Grant-Jacob et al. [@doi.org/10.1364/OE.26.027237] developed a real-time particulates detection method with CNN to identify particulates from their scattering patterns. The CNN model was developed by training of scattering patterns paired with the real particle images. The CNN used in this work consisted of an input layer, two convolutional layers as well as a fully connected layer (1024 neurons) to generate the categorisation output. With the CNN model developed, the real-time sensing tests also conducted with the accuracy of 86%. This piece of study indicates the CNN method can be a strong approach to deal with the image processing, which can be implement into this project. Addtionally, Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. 
+Among different machine leaning network, like the recurrent neural network (RNN), the long short-term memory (LSTM) network, and the gated recurrent unit (GRU) network for temporal series predictions, and the convolutional neural network (CNN), the stacked autoencoder (SAE), and the deep belief network (DBN) for spatial feature extractions , the convolutional neural network (CNN) is widely applied for image data processing [https://link.springer.com/article/10.1007/s40726-020-00159-z]. The CNNs contain multilayer of fully connected networks, each neuron in one layer is connected to all neurons in the next layer. The networks in CNN employs mathematical operation called convolution, which is relatively simple. Various building blocks, hyperparameters, methods and frames can be chosen for specific applications, which makes the CNN very flexible. The CNNs also use relatively little pre-processing compared to other image classification algorithms, and can be conducted independently from prior knowledge and effort in feature design, which make CNN distinguished from others. Grant-Jacob et al. [@doi:10.1364/OE.26.027237] developed a real-time particulates detection method with CNN to identify particulates from their scattering patterns. The CNN model was developed by training of scattering patterns paired with the real particle images. The CNN used in this work consisted of an input layer, two convolutional layers as well as a fully connected layer (1024 neurons) to generate the categorisation output. With the CNN model developed, the real-time sensing tests also conducted with the accuracy of 86%. This piece of study indicates the CNN method can be a strong approach to deal with the image processing, which can be implement into this project. Addtionally, Hong et al. [@doi:10.1016/j.envint.2020.106044] developed a novel method of predicting the concentrations and diameters of outdoor ultrafine particles using street-level images and audio data in Montreal, Canada. Convolutional neural networks, multivariable linear regression and genralized additive models were used to make the predictions. 
 
-Above studies demonstrate the potential of using parametric machine learning algorithms, like support vector regression, or nonparametric machine learning algorithms, like CNN for air pollution estimation. Although neural networks can have good performance with high prediction accuracy, their results are difficult to interpret with complex hidden layers. The random forest algorithm, an additional family of machine learning algorithms cna provide the variable importance measures, which can help estimate the strength of relationships between PM2.5 and various predictors. Similarly, random forests provide multivariate, nonparametric, nonlinear regression based on a training data set. [@doi.org/10.1021/acs.est.7b01210]. However, different from NN, random forests construct a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean/average prediction (regression) of the individual trees. A recent study estimated the PM2.5 concentrations in the conterminous United States by the random forest approach, which achieved an overall cross-validation (CV) R2 value of 0.80, with 2.83 μg/m3 of the root mean squared prediction error (RMSPE) for daily predictions [@doi.org/10.1021/acs.est.7b01210]. 
+Above studies demonstrate the potential of using parametric machine learning algorithms, like support vector regression, or nonparametric machine learning algorithms, like CNN for air pollution estimation. Although neural networks can have good performance with high prediction accuracy, their results are difficult to interpret with complex hidden layers. The random forest algorithm, an additional family of machine learning algorithms cna provide the variable importance measures, which can help estimate the strength of relationships between PM2.5 and various predictors. Similarly, random forests provide multivariate, nonparametric, nonlinear regression based on a training data set. [@doi:10.1021/acs.est.7b01210]. However, different from NN, random forests construct a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean/average prediction (regression) of the individual trees. A recent study estimated the PM2.5 concentrations in the conterminous United States by the random forest approach, which achieved an overall cross-validation (CV) R2 value of 0.80, with 2.83 μg/m3 of the root mean squared prediction error (RMSPE) for daily predictions [@doi:10.1021/acs.est.7b01210]. 
 
 ## Exploratory Data Anlysis {.page_break_before}
 1. Variables Explanation
@@ -399,10 +399,13 @@ The first model I tried was the CNN with the image information only. First I cle
 
 ![
 **1280x720 image before compression**
-](images/weiqi1.png){#fig:weiqi1 height=3in}
+](images/weiqi1.png "Wide image"){#fig:weiqi1 height=3in}
+
+
+
 ![
 **128x72 image after compression**
-](images/weiqi2.png){#fig:weiqi2 height=3in}
+](images/weiqi2.png "Wide image"){#fig:weiqi2 height=3in}
 
 After the data preparation, next step is standardizing and generating the data for modeling. The ImageDataGenerator can take the image data and the label from the dataframe, and set the batch_size and seed. Specifically, the class_mode="raw" for numerical data regression. For training data, the shuffle is True for a more random training. For testing data, the shuffle is False to make the prediection in order. In general, developing models that take least possible amount of preprocessing are preferred. As all the images have same size of 128x72, standardizing the data size is not necessary here. However, each pixel consists of 3 integer values between 0 and 255 (RGB level values). So pixel values need to be normolized between -1 and 1. It can be achieved with the ImageDataGenerator setting to rescale the value. Additionally, in order to better evaluate the model, the whole training set was split to training and validation set with the proportion of 0.7 and 0.3.
 
@@ -411,10 +414,12 @@ The model then was complied with Adam optimizer and RootMeanSquaredError as the 
 
 ![
 **training and validation loss change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)**
-](images/weiqi3.png){#fig:weiqi3 height=3in}
+](images/weiqi3.png "Wide image"){#fig:weiqi3 height=3in}
+
+
 ![
 **training and validation rmse change with the epoch (learning rate: 0.005; drop rate: 0.25; epochs: 10)**
-](images/weiqi4.png){#fig:weiqi4 height=3in}
+](images/weiqi4.png "Wide image"){#fig:weiqi4 height=3in}
 
 #### Random Forest (Numerical Data)
 
@@ -604,7 +609,7 @@ The flowchart below shows my overall modeling process. Finally, the model and pa
 
 ![
 **Modeling Results Summary**
-](images/weiqi5.png){#fig:weiqi5 height=3in}
+](images/weiqi5.png "Wide image"){#fig:weiqi5 height=3in}
 
 Based on the summary above, all of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
 However, to better achieve the goal of this project, further improvement of NN/CNN model will be needed to produce more accurate predictions based on the image information. 

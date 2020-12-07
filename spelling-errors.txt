@@ -7,7 +7,7 @@ cna
 CNNs
 Conc
 Conv
-Convolutional
+convolutional
 csv
 CTMs
 cvlib
@@ -16,10 +16,10 @@ dataset
 datasets
 DBN
 dehaze
-dehazed
+Dehazed
 dehazedone
 dehazeroi
-Dehazing
+dehazing
 Dev
 droprate
 EDA
@@ -40,7 +40,7 @@ ImageDataGenerator
 imagenet
 intra
 jpg
-Kaggle
+kaggle
 keras
 kPa
 Liu
