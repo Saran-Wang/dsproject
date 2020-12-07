@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/dc53e43b04e5de9e7596849e102973b3fc9d6a5a/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dc53e43b04e5de9e7596849e102973b3fc9d6a5a/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/dc53e43b04e5de9e7596849e102973b3fc9d6a5a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/dc53e43b04e5de9e7596849e102973b3fc9d6a5a/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8/))
 was automatically generated
-from [Saran-Wang/dsproject@dc53e43](https://github.com/Saran-Wang/dsproject/tree/dc53e43b04e5de9e7596849e102973b3fc9d6a5a)
+from [Saran-Wang/dsproject@fad08d4](https://github.com/Saran-Wang/dsproject/tree/fad08d4e48ec428a80bac7a6f4fe69bc29cdd4d8)
 on December 7, 2020.
 </em></small>
 
@@ -339,13 +339,17 @@ For all three models, I performed the same first initial steps. I read in the �
 To prepare the numeric data for the neural network model, I set the eight numeric variables to be the independent “x” variables and the total pollution to be the dependent “y” variable in a tensorflow dataset. I set the batch size to be 50 and created a “Sequential” keras model. My model had four layers: two “relu” layers with 30 units each, a “sigmoid” layer with 30 units, and a linear layer with 15 units. Using a learning rate of 0.0005, loss of mean square error, and 30 epochs, I compiled the model and tested it on the validation dataset. The mean square error converged at around 1,500-1,800 depending on the random training and validation dataset generated in the initial setup.
 ![
 **Numeric Neural Network Mean Square Error**
-](images/Gemma1.png){#fig:NumericNN_MSE width=3in}
+](images/Gemma1.png){#fig:NumericNN_MSE height=3in}
 
 #### Convolutional Neural Network (Image Data)
 To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup. 
+**Image Neural Network Mean Square Error**
+](images/Gemma2.png){#fig:ImageNN_MSE height=3in}
 
 #### Random Forest (Numeric Data)
 For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution. 
+**Random Forest Feature Importance**
+](images/Gemma3.png){#fig:Feature_Importance height=3in}
 
 Since my random forest model performed best on my validation dataset, I used the entire original training dataset (not split into training and validation data) to create a random forest model with the same parameters. I then used this model to predict pollution values in the test dataset which resulted in a final mean square error of 124 or root mean square error of 11.2.
 
