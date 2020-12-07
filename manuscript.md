@@ -69,11 +69,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/32722553fd7750ae140644626e8e94481fc210ea/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/993354340c05ee3b06e20ad624c1d22d07039778/))
 was automatically generated
-from [Saran-Wang/dsproject@3272255](https://github.com/Saran-Wang/dsproject/tree/32722553fd7750ae140644626e8e94481fc210ea)
+from [Saran-Wang/dsproject@9933543](https://github.com/Saran-Wang/dsproject/tree/993354340c05ee3b06e20ad624c1d22d07039778)
 on December 7, 2020.
 </em></small>
 
@@ -147,7 +147,7 @@ on December 7, 2020.
 
 
 ## Introduction {.page_break_before}
-Air quality has become a major concern for many cities around the world. Poor air quality in urban areas may cause various health problems for people who are exposed to it in their everyday life [@doi:10.1016/S0140-6736(02)11274-8] . According to World Health Organisation (WHO), more than seven million persons are dying every year due to the air pollution and more than 80% of urban areas population lives in places where air quality over WHO guideline limits. Particularly, particulate matter in air is a public health hazard with both acute and chronic exposure. 
+Air quality has become a major concern for many cities around the world. Poor air quality in urban areas may cause various health problems for people who are exposed to it in their everyday life. According to World Health Organisation (WHO), more than seven million persons are dying every year due to the air pollution and more than 80% of urban areas population lives in places where air quality over WHO guideline limits. Particularly, particulate matter in air is a public health hazard with both acute and chronic exposure. 
 
 PM2.5 refers to airborne particles less than 2.5 μm in the aerodynamic diameter and has been linked to many adverse health outcomes, including cardiovascular and respiratory morbidity and mortality [@doi:10.1021/acs.est.7b01210] . PM2.5 has found to cause about 3% of mortality from cardiopulmonary disease, 5% of mortality from cancer of the trachea, bronchus, and lung, and about 1% of mortality from acute respiratory infections in children under five year [@doi:10.1080/15287390590936166]. Therefore, it is a crucial to better monitoring and further reduce the air pollution. The main sources of air pollution in urban areas are vehicle exhausts and industrial sites located around. Many cities have deployed a few advanced stations for air quality monitoring. However, the conventional air quality monitor equipment are high cost and time-consuming, which limited their implementations for quick, continuous and portable measurements [@doi:10.1016/j.dcan.2019.03.003] .
 
@@ -234,7 +234,7 @@ Extract the total particle concentration data based on different dates and then 
 **Date-based Particle Concentration**
 ](images/xueao1.png "Wide image"){#fig:Date-based width=4in}
 
-## Model {.page_break_before}
+## Model 
 ### Shiyuan's Model {.page_break_before}
 My model setup splits into two part, the first is image data extraction, the second is the selection of appropriate model to fit this dataset.
 
@@ -609,7 +609,7 @@ The flowchart below shows my overall modeling process. Finally, the model and pa
 
 ![
 **Modeling Results Summary**
-](images/weiqi5.png "Wide image"){#fig:weiqi5 height=3in}
+](images/weiqi5.PNG "Wide image"){#fig:weiqi5 height=3in}
 
 Based on the summary above, all of the team members found random forest models to produce the best results with the lowest root mean square error, in range of 10-16, indicating that our models could provide approximations for pollution concentrations but not an accurate prediction. While each member used different parameters for her model, the final predictions had root mean square error values of less than 20. Based on our results, we conclude that machine learning can be used to approximate particulate matter with the variables we had available.
 However, to better achieve the goal of this project, further improvement of NN/CNN model will be needed to produce more accurate predictions based on the image information. 

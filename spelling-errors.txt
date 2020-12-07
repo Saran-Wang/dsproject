@@ -40,7 +40,7 @@ ImageDataGenerator
 imagenet
 intra
 jpg
-kaggle
+Kaggle
 keras
 kPa
 Liu
