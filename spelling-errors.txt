@@ -5,6 +5,11 @@ csv
 cvlib
 dataset
 datasets
+dehaze
+dehazed
+dehazedone
+dehazeroi
+Dehazing
 Dev
 EDA
 extaction
@@ -25,7 +30,7 @@ Kaggle
 keras
 kPa
 Liu
-luminance
+Luminance
 MSE
 multivariable
 optimizers

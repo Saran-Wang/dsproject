@@ -71,11 +71,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -107,9 +107,9 @@ title: Project 5 Pollution Vision
 
 <small><em>
 This manuscript
-([permalink](https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/))
+([permalink](https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/))
 was automatically generated
-from [Saran-Wang/dsproject@e94effa](https://github.com/Saran-Wang/dsproject/tree/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749)
+from [Saran-Wang/dsproject@73bee89](https://github.com/Saran-Wang/dsproject/tree/73bee89d7a8d14fc44f97a54456e1cb3672b035b)
 on December 7, 2020.
 </em></small>
 
@@ -293,6 +293,26 @@ Figure @fig:orginial1 is the original figure and figure @fig:Entropy shows its e
 
 5. Transmission and amount of haze removed
 
+Transmission means the attenuation of radiance, and there are many ways to calculate transmission. One of the most efficient method is called “dark channel prior dehazing”, with which we could estimate the thickness of the haze and recover a haze-free image. The definition of “dark channel prior dehazing” is that outdoor images contains some pixels whose intensity is very low in at least one color channel, and it is able to directly estimate the thickness of the haze and recover a high-quality haze-free image (10.1109/TPAMI.2010.168). The amount of haze removed is calculated by `((dc(I)-dc(J))**2).mean()`, where dc is dark channel, I is the original hazy image, and J is the dehazed image.
+
+To calculate the transmission and the amount of haze removed, the first step is to set appropriate transmission rate for different images, and then dehaze them. We can see the second figure @fig:dehazedone, which is already dehazed, is obviously brighter than the original image. The process of dehazing is like lifting a mask from the original image. However, we can see the lower part of the dehazed image has some noises, and currently I can’t deal with them. Fortunately, for images from the same video, the place where noises occur is the same. Therefore, all we need to do is to select the appropriate region of interest for images from different videos to get rid of noises. And figure @fig:dehazeroi is the final output image after dehazing and selecting ROI. The code to calculate transmission and the amount of haze removed is adapted from  [@https://github.com/He-Zhang/image_dehaze.git] and [@https://github.com/samibinsami/A-Novel-Image-Dehazing-and-Assessment-Method.git] .
+
+![
+**Original Image without Dehazing**
+](images/333.png "Wide image"){#fig:original2 width=3in}
+
+
+![
+**Dehazed Image (with noise)**
+](images/444.png "Wide image"){#fig:dehazedone width=3in}
+
+
+![
+**Dehazed Image (within ROI)**
+](images/555.png "Wide image"){#fig:dehazeroi width=3in}
+
+
+
 6. Number of cars on streets
 
 Also, I take the number of cars on streets into account. Intuitively, the more cars on the street, the higher PM concentrations would be. There is a very efficient library in python called *cvlib*, within which a function called *object_detection* could detect the number of different objects appearing on an image. The example code is shown as below:
@@ -339,18 +359,21 @@ For all three models, I performed the same first initial steps. I read in the �
 
 #### Neural Network (Numeric Data)
 To prepare the numeric data for the neural network model, I set the eight numeric variables to be the independent “x” variables and the total pollution to be the dependent “y” variable in a tensorflow dataset. I set the batch size to be 50 and created a “Sequential” keras model. My model had four layers: two “relu” layers with 30 units each, a “sigmoid” layer with 30 units, and a linear layer with 15 units. Using a learning rate of 0.0005, loss of mean square error, and 30 epochs, I compiled the model and tested it on the validation dataset. The mean square error converged at around 1,500-1,800 depending on the random training and validation dataset generated in the initial setup.
+
 ![
 **Numeric Neural Network Mean Square Error**
 ](images/Gemma1.png){#fig:NumericNN_MSE height=3in}
 
 #### Convolutional Neural Network (Image Data)
 To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup. 
+
 ![
 **Image Neural Network Mean Square Error**
 ](images/Gemma2.png){#fig:ImageNN_MSE height=3in}
 
 #### Random Forest (Numeric Data)
 For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution. 
+
 ![
 **Random Forest Feature Importance**
 ](images/Gemma3.png){#fig:Feature_Importance height=3in}

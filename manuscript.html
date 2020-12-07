@@ -116,9 +116,9 @@
   <meta name="citation_fulltext_html_url" content="https://Saran-Wang.github.io/dsproject/" />
   <meta name="citation_pdf_url" content="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://Saran-Wang.github.io/dsproject/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
-  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/" />
-  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/" />
+  <meta name="manubot_html_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://Saran-Wang.github.io/dsproject/v/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749/">permalink</a>)
+(<a href="https://Saran-Wang.github.io/dsproject/v/73bee89d7a8d14fc44f97a54456e1cb3672b035b/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/Saran-Wang/dsproject/tree/e94effa01a8fbbfcf73c8ccf9b2f856c7af7b749">Saran-Wang/dsproject@e94effa</a>
+from <a href="https://github.com/Saran-Wang/dsproject/tree/73bee89d7a8d14fc44f97a54456e1cb3672b035b">Saran-Wang/dsproject@73bee89</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -362,33 +362,52 @@ where I(i,j) is luminance intensity at (i,j) pixel.</p>
 </figure>
 </div>
 <ol start="5" type="1">
-<li><p>Transmission and amount of haze removed</p></li>
-<li><p>Number of cars on streets</p></li>
+<li>Transmission and amount of haze removed</li>
+</ol>
+<p>Transmission means the attenuation of radiance, and there are many ways to calculate transmission. One of the most efficient method is called “dark channel prior dehazing”, with which we could estimate the thickness of the haze and recover a haze-free image. The definition of “dark channel prior dehazing” is that outdoor images contains some pixels whose intensity is very low in at least one color channel, and it is able to directly estimate the thickness of the haze and recover a high-quality haze-free image (10.1109/TPAMI.2010.168). The amount of haze removed is calculated by <code>((dc(I)-dc(J))**2).mean()</code>, where dc is dark channel, I is the original hazy image, and J is the dehazed image.</p>
+<p>To calculate the transmission and the amount of haze removed, the first step is to set appropriate transmission rate for different images, and then dehaze them. We can see the second figure <a href="#fig:dehazedone">10</a>, which is already dehazed, is obviously brighter than the original image. The process of dehazing is like lifting a mask from the original image. However, we can see the lower part of the dehazed image has some noises, and currently I can’t deal with them. Fortunately, for images from the same video, the place where noises occur is the same. Therefore, all we need to do is to select the appropriate region of interest for images from different videos to get rid of noises. And figure <a href="#fig:dehazeroi">11</a> is the final output image after dehazing and selecting ROI. The code to calculate transmission and the amount of haze removed is adapted from <span class="citation" data-cites="9CUywkVf">[<a href="#ref-9CUywkVf" role="doc-biblioref">3</a>]</span> and <span class="citation" data-cites="vYkBc2pi">[<a href="#ref-vYkBc2pi" role="doc-biblioref">4</a>]</span> .</p>
+<div id="fig:original2" class="fignos">
+<figure>
+<img src="images/333.png" style="width:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Original Image without Dehazing</strong></figcaption>
+</figure>
+</div>
+<div id="fig:dehazedone" class="fignos">
+<figure>
+<img src="images/444.png" style="width:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Dehazed Image (with noise)</strong></figcaption>
+</figure>
+</div>
+<div id="fig:dehazeroi" class="fignos">
+<figure>
+<img src="images/555.png" style="width:3in" alt="" /><figcaption><span>Figure 11:</span> <strong>Dehazed Image (within ROI)</strong></figcaption>
+</figure>
+</div>
+<ol start="6" type="1">
+<li>Number of cars on streets</li>
 </ol>
 <p>Also, I take the number of cars on streets into account. Intuitively, the more cars on the street, the higher PM concentrations would be. There is a very efficient library in python called <em>cvlib</em>, within which a function called <em>object_detection</em> could detect the number of different objects appearing on an image. The example code is shown as below:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>im <span class="op">=</span> cv2.imread(<span class="st">&#39;../input/pollutionvision/frames/frames/video06082020_0.jpg&#39;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>bbox, label, conf <span class="op">=</span> cv.detect_common_objects(im)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>output_image <span class="op">=</span> draw_bbox(im, bbox, label, conf)</span>
 <span id="cb2-4"><a href="#cb2-4"></a>number_of_car <span class="op">=</span> label.count(<span class="st">&#39;car&#39;</span>)</span></code></pre></div>
-<p>As we can see in figure <a href="#fig:2cars">9</a>, the left image has 2 cars on street, and we can detect exactly two cars; while figure <a href="#fig:5cars">10</a> has no car on street but 5 cars parking in the parking lot, and we could detect 5 cars.</p>
+<p>As we can see in figure <a href="#fig:2cars">12</a>, the left image has 2 cars on street, and we can detect exactly two cars; while figure <a href="#fig:5cars">13</a> has no car on street but 5 cars parking in the parking lot, and we could detect 5 cars.</p>
 <div id="fig:2cars" class="fignos">
 <figure>
-<img src="images/666.png" style="width:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Two cars detected</strong></figcaption>
+<img src="images/666.png" style="width:3in" alt="" /><figcaption><span>Figure 12:</span> <strong>Two cars detected</strong></figcaption>
 </figure>
 </div>
 <div id="fig:5cars" class="fignos">
 <figure>
-<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Five cars detected</strong></figcaption>
+<img src="images/222.png" style="width:3in" alt="" /><figcaption><span>Figure 13:</span> <strong>Five cars detected</strong></figcaption>
 </figure>
 </div>
 <p>Here comes the problem, this function could only detect the number of cars appearing on an image but can’t identify which is in motion. But the moving cars are actually the ones which contribute to PM concentrations at the very moment. However, in this case, I just keep the original detection results, since if there are more cars in the parking lot, I just assume it’s a traffic busy day, on which the PM concentrations would be higher than normal days.</p>
 <ol start="7" type="1">
 <li>Correlations among variables</li>
 </ol>
-<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">11</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
+<p>Here we plot out the spearman correlations among those features in figure <a href="#fig:correlations2">14</a>, the last column shows the spearman correlations between each feature and the Total PM concentrations. As we can see, the dead time, which is an instrument parameter, is closely correlated with PM concentrations, followed by Pressure, RGB, luminance and temperature. However, since the dataset is rather complicated, the correlations may mean nothing. Actually, the different combination of different features may have various impacts on the results of our model. And the correlations just provide us with a straightforward perception.</p>
 <div id="fig:correlations2" class="fignos">
 <figure>
-<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 11:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
+<img src="images/999.png" style="height:3in" alt="" /><figcaption><span>Figure 14:</span> <strong>Variables Correlations (include digitized image data)</strong></figcaption>
 </figure>
 </div>
 <h4 id="model-selection">Model Selection</h4>
@@ -398,14 +417,26 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <p>I used three different approaches to predict pollution concentrations: building a neural network using the numeric data, creating a neural network using the image data, and developing a random forest model using the numeric data.</p>
 <p>For all three models, I performed the same first initial steps. I read in the “csv” files containing the training dataset and test dataset and removed the variables that should not be included in the model. These variables included parameters related to the particulate size and shape, superfluous instrument parameters, and variables with a standard deviation of 0. For each of the 64961 data points, there was one image and eight numeric variables: temperature, pressure, errors, dead time, wind speed, distance to road, camera angle, and elevation. There were no missing values in the dataset. I then randomly split the training dataset into a validation dataset (20% of the original training dataset) and a new training dataset (80% of the original training dataset).</p>
 <h4 id="neural-network-numeric-data">Neural Network (Numeric Data)</h4>
-<p>To prepare the numeric data for the neural network model, I set the eight numeric variables to be the independent “x” variables and the total pollution to be the dependent “y” variable in a tensorflow dataset. I set the batch size to be 50 and created a “Sequential” keras model. My model had four layers: two “relu” layers with 30 units each, a “sigmoid” layer with 30 units, and a linear layer with 15 units. Using a learning rate of 0.0005, loss of mean square error, and 30 epochs, I compiled the model and tested it on the validation dataset. The mean square error converged at around 1,500-1,800 depending on the random training and validation dataset generated in the initial setup.
-<img src="images/Gemma1.png" id="fig:NumericNN_MSE" style="height:3in" alt="Numeric Neural Network Mean Square Error" /></p>
+<p>To prepare the numeric data for the neural network model, I set the eight numeric variables to be the independent “x” variables and the total pollution to be the dependent “y” variable in a tensorflow dataset. I set the batch size to be 50 and created a “Sequential” keras model. My model had four layers: two “relu” layers with 30 units each, a “sigmoid” layer with 30 units, and a linear layer with 15 units. Using a learning rate of 0.0005, loss of mean square error, and 30 epochs, I compiled the model and tested it on the validation dataset. The mean square error converged at around 1,500-1,800 depending on the random training and validation dataset generated in the initial setup.</p>
+<div id="fig:NumericNN_MSE" class="fignos">
+<figure>
+<img src="images/Gemma1.png" style="height:3in" alt="" /><figcaption><span>Figure 15:</span> <strong>Numeric Neural Network Mean Square Error</strong></figcaption>
+</figure>
+</div>
 <h4 id="convolutional-neural-network-image-data">Convolutional Neural Network (Image Data)</h4>
-<p>To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup.
-<img src="images/Gemma2.png" id="fig:ImageNN_MSE" style="height:3in" alt="Image Neural Network Mean Square Error" /></p>
+<p>To prepare the image data for the neural network, I created a function that loaded the image from the image name, randomly flipped it vertically, randomly flipped it horizontally, and then randomly cropped the image to be 72 x 128 (from the original size of 720 x 1280). I initially tried using the entire image, but when compiling the model, my computer ran out of memory. Using a batch size of 25 and “imagenet” weights, I created a model using “applications.Xception” and added a normalization layer that normalized the image data from (0, 255) to (-1, +1). The weights of the normalization layer were the mean (0 + 255)/2 = 127.5 and variance (in this case set to be the square of the mean). My model used GlobalAveragePooling2D, had a Dropout at 0.5, and activation of “softmax.” Using a learning rate of 0.00005, “optimizers.Adam,” loss of mean squared error, and 10 epochs, I fit the model to my validation dataset and regularly had mean square error values exceeding 170,000 for each of the different randomly selected validation and training datasets created in the initial setup.</p>
+<div id="fig:ImageNN_MSE" class="fignos">
+<figure>
+<img src="images/Gemma2.png" style="height:3in" alt="" /><figcaption><span>Figure 16:</span> <strong>Image Neural Network Mean Square Error</strong></figcaption>
+</figure>
+</div>
 <h4 id="random-forest-numeric-data">Random Forest (Numeric Data)</h4>
-<p>For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution.
-<img src="images/Gemma3.png" id="fig:Feature_Importance" style="height:3in" alt="Random Forest Feature Importance" /></p>
+<p>For the random forest model, I set the eight numeric variables from the training dataset to be the independent “x” variables and the corresponding total pollution from the training dataset to be the dependent “y” variable. I also separated the validation dataset into the independent variables and dependent variable. My random forest model had 1000 “n_estimators” (trees), used mean square error as its criterion, had a maximum depth of 20, and had a minimum sample split of 2. I fit the random forest model using the training dataset and then used the model to make predictions for the validation dataset. The resulting mean square error was around 140, which was much lower than the mean square error produced by the neural networks for the numeric and image data. Looking at the features that had the most influence on the random forest model, the dead time had 100-1000-fold more impact on the predicted pollution than any of the other independent variables. This makes sense because I now know that the dead time is an instrument parameter stating how long the instrument has to “think” to measure the pollution, so longer dead times would be associated with higher pollution.</p>
+<div id="fig:Feature_Importance" class="fignos">
+<figure>
+<img src="images/Gemma3.png" style="height:3in" alt="" /><figcaption><span>Figure 17:</span> <strong>Random Forest Feature Importance</strong></figcaption>
+</figure>
+</div>
 <p>Since my random forest model performed best on my validation dataset, I used the entire original training dataset (not split into training and validation data) to create a random forest model with the same parameters. I then used this model to predict pollution values in the test dataset which resulted in a final mean square error of 124 or root mean square error of 11.2.</p>
 <h3 class="page_break_before" id="weiqis-model">Weiqi’s Model</h3>
 <h3 class="page_break_before" id="xueaos-model">Xueao’s Model</h3>
@@ -425,7 +456,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <span id="cb3-7"><a href="#cb3-7"></a>plt.show()</span></code></pre></div>
 <div id="fig:Gray" class="fignos">
 <figure>
-<img src="images/xueao_gray.png" style="width:5in" alt="" /><figcaption><span>Figure 12:</span> <strong>Ouput of Gray Scale Image</strong></figcaption>
+<img src="images/xueao_gray.png" style="width:5in" alt="" /><figcaption><span>Figure 18:</span> <strong>Ouput of Gray Scale Image</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -479,36 +510,36 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <span id="cb7-8"><a href="#cb7-8"></a>    <span class="co">#print(&#39;CV accuracy scores: %s&#39; % scores)</span></span>
 <span id="cb7-9"><a href="#cb7-9"></a>    <span class="bu">print</span>(estimator[<span class="dv">0</span>], <span class="st">&#39;CV accuracy: </span><span class="sc">%.3f</span><span class="st"> +/- </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> (np.mean(scores), np.std(scores)))</span></code></pre></div>
 <ul>
-<li><strong>Ridge regression</strong> <span class="citation" data-cites="yCC8Xn6w">[<a href="#ref-yCC8Xn6w" role="doc-biblioref">3</a>]</span></li>
+<li><strong>Ridge regression</strong> <span class="citation" data-cites="yCC8Xn6w">[<a href="#ref-yCC8Xn6w" role="doc-biblioref">5</a>]</span></li>
 </ul>
 <div id="fig:Ridge" class="fignos">
 <figure>
-<img src="images/xueao2.png" style="width:6in" alt="" /><figcaption><span>Figure 13:</span> <strong>Ridge Regression Models</strong></figcaption>
+<img src="images/xueao2.png" style="width:6in" alt="" /><figcaption><span>Figure 19:</span> <strong>Ridge Regression Models</strong></figcaption>
 </figure>
 </div>
 <ul>
-<li><strong>Lasso regression</strong> <span class="citation" data-cites="n37J3rTE">[<a href="#ref-n37J3rTE" role="doc-biblioref">4</a>]</span></li>
+<li><strong>Lasso regression</strong> <span class="citation" data-cites="n37J3rTE">[<a href="#ref-n37J3rTE" role="doc-biblioref">6</a>]</span></li>
 </ul>
 <div id="fig:Comparison" class="fignos">
 <figure>
-<img src="images/Comparison.png" style="width:6in" alt="" /><figcaption><span>Figure 14:</span> <strong>Forms of the Constraint Regions for Lasso and Ridge Regression</strong></figcaption>
+<img src="images/Comparison.png" style="width:6in" alt="" /><figcaption><span>Figure 20:</span> <strong>Forms of the Constraint Regions for Lasso and Ridge Regression</strong></figcaption>
 </figure>
 </div>
 <ul>
-<li><strong>RandomForestRegressor</strong> <span class="citation" data-cites="R1nxXFqe">[<a href="#ref-R1nxXFqe" role="doc-biblioref">5</a>]</span></li>
+<li><strong>RandomForestRegressor</strong> <span class="citation" data-cites="R1nxXFqe">[<a href="#ref-R1nxXFqe" role="doc-biblioref">7</a>]</span></li>
 </ul>
 <p>“A Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap Aggregation, commonly known as bagging. What is bagging you may ask? Bagging, in the Random Forest method, involves training each decision tree on a different data sample where sampling is done with replacement. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.”</p>
 <div id="fig:RandomForest" class="fignos">
 <figure>
-<img src="images/Forest.png" style="width:4in" alt="" /><figcaption><span>Figure 15:</span> <strong>Random Forest Regression: Process</strong></figcaption>
+<img src="images/Forest.png" style="width:4in" alt="" /><figcaption><span>Figure 21:</span> <strong>Random Forest Regression: Process</strong></figcaption>
 </figure>
 </div>
 <ul>
-<li><strong>GradientBoostingRegressor</strong> <span class="citation" data-cites="k7TFwJCu">[<a href="#ref-k7TFwJCu" role="doc-biblioref">6</a>]</span></li>
+<li><strong>GradientBoostingRegressor</strong> <span class="citation" data-cites="k7TFwJCu">[<a href="#ref-k7TFwJCu" role="doc-biblioref">8</a>]</span></li>
 </ul>
 <div id="fig:GradientBoosting" class="fignos">
 <figure>
-<img src="images/xueao4.png" style="width:7in" alt="" /><figcaption><span>Figure 16:</span> <strong>Gradient Boosting Algorithm</strong></figcaption>
+<img src="images/xueao4.png" style="width:7in" alt="" /><figcaption><span>Figure 22:</span> <strong>Gradient Boosting Algorithm</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -517,7 +548,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 </ul>
 <div id="fig:Evaluation" class="fignos">
 <figure>
-<img src="images/xueao5.png" style="width:3in" alt="" /><figcaption><span>Figure 17:</span> <strong>Evaluation Results</strong></figcaption>
+<img src="images/xueao5.png" style="width:3in" alt="" /><figcaption><span>Figure 23:</span> <strong>Evaluation Results</strong></figcaption>
 </figure>
 </div>
 <h4 id="tune-hyperparameters-using-gridsearchcv">3. Tune hyperparameters using GridSearchCV</h4>
@@ -540,7 +571,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <span id="cb8-14"><a href="#cb8-14"></a><span class="bu">print</span>(<span class="st">&#39;Validation accuracy: </span><span class="sc">%.3f</span><span class="st">&#39;</span> <span class="op">%</span> est.score(X_validation, y_validation))</span></code></pre></div>
 <div id="fig:Best" class="fignos">
 <figure>
-<img src="images/xueao6.png" style="width:8in" alt="" /><figcaption><span>Figure 18:</span> <strong>Best Scores and Best Parameters</strong></figcaption>
+<img src="images/xueao6.png" style="width:8in" alt="" /><figcaption><span>Figure 24:</span> <strong>Best Scores and Best Parameters</strong></figcaption>
 </figure>
 </div>
 <p>As shown above, the performance of the two models with their best parameters are both excellent. Thus, I will train two models:RandomForest and GradientBoosting at the same time and evaluate their RMSE to determine the best model.</p>
@@ -559,7 +590,7 @@ At first, I tried the Neural network, but it doesn’t do well in this dataset, 
 <p>The flowchart below shows my overall modeling process. Finally, the model and parameters I selected is: RandomForestRegressor with max_depth = 10, n_estimators = 300. I first apply the entire processed train dataset to train the model, then predict for the test dataset, and finally get the root mean squared error of 10.74. RMSE = 10.74 (MSE = 115) is within the reasonable range for this project.</p>
 <div id="fig:Flowchart" class="fignos">
 <figure>
-<img src="images/xueao8.png" style="width:5in" alt="" /><figcaption><span>Figure 19:</span> <strong>Flowchart of Modeling</strong></figcaption>
+<img src="images/xueao8.png" style="width:5in" alt="" /><figcaption><span>Figure 25:</span> <strong>Flowchart of Modeling</strong></figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
@@ -579,23 +610,33 @@ Chenbin Liu, Francis Tsow, Yi Zou, Nongjian Tao<br />
 <em>PLOS ONE</em> (2016-02-01) <a href="https://doi.org/ghnjkc">https://doi.org/ghnjkc</a> <br />
 DOI: <a href="https://doi.org/10.1371/journal.pone.0145955">10.1371/journal.pone.0145955</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26828757">26828757</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734658">PMC4734658</a></p>
 </div>
+<div id="ref-9CUywkVf">
+<p>3. <strong>He-Zhang/image_dehaze</strong> <br />
+He Zhang<br />
+(2020-12-06) <a href="https://github.com/He-Zhang/image_dehaze">https://github.com/He-Zhang/image_dehaze</a></p>
+</div>
+<div id="ref-vYkBc2pi">
+<p>4. <strong>samibinsami/A-Novel-Image-Dehazing-and-Assessment-Method</strong> <br />
+Saad Bin Sami<br />
+(2020-08-01) <a href="https://github.com/samibinsami/A-Novel-Image-Dehazing-and-Assessment-Method">https://github.com/samibinsami/A-Novel-Image-Dehazing-and-Assessment-Method</a></p>
+</div>
 <div id="ref-yCC8Xn6w">
-<p>3. <strong>Ridge Regression</strong> <br />
+<p>5. <strong>Ridge Regression</strong> <br />
 NCSS, LLC<br />
 (2020-02-10) <a href="https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf">https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf</a></p>
 </div>
 <div id="ref-n37J3rTE">
-<p>4. <strong>Lasso</strong> <br />
+<p>6. <strong>Lasso</strong> <br />
 Wikipedia<br />
 (2020-11-17) <a href="https://en.wikipedia.org/w/index.php?title=Lasso&amp;oldid=989142673">https://en.wikipedia.org/w/index.php?title=Lasso&amp;oldid=989142673</a></p>
 </div>
 <div id="ref-R1nxXFqe">
-<p>5. <strong>A Beginners Guide to Random Forest Regression</strong> <br />
+<p>7. <strong>A Beginners Guide to Random Forest Regression</strong> <br />
 Krishni<br />
 <em>Medium</em> (2019-06-05) <a href="https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb">https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb</a></p>
 </div>
 <div id="ref-k7TFwJCu">
-<p>6. <strong>Gradient boosting</strong> <br />
+<p>8. <strong>Gradient boosting</strong> <br />
 Wikipedia<br />
 (2020-12-05) <a href="https://en.wikipedia.org/w/index.php?title=Gradient_boosting&amp;oldid=992489307">https://en.wikipedia.org/w/index.php?title=Gradient_boosting&amp;oldid=992489307</a></p>
 </div>
